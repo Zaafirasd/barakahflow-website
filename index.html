@@ -59,38 +59,38 @@
     }
 
     html[data-theme="light"] {
-      --surface: rgba(255, 255, 255, 0.82);
-      --surface-border: rgba(15, 23, 42, 0.08);
+      --surface: rgba(255, 255, 255, 0.76);
+      --surface-border: rgba(15, 23, 42, 0.04);
       --surface-shadow:
-        0 24px 60px -24px rgba(15, 23, 42, 0.1),
-        0 0 0 1px rgba(148, 163, 184, 0.06);
-      --text: #0f172a;
-      --text-soft: #334155;
+        0 24px 60px -12px rgba(15, 23, 42, 0.08),
+        0 0 0 1px rgba(15, 23, 42, 0.03);
+      --text: #1e293b;
+      --text-soft: #475569;
       --muted: #64748b;
-      --nav-bg: rgba(255, 255, 255, 0.82);
-      --secondary-bg: rgba(15, 23, 42, 0.05);
-      --secondary-border: rgba(15, 23, 42, 0.06);
-      --glass-bg: rgba(15, 23, 42, 0.04);
-      --glass-border: rgba(15, 23, 42, 0.08);
-      --stat-bg: rgba(255, 255, 255, 0.65);
-      --shell-border: rgba(15, 23, 42, 0.06);
-      --spotlight-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.92));
-      --spotlight-text: #0f172a;
-      --spotlight-copy: #334155;
+      --nav-bg: rgba(255, 255, 255, 0.72);
+      --secondary-bg: rgba(15, 23, 42, 0.04);
+      --secondary-border: rgba(15, 23, 42, 0.05);
+      --glass-bg: rgba(15, 23, 42, 0.03);
+      --glass-border: rgba(15, 23, 42, 0.06);
+      --stat-bg: rgba(255, 255, 255, 0.55);
+      --shell-border: rgba(15, 23, 42, 0.04);
+      --spotlight-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.88));
+      --spotlight-text: #1e293b;
+      --spotlight-copy: #475569;
       --hero-gradient:
         linear-gradient(135deg,
-          rgba(254, 242, 242, 0.95) 0%,
-          rgba(245, 243, 255, 0.9) 48%,
-          rgba(240, 249, 255, 0.85) 100%);
-      --top-glow: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, transparent 100%);
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(248, 250, 252, 0.9) 48%,
+          rgba(241, 245, 249, 0.85) 100%);
+      --top-glow: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, transparent 100%);
       --page-backdrop:
-        radial-gradient(circle at 15% 0%, rgba(251, 113, 133, 0.08), transparent 24%),
-        radial-gradient(circle at 86% 0%, rgba(125, 211, 252, 0.12), transparent 30%),
-        radial-gradient(circle at 50% 16%, rgba(16, 185, 129, 0.06), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, #f1f5f9 52%, #ffffff 100%);
+        radial-gradient(circle at 15% 0%, rgba(251, 113, 133, 0.05), transparent 20%),
+        radial-gradient(circle at 85% 0%, rgba(125, 211, 252, 0.08), transparent 25%),
+        radial-gradient(circle at 50% 12%, rgba(16, 185, 129, 0.04), transparent 18%),
+        linear-gradient(180deg, #f8fafc 0%, #f1f5f9 45%, #e2e8f0 100%);
       --mesh:
-        linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+        linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
     }
 
     * {
@@ -242,7 +242,7 @@
 
     .status-notice {
       display: inline-block;
-      margin-top: 1.5rem;
+      margin: 1.5rem auto 0;
       padding: 0.85rem 1.15rem;
       background: var(--surface-bg);
       border: 1px solid var(--surface-border);
@@ -250,6 +250,7 @@
       color: var(--text-soft);
       font-size: 0.9rem;
       line-height: 1.5;
+      max-width: 34rem;
     }
 
     .status-notice strong {
