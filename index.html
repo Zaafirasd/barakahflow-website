@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Download BarakahFlow, the halal personal finance app for Muslims. Track expenses, calculate Zakat, monitor live gold prices, and manage bills with barakah.">
+  <meta name="description" content="Download BarakahFlow, the premium halal personal finance app for Muslims. Track expenses, calculate Zakat with live gold prices, and manage Shariah-compliant wealth with ease.">
+  <link rel="canonical" href="https://barakahflow.com/">
+  <meta name="keywords" content="halal personal finance, zakat calculator, islamic budgeting app, shariah compliant finance, muslim expense tracker, gold price tracking nisab">
   <meta name="theme-color" content="#10B981">
   <link rel="icon" type="image/png" href="Images/logopng.png">
   <link rel="apple-touch-icon" href="Images/logopng.png">
@@ -24,7 +26,57 @@
   <meta property="twitter:title" content="BarakahFlow — Halal Personal Finance">
   <meta property="twitter:description" content="Manage your money the halal way. Track budgeting, Zakat, gold prices, and more in one premium experience.">
   <meta property="twitter:image" content="Images/logopng.png">
-  <title>BarakahFlow &mdash; Halal Personal Finance</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "BarakahFlow",
+        "operatingSystem": "Android",
+        "applicationCategory": "FinanceApplication",
+        "description": "Premium halal personal finance and Zakat tracker for Muslims. Track expenses, calculate Zakat with live gold prices, and manage Shariah-compliant wealth.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "url": "https://barakahflow.com/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is BarakahFlow truly Shariah-compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, BarakahFlow is designed from the ground up for Muslims. It facilitates interest-free budgeting (Riba-free tracking), automated Zakat calculations, and focuses on wealth purification through Sadaqah and Waqf categories."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Zakat calculator work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BarakahFlow monitors real-time gold prices to determine the Niṣāb (threshold). By tracking your savings, gold, and receivables, it automatically identifies if your wealth exceeds the threshold and calculates the 2.5% Zakat due annually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my financial data secure and private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Privacy is a core Islamic value. BarakahFlow does not sell your data or include intrusive ads. All sensitive financial information is stored locally and encrypted, ensuring your barakah remains personal."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <title>BarakahFlow | Premium Halal Personal Finance & Zakat Tracker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1182,6 +1234,65 @@
         transform: none;
       }
     }
+
+    /* FAQ Section Styles */
+    .faq-grid {
+      display: grid;
+      gap: 1rem;
+      max-width: 48rem;
+      margin: 2.5rem auto 0;
+    }
+
+    .faq-item {
+      padding: 0;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      transition: transform 0.3s var(--ease-out);
+    }
+
+    .faq-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .faq-item summary {
+      padding: 1.25rem 1.75rem;
+      list-style: none;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--emerald);
+      transition: transform 0.3s var(--ease-out);
+      font-weight: 400;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-content {
+      padding: 0 1.75rem 1.75rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .faq-content p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -1190,7 +1301,7 @@
       <div class="container">
         <div class="navbar-inner">
           <a class="brand" href="#top" aria-label="BarakahFlow home">
-            <img src="Images/logopng.png" alt="BarakahFlow logo">
+            <img src="Images/logopng.png" alt="BarakahFlow - Premium Halal Personal Finance App">
             <span>
               <span class="brand-name">BarakahFlow</span>
               <span class="brand-tag">Finance with Barakah</span>
@@ -1229,10 +1340,10 @@
 
                 <div class="hero-visual reveal">
                   <div class="hero-app-card">
-                    <img src="Images/app_preview.jpg" alt="BarakahFlow App Preview">
+                    <img src="Images/app_preview.jpg" alt="BarakahFlow mobile app dashboard showing halal expense tracking and Shariah-compliant budgeting">
                   </div>
                   <div class="hero-app-card">
-                    <img src="Images/zakat_preview.jpg" alt="BarakahFlow Zakat Preview">
+                    <img src="Images/zakat_preview.jpg" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features">
                   </div>
                 </div>
 
@@ -1336,7 +1447,39 @@
                 <span>APK</span>
                 <span>5.5 MB</span>
               </div>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Questions?</span>
+            <h2 class="section-heading">Commonly Asked Questions</h2>
+            <p class="section-copy">Learn more about how BarakahFlow handles your financial data and religious obligations.</p>
+          </div>
+
+          <div class="faq-grid reveal" data-stagger>
+            <details class="surface faq-item">
+              <summary>Is BarakahFlow truly Shariah-compliant?</summary>
+              <div class="faq-content">
+                <p>Yes. BarakahFlow is built to respect Islamic financial principles. We avoid interest-based calculations and provide specific categories for Zakat, Sadaqah, and purification of wealth. Our focus is on fostering "Barakah" through ethical money management.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>How does the Zakat calculator work?</summary>
+              <div class="faq-content">
+                <p>The app pulls real-time gold market data to determine the current Niṣāb. By aggregating your assets (cash, gold, business inventory), it calculates exactly what you owe when your wealth has stayed above the threshold for a lunar year (Hawl).</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Is my financial data secure and private?</summary>
+              <div class="faq-content">
+                <p>We believe financial privacy is a fundamental right. BarakahFlow operates without ads or third-party trackers. Your financial data is stored locally on your device and is never sold or uploaded to external servers without your explicit action.</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -1346,7 +1489,7 @@
       <div class="container">
         <div class="surface footer-inner">
           <div class="footer-brand">
-            <img src="Images/logopng.png" alt="BarakahFlow logo">
+            <img src="Images/logopng.png" alt="BarakahFlow branding">
             <span>
               <strong>BarakahFlow</strong>
               <span>Finance with Barakah</span>
