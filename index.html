@@ -1312,8 +1312,11 @@
             <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
               <span class="theme-icon" aria-hidden="true">&#x2600;</span>
             </button>
-            <a class="button button-primary" href="downloads/barakahflow.apk" download>
+            <a class="button button-primary platform-android-only" id="nav-download-btn" href="downloads/barakahflow.apk" download>
               <span class="button-text">Download</span> APK
+            </a>
+            <a class="button button-primary platform-ios-only" style="display: none;" id="nav-ios-btn" href="https://barakah-flow.vercel.app/signin" target="_blank" rel="noopener noreferrer">
+              Launch App
             </a>
           </div>
         </div>
@@ -1333,8 +1336,13 @@
                 </h1>
                 <p>The halal budgeting app built for Muslims. Track expenses, calculate Zakat, and manage your wealth &mdash; the Islamic way.</p>
 
-                <div class="hero-actions">
-                  <a class="button button-primary" href="downloads/barakahflow.apk" download>Download for Android (.apk)</a>
+                <div class="hero-actions" id="hero-actions">
+                  <!-- Android Button -->
+                  <a class="button button-primary platform-android-only" id="hero-android-btn" href="downloads/barakahflow.apk" download>Download for Android (.apk)</a>
+                  
+                  <!-- iOS Button (Primary on iOS) -->
+                  <a class="button download-ios platform-ios-only" style="display: none;" id="hero-ios-btn" href="https://barakah-flow.vercel.app/signin" target="_blank" rel="noopener noreferrer">Launch for iOS (iPhone)</a>
+                  
                   <a class="button button-secondary" href="#features">Learn More</a>
                 </div>
 
@@ -1442,9 +1450,9 @@
             <p>Free. No subscription. Alpha release &mdash; join our early community and start managing your money the halal way.</p>
 
             <div class="download-actions">
-              <a class="button button-primary download-main" href="downloads/barakahflow.apk" download>Download for Android (.apk)</a>
-              <a class="button button-secondary download-ios" href="https://barakah-flow.vercel.app/signin" target="_blank" rel="noopener noreferrer">Launch for iOS (iPhone)</a>
-              <div class="file-meta" aria-label="APK file size">
+              <a class="button button-primary download-main platform-android-only" id="panel-android-btn" href="downloads/barakahflow.apk" download>Download for Android (.apk)</a>
+              <a class="button download-ios platform-ios-only" id="panel-ios-btn" href="https://barakah-flow.vercel.app/signin" target="_blank" rel="noopener noreferrer">Launch for iOS (iPhone)</a>
+              <div class="file-meta platform-android-only" aria-label="APK file size">
                 <span>APK</span>
                 <span>5.5 MB</span>
               </div>
@@ -1629,6 +1637,47 @@
         });
       }
 
+      function handlePlatformSpecifics() {
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const androidEls = document.querySelectorAll(".platform-android-only");
+        const iosEls = document.querySelectorAll(".platform-ios-only");
+
+        if (isIOS) {
+          androidEls.forEach(el => el.style.display = "none");
+          iosEls.forEach(el => {
+            el.style.display = "inline-flex";
+            if (!el.classList.contains("button-secondary")) {
+                el.classList.add("button-primary");
+            }
+          });
+          
+          // Ensure hero order
+          const heroActions = document.getElementById("hero-actions");
+          const heroIos = document.getElementById("hero-ios-btn");
+          if (heroActions && heroIos) {
+            heroActions.prepend(heroIos);
+            heroIos.classList.add("button-primary");
+          }
+          
+          // Panel styling for iOS (ensure consistency)
+          const panelIos = document.getElementById("panel-ios-btn");
+          if (panelIos) {
+              panelIos.classList.add("button-primary");
+              panelIos.classList.add("download-main"); // apply panel styles
+          }
+        } else {
+            // Non-iOS: Show Android as primary, iOS as secondary or hidden
+            iosEls.forEach(el => {
+                 if (el.id !== 'panel-ios-btn') {
+                    el.style.display = "none";
+                 } else {
+                     el.classList.add("button-secondary");
+                 }
+            });
+        }
+      }
+
+      handlePlatformSpecifics();
       checkIOS();
     })();
   </script>
