@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Windows-specific
+desktop.ini
+
+# Logs and temporary files
+*.log
+tmp/
+.gemini/
+.agent/
+.agents/
+
+# Artifacts
+implementation_plan.md
+task.md
+walkthrough.md
