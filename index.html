@@ -240,6 +240,23 @@
       50% { opacity: 0.4; transform: scale(1.2); }
     }
 
+    .status-notice {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.15rem;
+      background: var(--surface-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 1rem;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .status-notice strong {
+      color: var(--emerald-strong);
+      margin-right: 0.4rem;
+    }
+
     .surface {
       border: 1px solid var(--surface-border);
       border-radius: var(--radius);
@@ -1275,10 +1292,10 @@
         <div class="container">
           <div class="spotlight surface">
             <div class="spotlight-copy reveal">
-              <div class="status-chip">Refining Experience</div>
-              <div class="spotlight-badge" aria-hidden="true">&#x262A;</div>
-              <h2>Zakat made simple.</h2>
-              <p>From Nisab threshold checks using the 85g gold standard to live per-gram pricing, Al-Fitr family counts, payment logging, and cloud sync, BarakahFlow helps you handle Zakat with calm, confidence, and clarity.</p>
+              <div class="status-chip">Update in Progress</div>
+              <h2 style="margin-top: 0.5rem;">Zakat Refinement Scheduled</h2>
+              <p>Our Zakat calculation engine is currently undergoing a comprehensive logic upgrade. We are refining the Nisab calibration and live price synchronization to ensure the most precise experience for your financial obligations.</p>
+              <p class="status-notice"><strong>Notice:</strong> This feature will be re-enabled in the next release.</p>
 
               <ul class="spotlight-points">
                 <li>See whether your wealth is above Nisab before anything is due.</li>
