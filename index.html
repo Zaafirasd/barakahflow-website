@@ -210,6 +210,36 @@
       text-align: center;
     }
 
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.45rem 0.85rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.24);
+      border-radius: 999px;
+      color: var(--emerald-strong);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .status-chip::before {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--emerald);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+    }
+
     .surface {
       border: 1px solid var(--surface-border);
       border-radius: var(--radius);
@@ -1245,6 +1275,7 @@
         <div class="container">
           <div class="spotlight surface">
             <div class="spotlight-copy reveal">
+              <div class="status-chip">Refining Experience</div>
               <div class="spotlight-badge" aria-hidden="true">&#x262A;</div>
               <h2>Zakat made simple.</h2>
               <p>From Nisab threshold checks using the 85g gold standard to live per-gram pricing, Al-Fitr family counts, payment logging, and cloud sync, BarakahFlow helps you handle Zakat with calm, confidence, and clarity.</p>
