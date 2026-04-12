@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | BarakahFlow</title>
+  <meta name="theme-color" content="#10B981">
+  <link rel="icon" type="image/png" href="Images/logopng.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald: #10b981;
+      --emerald-strong: #34d399;
+      --emerald-ink: #04211a;
+      --radius: 28px;
+    }
+    
+    html[data-theme="dark"] {
+      --text: #f8fafc;
+      --text-soft: #cbd5e1;
+      --muted: #94a3b8;
+      --nav-bg: rgba(15, 23, 42, 0.72);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --page-backdrop: linear-gradient(180deg, #0e0b23 0%, #020617 100%);
+      --surface: rgba(15, 23, 42, 0.65);
+      --surface-border: rgba(255, 255, 255, 0.06);
+    }
+    
+    html[data-theme="light"] {
+      --text: #1e293b;
+      --text-soft: #475569;
+      --muted: #64748b;
+      --nav-bg: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(15, 23, 42, 0.06);
+      --page-backdrop: linear-gradient(180deg, #eeecf4 0%, #feffff 100%);
+      --surface: rgba(255, 255, 255, 0.76);
+      --surface-border: rgba(15, 23, 42, 0.04);
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      background: var(--page-backdrop);
+      line-height: 1.6;
+    }
+    
+    a { color: var(--emerald-strong); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(800px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    .navbar {
+      padding: 1rem;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--surface-border);
+      backdrop-filter: blur(24px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none !important;
+      color: inherit;
+    }
+
+    .brand img { width: 2.7rem; }
+    .brand-name { font-weight: 800; font-size: 1.02rem; display: block; }
+    .brand-tag { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;}
+
+    .content-box {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 3rem;
+      margin-top: 2rem;
+    }
+
+    h1 { font-size: 2.5rem; margin-top: 0; letter-spacing: -0.04em; }
+    h2 { font-size: 1.5rem; margin-top: 2rem; color: var(--emerald-strong); }
+    h3 { font-size: 1.2rem; margin-top: 1.5rem; color: var(--text); font-weight: 800; }
+    p { color: var(--text-soft); }
+    ul { color: var(--text-soft); padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    
+    .footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 600px) {
+        .content-box { padding: 1.5rem; }
+        h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div style="width: min(1200px, calc(100% - 2rem)); margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a class="brand" href="index.html">
+        <img src="Images/logopng.png" alt="BarakahFlow">
+        <span>
+          <span class="brand-name">BarakahFlow</span>
+          <span class="brand-tag">Finance with Barakah</span>
+        </span>
+      </a>
+      <a href="index.html" style="color: var(--text); font-weight: 600; text-decoration: none;">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-box">
+      <h1>BarakahFlow Privacy Policy</h1>
+      <p><strong>Last updated:</strong> April 2026</p>
+      
+      <h2>1. Who we are</h2>
+      <p>BarakahFlow is a personal Islamic finance tracker designed to help Muslims manage income, expenses, bills, and Zakat. Your financial data stays private and is never sold or shared with advertisers.</p>
+
+      <h2>2. Data we collect</h2>
+      <ul>
+        <li><strong>Account data</strong> — your email address, used only for authentication.</li>
+        <li><strong>Financial data</strong> — income, transactions, bills, and budgets you enter. This is stored securely in your private account and visible only to you.</li>
+        <li><strong>Zakat data</strong> — asset values you enter for Zakat calculations. Stored in your account and optionally cached locally on your device.</li>
+        <li><strong>Usage analytics</strong> — anonymous, aggregated event counts (e.g. how many users enabled Zakat). No personally identifiable information is attached to these events.</li>
+      </ul>
+
+      <h2>3. How we use your data</h2>
+      <ul>
+        <li>To provide and sync the app across your devices.</li>
+        <li>To calculate your budget, Zakat estimates, and bill schedules.</li>
+        <li>To allow you to export or delete your data at any time.</li>
+      </ul>
+      <p><strong>Note:</strong> We do not use your financial data for advertising, profiling, or any purpose outside of operating the app for you.</p>
+
+      <h2>4. Third-party services</h2>
+      <ul>
+        <li><strong>Supabase</strong> — our database and authentication provider. Your data is stored on Supabase servers.</li>
+        <li><strong>Vercel</strong> — our hosting provider.</li>
+        <li><strong>Vercel Analytics & Speed Insights</strong> — anonymous, aggregated performance monitoring. No cookies, no fingerprinting.</li>
+      </ul>
+
+      <h2>5. Data retention</h2>
+      <p>Your data is retained as long as you have an account. You can delete your account at any time from Profile → Delete Account, which permanently removes all your data from our systems.</p>
+
+      <h2>6. Your rights</h2>
+      <p>You have the right to access the data we hold about you (all visible in the app), delete your account and all associated data, or request a copy of your data by contacting us.</p>
+
+      <h2>7. Security</h2>
+      <p>All data is encrypted in transit (HTTPS) and at rest. Authentication is handled by Supabase with industry-standard security practices. We never store passwords in plain text.</p>
+
+      <h2>8. Changes to this policy</h2>
+      <p>We may update this policy as the app evolves. The “Last updated” date at the top will reflect any changes.</p>
+
+      <h2>9. Contact</h2>
+      <p>Questions about your privacy? Email us at: <a href="mailto:barakahflowapp@gmail.com">barakahflowapp@gmail.com</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 BarakahFlow. Built for Muslims, by Muslims.</p>
+  </footer>
+
+  <script>
+    // Inherit theme from localStorage
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem("barakahflow-theme");
+    root.dataset.theme = storedTheme === "light" ? "light" : "dark";
+  </script>
+</body>
+</html>

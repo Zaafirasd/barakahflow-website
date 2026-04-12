@@ -1399,37 +1399,37 @@
 
           <div class="features-grid" data-stagger>
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x1F7E2;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="pie-chart"></i></span>
               <h3>Smart Budgeting</h3>
               <p>Set halal budgets with Islamic expense categories.</p>
             </article>
 
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x263D;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="moon"></i></span>
               <h3>Zakat Calculator</h3>
               <p>Auto-calculate Zakat Al-Mal with live silver prices and Nisab check.</p>
             </article>
 
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x1F947;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="coins"></i></span>
               <h3>Silver Tracker</h3>
               <p>Track your silver grams with real-time price per gram in your currency.</p>
             </article>
 
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x1F4CB;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
               <h3>Bills Manager</h3>
               <p>Never miss a recurring payment. Monthly, quarterly, annual.</p>
             </article>
 
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x1F4B8;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="history"></i></span>
               <h3>Transaction History</h3>
               <p>Log income and expenses with 30+ halal categories.</p>
             </article>
 
             <article class="surface feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">&#x1F512;</span>
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
               <h3>Private &amp; Secure</h3>
               <p>Your data is encrypted and protected. No ads, ever.</p>
             </article>
@@ -1519,7 +1519,8 @@
           </div>
 
           <div class="footer-meta">
-            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
             <span>&copy; 2026 BarakahFlow. Built for Muslims, by Muslims.</span>
           </div>
         </div>
@@ -1550,6 +1551,7 @@
   </div>
   </div>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     (function () {
       const root = document.documentElement;
@@ -1692,6 +1694,7 @@
 
       handlePlatformSpecifics();
       checkIOS();
+      lucide.createIcons();
     })();
   </script>
 </body>
