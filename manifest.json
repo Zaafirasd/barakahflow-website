@@ -1,7 +1,7 @@
 {
   "name": "BarakahFlow",
   "short_name": "BarakahFlow",
-  "description": "Halal personal finance for Muslims.",
+  "description": "Premium halal personal finance and Zakat tracker for Muslims.",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#0f172a",

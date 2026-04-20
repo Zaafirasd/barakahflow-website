@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Download BarakahFlow, the premium halal personal finance app for Muslims. Track expenses, calculate Zakat with live silver prices, and manage wealth with Islamic finance principles in mind with ease.">
   <link rel="canonical" href="https://barakahflow-website.vercel.app/">
-  <meta name="keywords" content="halal personal finance, zakat calculator, islamic budgeting app, finance designed with islamic principles in mind, muslim expense tracker, silver price tracking nisab">
+  <meta name="keywords" content="BarakahFlow, barakaflow, halal personal finance, zakat calculator, islamic budgeting app, finance designed with islamic principles in mind, muslim expense tracker, silver price tracking nisab">
   <meta name="theme-color" content="#10B981">
   <link rel="icon" type="image/png" href="Images/logopng.png">
   <link rel="apple-touch-icon" href="Images/logopng.png">
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="author" content="BarakahFlow Team">
+  <meta name="creator" content="BarakahFlow">
+  <meta name="publisher" content="BarakahFlow">
+  <meta name="robots" content="index, follow">
+  <!-- Google Search Console Placeholder -->
+  <meta name="google-site-verification" content="ADD_YOUR_VERIFICATION_CODE_HERE">
+
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -32,8 +39,29 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "name": "BarakahFlow",
+        "alternateName": ["Barakah Flow", "barakaflow"],
+        "url": "https://barakahflow-website.vercel.app/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://barakahflow-website.vercel.app/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "BarakahFlow",
+        "url": "https://barakahflow-website.vercel.app/",
+        "logo": "https://barakahflow-website.vercel.app/Images/logopng.png",
+        "sameAs": [
+          "https://github.com/Zaafirasd/barakahflow-website"
+        ]
+      },
+      {
         "@type": "SoftwareApplication",
         "name": "BarakahFlow",
+        "alternateName": "Barakaflow",
         "operatingSystem": "Android",
         "applicationCategory": "FinanceApplication",
         "description": "Premium halal personal finance and Zakat tracker for Muslims. Track expenses, calculate Zakat with live silver prices, and manage wealth with Islamic finance principles in mind.",
@@ -44,6 +72,7 @@
         },
         "url": "https://barakahflow-website.vercel.app/"
       },
+
       {
         "@type": "FAQPage",
         "mainEntity": [
@@ -1521,7 +1550,8 @@
           <div class="footer-meta">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
-            <span>&copy; 2026 BarakahFlow. Built for Muslims, by Muslims.</span>
+            <span>&copy; 2026 BarakahFlow. Built for Muslims by the BarakahFlow Team.</span>
+
           </div>
         </div>
       </div>

@@ -1,0 +1,29 @@
+# BarakahFlow (Barakaflow)
+
+> The premium halal personal finance app for Muslims.
+
+## Overview
+BarakahFlow is a specialized budgeting and Zakat tracking application designed with Islamic finance principles in mind. It helps users manage their wealth, track expenses across halal categories, and calculate religious obligations like Zakat Al-Mal with real-time silver market data.
+
+## Features
+- **Smart Budgeting**: Halal expense categories (Sadaqah, Zakat, Hajj, Eid).
+- **Zakat Calculator**: Automated calculations using live silver prices and Nisab thresholds.
+- **Silver Tracker**: Real-time silver price monitoring per gram.
+- **Privacy First**: Encrypted data storage, no ads, no trackers.
+
+## Technical Details
+- **Platform**: Android (.apk), iOS (PWA/Safari).
+- **Technology**: Built for speed and reliability with high-aesthetic modern UI.
+- **Status**: Alpha release (Android).
+
+## Key Links
+- [Homepage](https://barakahflow-website.vercel.app/)
+- [Privacy Policy](https://barakahflow-website.vercel.app/privacy-policy.html)
+- [Android Download](https://barakahflow-website.vercel.app/downloads/barakahflow-v1.apk)
+- [iOS Launch](https://barakah-flow.vercel.app/signin)
+
+## Metadata
+- **Author**: BarakahFlow Team
+- **Name**: BarakahFlow
+- **Alternate Name**: Barakaflow (common typo)
+- **Repo**: https://github.com/Zaafirasd/barakahflow-website
