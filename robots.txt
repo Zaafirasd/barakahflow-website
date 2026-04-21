@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barakahflow-website.vercel.app/sitemap.xml
+Sitemap: https://barakahflowapp.com/sitemap.xml
