@@ -1,9 +1,9 @@
 # BarakahFlow (Barakaflow)
 
-> The premium halal personal finance app for Muslims.
+> The Faith-First wealth management app for Muslims.
 
 ## Overview
-BarakahFlow is a specialized budgeting and Zakat tracking application designed with Islamic finance principles in mind. It helps users manage their wealth, track expenses across halal categories, and calculate religious obligations like Zakat Al-Mal with real-time silver market data.
+BarakahFlow is a Faith-First wealth management and Zakat tracking application designed with Islamic finance principles in mind. It helps users manage their wealth, track expenses across halal categories, and calculate religious obligations like Zakat Al-Mal with real-time silver market data.
 
 ## Features
 - **Smart Budgeting**: Halal expense categories (Sadaqah, Zakat, Hajj, Eid).
