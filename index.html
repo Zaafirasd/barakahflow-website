@@ -1727,6 +1727,35 @@
       handlePlatformSpecifics();
       checkIOS();
       lucide.createIcons();
+
+      // BarakahFlow website analytics
+      const ANALYTICS_URL = 'https://app.barakahflowapp.com/api/analytics/website';
+      function trackWebsite(metric) {
+        fetch(ANALYTICS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ metric }),
+          keepalive: true,
+        }).catch(function() {});
+      }
+
+      // Track page visit (once per session)
+      if (!sessionStorage.getItem('bf_visited')) {
+        sessionStorage.setItem('bf_visited', '1');
+        trackWebsite('website_visit');
+      }
+
+      // Track APK download clicks
+      ['nav-download-btn', 'hero-android-btn'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', function() { trackWebsite('website_apk_download'); }, { once: true });
+      });
+
+      // Track iOS launch clicks
+      ['nav-ios-btn', 'hero-ios-btn'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', function() { trackWebsite('website_ios_launch'); }, { once: true });
+      });
     })();
   </script>
 </body>
