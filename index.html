@@ -549,11 +549,40 @@
     .hero-grid {
       position: relative;
       z-index: 1;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       align-items: center;
       text-align: center;
       gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        gap: 3.5rem;
+      }
+
+      .hero-grid .eyebrow,
+      .hero-grid .hero-actions {
+        justify-content: flex-start;
+      }
+
+      .hero-copy p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .hero-meta {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none !important;
+      }
+
+      .hero-visual {
+        margin-top: 0;
+        justify-content: center;
+      }
     }
 
     .hero-copy {
@@ -596,6 +625,13 @@
 
     .hero-title span {
       display: block;
+    }
+
+    .hero-title span:last-child {
+      background: linear-gradient(90deg, #34d399 0%, #10b981 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-copy p {
@@ -743,6 +779,25 @@
       overflow: hidden;
       padding: 1.45rem;
       min-height: 14.2rem;
+      transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 1.5rem; right: 1.5rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
+      pointer-events: none;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow:
+        0 28px 60px -16px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(16, 185, 129, 0.15),
+        inset 0 1px 0 rgba(16, 185, 129, 0.06);
     }
 
     .feature-card::before {
@@ -767,7 +822,10 @@
       background: rgba(16, 185, 129, 0.12);
       color: var(--emerald);
       font-size: 1.45rem;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(16, 185, 129, 0.22),
+        0 4px 16px rgba(16, 185, 129, 0.14);
     }
 
     .feature-card h3 {
@@ -1430,17 +1488,6 @@
                   <a class="button button-secondary" href="#features">Learn More</a>
                 </div>
 
-                <div class="hero-visual reveal">
-                  <div class="hero-app-card">
-                    <img src="DarkDash.PNG" class="img-dark" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in dark mode">
-                    <img src="LightDash.PNG" class="img-light" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in light mode">
-                  </div>
-                  <div class="hero-app-card">
-                    <img src="DarkZakat.PNG" class="img-dark" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in dark mode">
-                    <img src="LightZaakt.PNG" class="img-light" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in light mode">
-                  </div>
-                </div>
-
                 <div class="hero-meta" data-stagger>
                   <div class="hero-stat">
                     <strong>Zakat Al-Mal</strong>
@@ -1454,6 +1501,17 @@
                     <strong>Islamic Categories</strong>
                     <span>Sadaqah, Sukuk, Hajj, Eid and more</span>
                   </div>
+                </div>
+              </div>
+
+              <div class="hero-visual reveal">
+                <div class="hero-app-card">
+                  <img src="DarkDash.PNG" class="img-dark" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in dark mode">
+                  <img src="LightDash.PNG" class="img-light" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in light mode">
+                </div>
+                <div class="hero-app-card">
+                  <img src="DarkZakat.PNG" class="img-dark" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in dark mode">
+                  <img src="LightZaakt.PNG" class="img-light" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in light mode">
                 </div>
               </div>
             </div>
