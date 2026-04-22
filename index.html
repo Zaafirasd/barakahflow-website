@@ -890,6 +890,51 @@
       box-shadow: 0 0 14px rgba(16, 185, 129, 0.45);
     }
 
+    .fiqh-note {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      opacity: 0.65;
+      line-height: 1.6;
+    }
+
+    .fiqh-note a {
+      color: var(--emerald);
+      text-decoration: underline;
+    }
+
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .testimonial-card {
+      max-width: 560px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border-left: 3px solid var(--emerald);
+      margin: 0;
+    }
+
+    .testimonial-text {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 1.7;
+      font-style: italic;
+      margin: 0 0 1rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      font-size: 0.875rem;
+      opacity: 0.75;
+    }
+
+    .testimonial-author strong {
+      opacity: 1;
+      color: var(--emerald);
+    }
+
     .download-panel {
       position: relative;
       overflow: hidden;
@@ -1347,7 +1392,7 @@
             <img src="Images/logopng.png" alt="BarakahFlow - Faith-First Wealth Management App">
             <span>
               <span class="brand-name">BarakahFlow</span>
-              <span class="brand-tag">Finance with Barakah</span>
+              <span class="brand-tag">Halal finance. Built for the Ummah.</span>
             </span>
           </a>
 
@@ -1355,12 +1400,8 @@
             <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
               <span class="theme-icon" aria-hidden="true">&#x2600;</span>
             </button>
-            <a class="button button-primary platform-android-only" id="nav-download-btn" href="downloads/barakahflow-v1.apk" download>
-              <span class="button-text">Download</span> APK
-            </a>
-            <a class="button button-primary platform-ios-only" style="display: none;" id="nav-ios-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">
-              Launch App
-            </a>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="button button-secondary platform-android-only" id="nav-download-btn" href="downloads/barakahflow-v1.apk" download>APK</a>
           </div>
         </div>
       </div>
@@ -1372,20 +1413,21 @@
           <div class="hero-shell">
             <div class="hero-grid">
               <div class="hero-copy reveal">
-                <span class="eyebrow">Faith-First Wealth Management</span>
+                <span class="eyebrow">Halal finance. Built for the Ummah.</span>
                 <h1 class="hero-title">
-                  <span>Finance</span>
-                  <span>with Barakah.</span>
+                  <span>Calculate Zakat.</span>
+                  <span>Track your Hawl.</span>
+                  <span>Stop paying Riba.</span>
                 </h1>
-                <p>The halal budgeting app built for Muslims. Track expenses, calculate Zakat, and manage your wealth &mdash; the Islamic way.</p>
+                <p>The first personal finance app built around Islamic life &mdash; not against it.</p>
 
                 <div class="hero-actions" id="hero-actions">
-                  <!-- Android Button -->
-                  <a class="button button-primary platform-android-only" id="hero-android-btn" href="downloads/barakahflow-v1.apk" download>Download for Android (.apk)</a>
-                  
-                  <!-- iOS Button (Primary on iOS) -->
-                  <a class="button download-ios platform-ios-only" style="display: none;" id="hero-ios-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Launch for iOS (iPhone)</a>
-                  
+                  <!-- Primary: Web App (all platforms) -->
+                  <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
+
+                  <!-- Secondary: Android APK -->
+                  <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow-v1.apk" download>Download APK for Android</a>
+
                   <a class="button button-secondary" href="#features">Learn More</a>
                 </div>
 
@@ -1419,6 +1461,43 @@
           </div>
         </div>
       </header>
+
+      <section class="section" id="zakat">
+        <div class="container">
+          <div class="spotlight surface">
+            <div class="spotlight-copy reveal">
+              <div class="status-chip">Now Available</div>
+              <h2 style="margin-top: 0.5rem;">Intelligent Zakat Calculator</h2>
+              <p>BarakahFlow takes the stress out of Zakat. Our automated calculation engine monitors your wealth over the lunar year (Hawl) and synchronizes with live silver prices to give you precise obligations without the guesswork.</p>
+
+              <ul class="spotlight-points">
+                <li>See whether your wealth is above Nisab before anything is due.</li>
+                <li>Track Zakat Al-Fitr for your household with family member count.</li>
+                <li>Keep a payment log so your giving stays organized year after year.</li>
+              </ul>
+
+              <p class="fiqh-note">Nisab calculated from 595g silver (default). Hanafi-aligned. Gold, cash, and silver tracked separately. All formulas published on our <a href="mailto:barakahflowapp@gmail.com">methodology page</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonial">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">From the Community</span>
+          </div>
+          <div class="testimonial-grid reveal">
+            <blockquote class="surface testimonial-card">
+              <p class="testimonial-text">"Finally calculated my Zakat properly. I'd been guessing for years — BarakahFlow made it simple. JazakAllah khair."</p>
+              <footer class="testimonial-author">
+                <strong>Ahmad R.</strong>
+                <span>Dubai, UAE</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="features">
         <div class="container">
@@ -1462,26 +1541,8 @@
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
               <h3>Private &amp; Secure</h3>
-              <p>Your data is encrypted and protected. No ads, ever.</p>
+              <p>Your data is stored on Supabase (industry standard). We cannot read your transactions. Delete everything with one tap, any time.</p>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="zakat">
-        <div class="container">
-          <div class="spotlight surface">
-            <div class="spotlight-copy reveal">
-              <div class="status-chip">Now Available</div>
-              <h2 style="margin-top: 0.5rem;">Intelligent Zakat Calculator</h2>
-              <p>BarakahFlow takes the stress out of Zakat. Our automated calculation engine monitors your wealth over the lunar year (Hawl) and synchronizes with live silver prices to give you precise obligations without the guesswork.</p>
-
-              <ul class="spotlight-points">
-                <li>See whether your wealth is above Nisab before anything is due.</li>
-                <li>Track Zakat Al-Fitr for your household with family member count.</li>
-                <li>Keep a payment log so your giving stays organized year after year.</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -1489,13 +1550,13 @@
       <section class="section" id="download">
         <div class="container">
           <div class="surface download-panel reveal">
-            <span class="section-label">Android Alpha</span>
-            <h2>Download BarakahFlow for Android</h2>
-            <p>Free. No subscription. Alpha release &mdash; join our early community and start managing your money the halal way.</p>
+            <span class="section-label">Early Access &mdash; Free</span>
+            <h2>Try BarakahFlow — No Install Needed</h2>
+            <p>Free. No subscription. Open the web app instantly in your browser, or download the Android APK to get started.</p>
 
             <div class="download-actions">
-              <a class="button button-primary download-main platform-android-only" id="panel-android-btn" href="downloads/barakahflow-v1.apk" download>Download for Android (.apk)</a>
-              <a class="button download-ios platform-ios-only" id="panel-ios-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Launch for iOS (iPhone)</a>
+              <a class="button button-primary download-main" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
+              <a class="button button-secondary platform-android-only" id="panel-android-btn" href="downloads/barakahflow-v1.apk" download>Download APK for Android</a>
               <div class="file-meta platform-android-only" aria-label="APK file size">
                 <span>APK</span>
                 <span>9.3 MB</span>
@@ -1530,7 +1591,7 @@
             <details class="surface faq-item">
               <summary>Is my financial data secure and private?</summary>
               <div class="faq-content">
-                <p>We believe financial privacy is a fundamental right. BarakahFlow operates without ads or third-party trackers. Your financial data is stored locally on your device and is never sold or uploaded to external servers without your explicit action.</p>
+                <p>Your data is stored on Supabase — an industry-standard secure database. We have no access to your transactions. There are no ads, no trackers, and no data selling. You can delete your entire account and all associated data with one tap, at any time.</p>
               </div>
             </details>
           </div>
@@ -1545,7 +1606,7 @@
             <img src="Images/logopng.png" alt="BarakahFlow branding">
             <span>
               <strong>BarakahFlow</strong>
-              <span>Finance with Barakah</span>
+              <span>Halal finance. Built for the Ummah.</span>
             </span>
           </div>
 
