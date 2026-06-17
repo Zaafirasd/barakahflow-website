@@ -1458,7 +1458,7 @@
             <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
               <span class="theme-icon" aria-hidden="true">&#x2600;</span>
             </button>
-            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open App</a>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer"><span class="button-text">Open App</span></a>
           </div>
         </div>
       </div>
@@ -1483,7 +1483,7 @@
                   <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
 
                   <!-- Secondary: Android APK -->
-                  <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow-v1.apk" download>Download APK for Android</a>
+                  <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
 
                   <a class="button button-secondary" href="#features">Learn More</a>
                 </div>
@@ -1506,12 +1506,12 @@
 
               <div class="hero-visual reveal">
                 <div class="hero-app-card">
-                  <img src="DarkDash.PNG" class="img-dark" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in dark mode">
-                  <img src="LightDash.PNG" class="img-light" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in light mode">
+                  <img src="Images/hero-dashboard-dark.webp" class="img-dark" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in dark mode">
+                  <img src="Images/hero-dashboard-light.webp" class="img-light" alt="BarakahFlow mobile app dashboard showing halal expense tracking and budgeting designed with Islamic finance principles in mind in light mode">
                 </div>
                 <div class="hero-app-card">
-                  <img src="DarkZakat.PNG" class="img-dark" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in dark mode">
-                  <img src="LightZaakt.PNG" class="img-light" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in light mode">
+                  <img src="Images/hero-zakat-dark.webp" class="img-dark" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in dark mode">
+                  <img src="Images/hero-zakat-light.webp" class="img-light" alt="BarakahFlow Zakat calculator showing Niṣāb status and wealth purification features in light mode">
                 </div>
               </div>
             </div>
@@ -1529,6 +1529,7 @@
 
               <ul class="spotlight-points">
                 <li>See whether your wealth is above Nisab before anything is due.</li>
+                <li>Auto-save inputs (Cash, Metals, Debts, Business Inventory) so you never lose progress.</li>
                 <li>Track Zakat Al-Fitr for your household with family member count.</li>
                 <li>Keep a payment log so your giving stays organized year after year.</li>
               </ul>
@@ -1558,7 +1559,7 @@
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="moon"></i></span>
               <h3>Zakat Calculator</h3>
-              <p>Auto-calculate Zakat Al-Mal with live silver prices and Nisab check.</p>
+              <p>Auto-calculate Zakat Al-Mal with live silver prices and Nisab check. Progress is auto-saved.</p>
             </article>
 
             <article class="surface feature-card reveal">
@@ -1580,6 +1581,24 @@
             </article>
 
             <article class="surface feature-card reveal">
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="heart"></i></span>
+              <h3>Friday Sadaqah</h3>
+              <p>Weekly notification alerts you to allocate small blessings on Friday, deep-linking straight to Sadaqah.</p>
+            </article>
+
+            <article class="surface feature-card reveal">
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="bell"></i></span>
+              <h3>Smart Notifications</h3>
+              <p>Keep track of bills, Zakat anniversaries, and daily logs with custom branded system notifications.</p>
+            </article>
+
+            <article class="surface feature-card reveal">
+              <span class="feature-icon" aria-hidden="true"><i data-lucide="save"></i></span>
+              <h3>Local Auto-Save</h3>
+              <p>Calculator inputs (Cash, Metals, Debts, Business Inventory) auto-save locally to prevent data loss on navigation.</p>
+            </article>
+
+            <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
               <h3>Private &amp; Secure</h3>
               <p>Your data is stored on Supabase (industry standard). We cannot read your transactions. Delete everything with one tap, any time.</p>
@@ -1597,10 +1616,10 @@
 
             <div class="download-actions">
               <a class="button button-primary download-main" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
-              <a class="button button-secondary platform-android-only" id="panel-android-btn" href="downloads/barakahflow-v1.apk" download>Download APK for Android</a>
+              <a class="button button-secondary platform-android-only" id="panel-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
               <div class="file-meta platform-android-only" aria-label="APK file size">
                 <span>APK</span>
-                <span>9.3 MB</span>
+                <span>32.5 MB</span>
               </div>
             </div>
         </div>
@@ -1848,7 +1867,7 @@
       }
 
       // Track APK download clicks
-      ['nav-download-btn', 'hero-android-btn'].forEach(function(id) {
+      ['nav-download-btn', 'hero-android-btn', 'panel-android-btn'].forEach(function(id) {
         var el = document.getElementById(id);
         if (el) el.addEventListener('click', function() { trackWebsite('website_apk_download'); }, { once: true });
       });

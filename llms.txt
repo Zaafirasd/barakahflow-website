@@ -19,7 +19,7 @@ BarakahFlow is a Faith-First wealth management and Zakat tracking application de
 ## Key Links
 - [Homepage](https://barakahflowapp.com/)
 - [Privacy Policy](https://barakahflowapp.com/privacy-policy.html)
-- [Android Download](https://barakahflowapp.com/downloads/barakahflow-v1.apk)
+- [Android Download](https://barakahflowapp.com/downloads/barakahflow.apk)
 - [iOS Launch](https://app.barakahflowapp.com)
 
 ## Metadata
