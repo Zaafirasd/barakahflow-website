@@ -9,7 +9,7 @@ BarakahFlow is a Faith-First wealth management and Zakat tracking application de
 - **Smart Budgeting**: Halal expense categories (Sadaqah, Zakat, Hajj, Eid).
 - **Zakat Calculator**: Automated calculations using live gold & silver prices and Nisab thresholds.
 - **Metals Tracker**: Real-time gold and silver price monitoring per gram.
-- **Privacy First**: Encrypted data storage, no ads, no trackers.
+- **Privacy First**: Strict data isolation (Row Level Security), no ads, no trackers.
 
 ## Technical Details
 - **Platform**: Android (.apk), iOS (PWA/Safari).
