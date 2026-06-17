@@ -156,37 +156,34 @@
     }
 
     html[data-theme="light"] {
-      --surface: rgba(255, 255, 255, 0.76);
-      --surface-border: rgba(15, 23, 42, 0.04);
+      --surface: #ffffff;
+      --surface-border: rgba(15, 23, 42, 0.08);
       --surface-shadow:
-        0 24px 60px -12px rgba(15, 23, 42, 0.08),
+        0 12px 30px -10px rgba(15, 23, 42, 0.04),
         0 0 0 1px rgba(15, 23, 42, 0.03);
-      --text: #1e293b;
-      --text-soft: #475569;
-      --muted: #64748b;
-      --nav-bg: rgba(255, 255, 255, 0.72);
+      --text: #0f172a;
+      --text-soft: #334155;
+      --muted: #475569;
+      --nav-bg: rgba(255, 255, 255, 0.9);
       --secondary-bg: rgba(15, 23, 42, 0.04);
-      --secondary-border: rgba(15, 23, 42, 0.05);
+      --secondary-border: rgba(15, 23, 42, 0.06);
       --glass-bg: rgba(15, 23, 42, 0.03);
       --glass-border: rgba(15, 23, 42, 0.06);
-      --stat-bg: rgba(255, 255, 255, 0.55);
-      --shell-border: rgba(15, 23, 42, 0.04);
-      --spotlight-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.88));
-      --spotlight-text: #1e293b;
-      --spotlight-copy: #475569;
+      --stat-bg: #f8fafc;
+      --shell-border: rgba(15, 23, 42, 0.06);
+      --spotlight-bg: linear-gradient(145deg, #ffffff, #f8fafc);
+      --spotlight-text: #0f172a;
+      --spotlight-copy: #334155;
       --hero-gradient:
         linear-gradient(135deg,
-          rgba(255, 255, 255, 0.95) 0%,
-          rgba(248, 250, 252, 0.9) 48%,
-          rgba(241, 245, 249, 0.85) 100%);
-      --top-glow: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, transparent 100%);
+          #ffffff 0%,
+          #f8fafc 48%,
+          #f1f5f9 100%);
+      --top-glow: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, transparent 100%);
       --page-backdrop:
-        radial-gradient(circle at 0% 0%, rgb(182, 158, 203) 0%, transparent 50%),
-        radial-gradient(circle at 100% 0%, rgb(165, 198, 191) 0%, transparent 50%),
-        linear-gradient(180deg, #eeecf4 0%, #feffff 100%);
-      --mesh:
-        linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+        radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.04) 0%, transparent 60%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      --mesh: transparent;
     }
 
     * {
