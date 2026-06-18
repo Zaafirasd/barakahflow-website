@@ -1280,37 +1280,46 @@
       }
 
       .navbar-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
         gap: 0.5rem;
         padding: 0.6rem 0.8rem;
       }
 
-      .brand-name {
-        font-size: 0.94rem;
+      .brand {
+        grid-column: 2;
+        justify-content: center;
       }
 
-      .brand-tag {
+      .brand img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      .brand-name, .brand-tag {
         display: none;
       }
 
       .nav-actions {
-        gap: 0.4rem;
+        display: contents;
+      }
+
+      .theme-toggle {
+        grid-column: 1;
+        justify-self: start;
+        width: 2.75rem;
+        height: 2.75rem;
       }
 
       .nav-actions .button {
-        min-height: 2.75rem;
-        padding-inline: 0.85rem;
-        font-size: 0.84rem;
+        display: none;
       }
 
       @media (max-width: 380px) {
-        .brand-name {
-          display: none;
-        }
-        .nav-actions .button-text {
-          display: none;
-        }
-        .nav-actions .button {
-          padding-inline: 0.7rem;
+        .brand img {
+          width: 2.8rem;
+          height: 2.8rem;
         }
       }
 
