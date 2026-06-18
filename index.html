@@ -1280,16 +1280,10 @@
       }
 
       .navbar-inner {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.6rem 0.8rem;
-      }
-
-      .brand {
-        grid-column: 2;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 0.6rem 0.8rem;
       }
 
       .brand img {
@@ -1306,11 +1300,19 @@
       }
 
       .theme-toggle {
-        grid-column: 1;
-        justify-self: start;
-        align-self: center;
-        width: 2.75rem;
-        height: 2.75rem;
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        z-index: 9999;
+        background: var(--surface);
+        border: 1px solid var(--emerald);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .theme-toggle .theme-icon {
+        font-size: 1.5rem;
       }
 
       .nav-actions .button {
@@ -1321,6 +1323,10 @@
         .brand img {
           width: 4.2rem;
           height: 4.2rem;
+        }
+        .theme-toggle {
+          bottom: 1rem;
+          right: 1rem;
         }
       }
 
