@@ -1521,7 +1521,7 @@
             <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
               <span class="theme-icon" aria-hidden="true">&#x2600;</span>
             </button>
-            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer"><span class="button-text">Open App</span></a>
+            <a class="button button-primary" id="nav-open-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer"><span class="button-text">Open App</span></a>
           </div>
         </div>
       </div>
@@ -1543,7 +1543,7 @@
 
                 <div class="hero-actions" id="hero-actions">
                   <!-- Primary: Web App (all platforms) -->
-                  <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
+                  <a class="button button-primary" id="hero-open-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
 
                   <!-- Secondary: Android APK -->
                   <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
@@ -1669,7 +1669,7 @@
             <p>Free. No subscription. Open the web app instantly in your browser, or download the Android APK to get started.</p>
 
             <div class="download-actions">
-              <a class="button button-primary download-main" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
+              <a class="button button-primary download-main" id="panel-open-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
               <a class="button button-secondary platform-android-only" id="panel-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
               <div class="file-meta platform-android-only" aria-label="APK file size">
                 <span>APK</span>
@@ -1926,10 +1926,16 @@
         if (el) el.addEventListener('click', function() { trackWebsite('website_apk_download'); }, { once: true });
       });
 
-      // Track iOS launch clicks
-      ['nav-ios-btn', 'hero-ios-btn'].forEach(function(id) {
+      // Track "Open in browser" launches, split by platform (APK downloads are tracked separately above)
+      var isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      var isAndroidDevice = /Android/.test(navigator.userAgent);
+      ['nav-open-btn', 'hero-open-btn', 'panel-open-btn'].forEach(function(id) {
         var el = document.getElementById(id);
-        if (el) el.addEventListener('click', function() { trackWebsite('website_ios_launch'); }, { once: true });
+        if (!el) return;
+        el.addEventListener('click', function() {
+          if (isIOSDevice) trackWebsite('website_ios_launch');
+          else if (isAndroidDevice) trackWebsite('website_android_launch');
+        }, { once: true });
       });
     })();
   </script>
