@@ -8,8 +8,11 @@
   <meta name="keywords" content="BarakahFlow, barakaflow, halal personal finance, zakat calculator, hanafi zakat calculator, nisab calculator, islamic budgeting app, muslim expense tracker, hawl tracker, gold and silver nisab, aaoifi zakat, multi currency muslim finance app">
   <meta name="theme-color" content="#10B981">
   <script defer src="/_vercel/insights/script.js"></script>
-  <link rel="icon" type="image/png" href="Images/logopng.png">
-  <link rel="apple-touch-icon" href="Images/logopng.png">
+  <!-- Square icons. The brand wordmark is 2:1, so it must never be used as a
+       favicon directly — browsers squash it into their square slot. -->
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +98,7 @@
             "name": "How is BarakahFlow different from a normal budgeting app?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Zakat is the product, not a widget. A full rules engine sits at the centre of the app, with around fifteen genuinely contested questions each presented as an explicit choice that names the school or standards body it comes from. Islamic giving — Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj and Umrah, Eid — has its own heading in the budget rather than being buried under miscellaneous. Gold and multiple currencies are native to the ledger."
+              "text": "Zakat is the product, not a widget. A full rules engine sits at the centre of the app, with around fifteen genuinely contested questions each presented as an explicit choice that names the school or standards body it comes from. Islamic giving (Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj and Umrah, Eid) has its own heading in the budget rather than being buried under miscellaneous. Gold and multiple currencies are native to the ledger."
             }
           },
           {
@@ -111,7 +114,7 @@
             "name": "How is nisab calculated?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nisab is drawn from live international gold and silver spot prices, refreshed roughly every thirty seconds while the calculator is open and shown in your own currency. The default threshold is the lower of the two metals — in practice silver — and you can switch to gold only or silver only. Three weight conventions are available: AAOIFI at 85g gold and 595g silver, the classical Tola convention at 87.48g and 612.36g, and MUIS Singapore at 86g and 595g."
+              "text": "Nisab is drawn from live international gold and silver spot prices, refreshed roughly every thirty seconds while the calculator is open and shown in your own currency. The default threshold is the lower of the two metals, in practice silver, and you can switch to gold only or silver only. Three weight conventions are available: AAOIFI at 85g gold and 595g silver, the classical Tola convention at 87.48g and 612.36g, and MUIS Singapore at 86g and 595g."
             }
           },
           {
@@ -127,7 +130,7 @@
             "name": "Can I deduct my mortgage from my Zakat?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not in full — no school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat — nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible."
+              "text": "Not in full. No school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat: nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible."
             }
           },
           {
@@ -151,7 +154,7 @@
             "name": "Do you track me? What analytics are running?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "There is no advertising tracking, no ad networks, no third-party marketing pixels and no selling of data. What does run is Vercel Analytics & Speed Insights. It measures technical performance — how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It uses no cookies and no fingerprinting, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure. Separately, the app keeps a handful of anonymous counters such as how many people finished setup, with no personal information attached."
+              "text": "There is no advertising tracking, no ad networks, no third-party marketing pixels and no selling of data. What does run is Vercel Analytics & Speed Insights. It measures technical performance: how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It uses no cookies and no fingerprinting, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure. Separately, the app keeps a handful of anonymous counters such as how many people finished setup, with no personal information attached."
             }
           },
           {
@@ -159,7 +162,7 @@
             "name": "Does BarakahFlow cost anything?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. BarakahFlow is free, with no subscription and no ads."
+              "text": "BarakahFlow is free, with no subscription and no ads."
             }
           }
         ]
@@ -455,8 +458,8 @@
     }
 
     .brand img {
-      width: 2.7rem;
-      height: 2.7rem;
+      width: auto;
+      height: 1.9rem;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -1142,8 +1145,8 @@
     }
 
     .footer-brand img {
-      width: 2.6rem;
-      height: 2.6rem;
+      width: auto;
+      height: 1.8rem;
       object-fit: contain;
     }
 
@@ -1357,8 +1360,8 @@
       }
 
       .brand img {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: auto;
+        height: 2.4rem;
       }
 
       .brand-name, .brand-tag {
@@ -1841,7 +1844,7 @@
                   <span>the way your deen</span>
                   <span>asks it to be.</span>
                 </h1>
-                <p>Everyday budgeting, bills and savings &mdash; built around a Zakat engine that follows your school of jurisprudence, not a one-size-fits-all formula.</p>
+                <p>Everyday budgeting, bills and savings, built around a Zakat engine that follows your school of jurisprudence, not a one-size-fits-all formula.</p>
 
                 <div class="hero-actions" id="hero-actions">
                   <!-- Primary: Web App (all platforms) -->
@@ -1881,13 +1884,13 @@
             <div class="spotlight-copy reveal">
               <div class="status-chip">Live now</div>
               <h2 style="margin-top: 0.5rem;">Most Zakat tools give you one answer. There isn&rsquo;t one answer.</h2>
-              <p>Scholars have differed on these questions for fourteen centuries, and a calculator that hides that difference is not being accurate &mdash; it is being silent. BarakahFlow does the opposite: it asks which position you follow, tells you who holds it, applies it, and keeps the record.</p>
+              <p>Scholars have differed on these questions for fourteen centuries. A calculator that hides that difference is not being accurate, it is being silent. BarakahFlow does the opposite: it asks which position you follow, tells you who holds it, applies it, and keeps the record.</p>
 
               <ul class="spotlight-points">
                 <li>Around fifteen genuinely contested questions, each an explicit choice.</li>
                 <li>Every option names the school or standards body it comes from.</li>
                 <li>Positions marked as the cautious, balanced or lenient side of the dispute.</li>
-                <li>A line-by-line breakdown showing every amount counted &mdash; and every amount deliberately left out.</li>
+                <li>A line-by-line breakdown of every amount counted, and every amount left out.</li>
               </ul>
 
               <p class="fiqh-note">BarakahFlow states positions; it does not issue fatwa. For a binding ruling on your own situation, speak to a qualified scholar.</p>
@@ -1920,36 +1923,32 @@
           <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
             <span class="section-label">Nisab &amp; Hawl</span>
             <h2 class="section-heading">The threshold, drawn the way you draw it.</h2>
-            <p class="section-copy">Zakat is only due once your wealth passes a threshold set by the value of gold or silver. Which metal you use changes the answer significantly, because the two have drifted far apart in modern times.</p>
+            <p class="section-copy">Zakat is due only once your wealth passes a threshold set by the value of gold or silver. Which metal you use changes the answer, because the two have drifted far apart.</p>
           </div>
 
           <div class="detail-grid" data-stagger>
             <article class="surface detail-card reveal">
               <h3>Which metal sets the line</h3>
-              <p>The default is the lower of the two &mdash; in practice, silver. This is the Hanafi rule for mixed holdings and the recommendation of the National Zakat Foundation and most charity bodies: a lower threshold means more people qualify to pay, which is the cautious position.</p>
-              <p>You can switch to silver only, fixing the threshold regardless of gold prices, or to gold only &mdash; a higher threshold that is defensible for someone whose zakatable wealth is gold alone.</p>
-            </article>
-
-            <article class="surface detail-card reveal">
-              <h3>Seeing where you stand</h3>
-              <p>The threshold is shown in your own currency, alongside the weight and metal it came from, with a progress bar telling you how close you are to it &mdash; so a user below the line understands why nothing is owed rather than simply seeing a zero.</p>
+              <p>The default is the lower of the two, which in practice means silver. That is the Hanafi rule for mixed holdings and what most charity bodies recommend: a lower threshold means more people qualify to pay.</p>
+              <p>You can switch to silver only, or to gold only for a higher threshold. Either way it is shown in your own currency with a progress bar, so if nothing is owed you can see why.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>A countdown that follows the moon</h3>
-              <p>Days elapsed, days remaining, and the due date in both the Gregorian and Hijri calendar &mdash; &ldquo;12 Ramadan 1447&rdquo;, not just a date in March. The countdown follows the true lunar anniversary rather than a flat 354 days, which would drift by roughly a day each year.</p>
-              <p>Paying your Zakat automatically restarts the year from the day of payment, as classical fiqh requires.</p>
+              <p>Days elapsed, days remaining, and the due date in both calendars: &ldquo;12 Ramadan 1447&rdquo;, not just a date in March.</p>
+              <p>It tracks the true lunar anniversary rather than a flat 354 days, which would drift by about a day a year. Paying your Zakat restarts the year from the day you paid.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>Lunar or solar, your choice</h3>
-              <p>Keep a lunar year and pay 2.5%. Prefer to anchor to a Gregorian date for accounting convenience and the rate is automatically raised to 2.577% &mdash; a solar year is about eleven days longer, and the uplift keeps your lifetime obligation whole. Permitted by AAOIFI, the OIC Fiqh Academy and Kuwait&rsquo;s Zakat House.</p>
+              <p>Keep a lunar year and pay 2.5%. Anchor to a Gregorian date instead and the rate rises automatically to 2.577%, because a solar year is about eleven days longer.</p>
+              <p>The uplift keeps your lifetime obligation whole. Permitted by AAOIFI, the OIC Fiqh Academy and Kuwait&rsquo;s Zakat House.</p>
             </article>
           </div>
 
           <div class="table-wrap reveal">
             <table class="ref-table">
-              <caption>Weight conventions &mdash; because the prophetic weights convert into modern grams in more than one way</caption>
+              <caption>Weight conventions: the prophetic weights convert into modern grams in more than one way</caption>
               <thead>
                 <tr>
                   <th scope="col">Convention</th>
@@ -1980,11 +1979,11 @@
               </tbody>
             </table>
           </div>
-          <p class="table-note">The spread between these conventions is about 2.8% &mdash; immaterial on a small holding, very material on a large one.</p>
+          <p class="table-note">The spread between these conventions is about 2.8%: immaterial on a small holding, very material on a large one.</p>
 
           <div class="table-wrap reveal">
             <table class="ref-table">
-              <caption>Regional presets &mdash; sensible starting positions, every field still editable</caption>
+              <caption>Regional presets: sensible starting positions, every field still editable</caption>
               <thead>
                 <tr>
                   <th scope="col">Preset</th>
@@ -2034,35 +2033,36 @@
           <div class="detail-grid" data-stagger>
             <article class="surface detail-card reveal">
               <h3>Live gold &amp; silver pricing</h3>
-              <p>The threshold is a weight of metal, so it is only as good as the price behind it. BarakahFlow pulls live international spot prices, refreshing roughly every thirty seconds while the calculator is open, shown in your own currency.</p>
-              <p>A Live Market / Manual Mode switch lets you override with a local price. If the live feed is ever unavailable, the app says so and stamps the last known price with its time &mdash; it never presents a stale number as current.</p>
+              <p>The threshold is a weight of metal, so it is only as good as the price behind it. BarakahFlow pulls live international spot prices in your own currency, refreshing every thirty seconds or so while the calculator is open.</p>
+              <p>You can override with a local price instead. If the feed goes down the app says so and timestamps the last known price, rather than passing off a stale number as current.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>Gold purity, handled properly</h3>
-              <p>Gold is tracked separately at 24, 22, 21 and 18 karat &mdash; the purities people actually own across the Gulf, South Asia and Europe &mdash; in grams or ounces. Each karat is valued at its own quoted price where available, so only the pure gold content enters the calculation. Stones, settings and non-gold alloy are excluded.</p>
-              <p>You can also record how much of each karat is jewellery you actually wear, which is what allows the Hanafi and majority positions on worn adornment to produce genuinely different answers from the same holdings.</p>
+              <p>Gold is tracked at 24, 22, 21 and 18 karat, in grams or ounces. Each karat is valued at its own price, so only the pure gold content counts. Stones, settings and alloy are excluded.</p>
+              <p>You can also record how much of each karat you actually wear. That is what lets the Hanafi and majority positions on worn jewellery give different answers from the same holdings.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>How debts reduce what you owe</h3>
-              <p>This is where most calculators do real damage &mdash; by letting people deduct an entire mortgage balance and wipe out their Zakat altogether. No school permits that.</p>
-              <p>Liabilities payable in the next twelve months are deducted in full. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much of it reduces your Zakat: nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion is never deductible, and the app says so plainly.</p>
+              <p>Most calculators let people deduct an entire mortgage balance and wipe out their Zakat. No school permits that.</p>
+              <p>Liabilities due within twelve months are deducted in full. For a mortgage you choose how much of the principal counts: nothing at all (the default), one month, or twelve lunar months. Interest is never deductible.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>Purifying interest</h3>
-              <p>If interest has accumulated in your bank account, you record it and the app removes it from your wealth base entirely &mdash; then states plainly that it is not your wealth, cannot be purified by paying Zakat on it, and must be given away separately.</p>
+              <p>Record any interest that has landed in your account and the app removes it from your wealth base entirely. It then says plainly that this is not your wealth, cannot be purified by paying Zakat on it, and must be given away separately.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>A record that survives the years</h3>
-              <p>Saving a calculation stores far more than a number: the complete method you were using, the metal prices at that moment, the exchange rates and the date they came from, and the Hijri dates on both ends of your year. A figure from three years ago can be reproduced exactly and defended.</p>
+              <p>Saving a calculation stores more than a number. It keeps the method you used, the metal prices at that moment, the exchange rates and their date, and the Hijri dates at both ends of your year.</p>
+              <p>A figure from three years ago can be reproduced exactly, and defended.</p>
             </article>
 
             <article class="surface detail-card reveal">
               <h3>Everything that counts</h3>
-              <p>Cash and bank balances, unspent salary, gold at four karats split into worn and investment, silver by weight, shares and funds at live market prices, business trading stock, retirement savings net of penalty and tax, digital assets, rental property under four scholarly treatments, money owed to you graded by likelihood of recovery, and debts as deductions.</p>
+              <p>Cash, unspent salary, gold at four karats, silver by weight, shares and funds at market prices, business stock, retirement savings net of penalty and tax, digital assets, rental property under four scholarly treatments, money owed to you, and debts as deductions.</p>
             </article>
           </div>
 
@@ -2079,26 +2079,26 @@
           <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
             <span class="section-label">Why BarakahFlow</span>
             <h2 class="section-heading">The ordinary work of money, done properly.</h2>
-            <p class="section-copy">Income, spending, bills, budgets and savings &mdash; with the obligations of Islamic finance built into the same place rather than bolted on afterwards.</p>
+            <p class="section-copy">Income, spending, bills, budgets and savings, with the obligations of Islamic finance built into the same place rather than bolted on afterwards.</p>
           </div>
 
           <div class="features-grid" data-stagger>
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="layout-dashboard"></i></span>
               <h3>A dashboard that answers first</h3>
-              <p>Balance, net worth, accounts, month spending, budget, bills, savings and investments &mdash; broadest question to most specific, so the answer you need most often is the one you never have to look for.</p>
+              <p>Balance, net worth, accounts, month spending, budget, bills, savings and investments. Ordered broadest to most specific, so the answer you need most often is the one you never have to hunt for.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="zap"></i></span>
               <h3>Quick Spend</h3>
-              <p>Logging a small expense sits behind a single button: type the amount, tap one of your six most-used categories, done. A &ldquo;More details&rdquo; link opens the full form when you need a date, a note or a different account.</p>
+              <p>Logging a small expense sits behind one button: type the amount, tap one of your six most-used categories, done. A &ldquo;More details&rdquo; link opens the full form when you need a date, a note or a different account.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="pie-chart"></i></span>
               <h3>Budgeting with giving built in</h3>
-              <p>A monthly amount per category, a single ring for the month, and Islamic Giving as its own heading &mdash; Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj / Umrah and Eid Expenses, never blurred into one line.</p>
+              <p>A monthly amount per category and a single ring for the month. Islamic Giving gets its own heading: Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj / Umrah and Eid Expenses, never blurred into one line.</p>
             </article>
 
             <article class="surface feature-card reveal">
@@ -2110,37 +2110,37 @@
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="target"></i></span>
               <h3>Savings goals</h3>
-              <p>Hajj and Umrah are first-class goal types, not something filed under &ldquo;travel&rdquo; &mdash; alongside Emergency, Education, Marriage, Home, Car and Other. Each gets its own progress ring and deadline countdown.</p>
+              <p>Hajj and Umrah are first-class goal types, not something filed under &ldquo;travel&rdquo;. Alongside Emergency, Education, Marriage, Home, Car and Other. Each gets its own progress ring and deadline countdown.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="scale"></i></span>
               <h3>Net worth you can trust</h3>
-              <p>Cash across every account, gold valued per karat, silver by weight, investments at market value and business stock &mdash; in one figure, split by a segmented bar. Each account has its own switches for net worth and Zakat.</p>
+              <p>Cash across every account, gold valued per karat, silver by weight, investments at market value and business stock, in one figure split by a segmented bar. Each account has its own switches for net worth and Zakat.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="trending-up"></i></span>
               <h3>Investments</h3>
-              <p>US-listed stocks and ETFs, valued at current market prices and converted into your display currency. Prices refresh nightly and again the moment you open the screen. Your portfolio flows into net worth and, if you want, into Zakat.</p>
+              <p>US-listed stocks and ETFs at current market prices, converted into your display currency. Prices refresh nightly and again the moment you open the screen. Your portfolio flows into net worth and, if you want, into Zakat.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="coins"></i></span>
               <h3>Gold &amp; silver as a real asset</h3>
-              <p>Gold at 24, 22, 21 and 18 karat and silver by weight, in grams or troy ounces. The app knows the difference between fifty grams of 24k bullion and fifty grams of 18k jewellery &mdash; and carries the worn-versus-investment split through to the jewellery ruling you follow.</p>
+              <p>Gold at 24, 22, 21 and 18 karat and silver by weight, in grams or troy ounces. The app knows the difference between fifty grams of 24k bullion and fifty grams of 18k jewellery, and carries the worn-versus-investment split through to the ruling you follow.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="globe"></i></span>
               <h3>Twenty currencies, natively</h3>
-              <p>Amounts are stored in the currency they actually moved in &mdash; nothing is silently converted behind your back. Base currency anchors your figures; display currency is just how you&rsquo;d like to read them today.</p>
+              <p>Amounts are stored in the currency they actually moved in. Nothing is silently converted behind your back. Base currency anchors your figures; display currency is just how you&rsquo;d like to read them today.</p>
             </article>
 
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="wifi-off"></i></span>
               <h3>Works offline</h3>
-              <p>Transactions entered without a connection are held on the device and sent up automatically once you&rsquo;re back online. Your latest figures are cached so the dashboard appears instantly &mdash; and when what you&rsquo;re looking at isn&rsquo;t live, the app says so.</p>
+              <p>Transactions entered without a connection are held on the device and sent up automatically once you&rsquo;re back online. Your latest figures are cached so the dashboard appears instantly, and when what you&rsquo;re looking at isn&rsquo;t live, the app says so.</p>
             </article>
 
             <article class="surface feature-card reveal">
@@ -2169,7 +2169,7 @@
           <ul class="reminder-list reveal" data-stagger>
             <li>
               <div><strong>Friday Sadaqah</strong><em>10am, every Friday</em></div>
-              <span>Invites you to give a small Sadaqah on the most blessed day of the week &mdash; and taps straight through to a pre-filled entry.</span>
+              <span>Invites you to give a small Sadaqah on the most blessed day of the week, tapping straight through to a pre-filled entry.</span>
             </li>
             <li>
               <div><strong>Zakat anniversary</strong><em>9am, on the day</em></div>
@@ -2185,7 +2185,7 @@
             </li>
             <li>
               <div><strong>Daily log</strong><em>8pm, only if needed</em></div>
-              <span>A nudge on days you haven&rsquo;t recorded anything &mdash; never on days you have.</span>
+              <span>A nudge on days you haven&rsquo;t recorded anything, never on days you have.</span>
             </li>
             <li>
               <div><strong>Budget warning</strong><em>Immediately</em></div>
@@ -2202,7 +2202,7 @@
           <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
             <span class="section-label">Multi-currency</span>
             <h2 class="section-heading">Built for people whose money doesn&rsquo;t live in one country.</h2>
-            <p class="section-copy">A Pakistani expat in Dubai sending money home, a British Muslim with family in Malaysia, a Gulf professional holding dollars &mdash; for a very large part of this audience, a single-currency app is simply the wrong shape.</p>
+            <p class="section-copy">A Pakistani expat in Dubai sending money home, a British Muslim with family in Malaysia, a Gulf professional holding dollars. For a very large part of this audience, a single-currency app is simply the wrong shape.</p>
 
             <ul class="pill-row" aria-label="Supported currencies">
               <li>AED</li><li>USD</li><li>SAR</li><li>KWD</li><li>BHD</li>
@@ -2211,7 +2211,7 @@
               <li>MYR</li><li>IDR</li><li>JPY</li><li>CNY</li><li>CHF</li>
             </ul>
 
-            <p class="table-note">Rates refresh daily and are cached on your device so the app keeps working offline. The date the rates came from is shown, and staleness is flagged rather than hidden. For Zakat, conversion happens at the rate on your Zakat date &mdash; which is what lets a saved calculation be reproduced years later.</p>
+            <p class="table-note">Rates refresh daily and are cached on your device so the app keeps working offline. The date they came from is shown, and staleness is flagged rather than hidden. For Zakat, conversion happens at the rate on your Zakat date, which is what lets a saved calculation be reproduced years later.</p>
           </div>
         </div>
       </section>
@@ -2247,7 +2247,7 @@
             <details class="surface faq-item">
               <summary>How is BarakahFlow different from a normal budgeting app?</summary>
               <div class="faq-content">
-                <p>Zakat is the product, not a widget. A full rules engine sits at the centre of the app, with around fifteen genuinely contested questions each presented as an explicit choice that names the school or standards body it comes from. Islamic giving &mdash; Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj and Umrah, Eid &mdash; has its own heading in the budget rather than being buried next to &ldquo;miscellaneous&rdquo;. Gold and multiple currencies are native to the ledger rather than bolted onto a single-currency one.</p>
+                <p>Zakat is the product, not a widget. A full rules engine sits at the centre of the app, with around fifteen genuinely contested questions each presented as an explicit choice that names the school or standards body it comes from. Islamic giving (Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj and Umrah, Eid) has its own heading in the budget rather than being buried next to &ldquo;miscellaneous&rdquo;. Gold and multiple currencies are native to the ledger rather than bolted onto a single-currency one.</p>
               </div>
             </details>
 
@@ -2262,7 +2262,7 @@
             <details class="surface faq-item">
               <summary>How is nisab calculated?</summary>
               <div class="faq-content">
-                <p>Nisab is drawn from live international gold and silver spot prices, refreshed roughly every thirty seconds while the calculator is open and shown in your own currency. The default threshold is the lower of the two metals &mdash; in practice silver &mdash; and you can switch to gold only or silver only. Three weight conventions are available: AAOIFI at 85g gold and 595g silver, the classical Tola convention at 87.48g and 612.36g, and MUIS Singapore at 86g and 595g.</p>
+                <p>Nisab is drawn from live international gold and silver spot prices, refreshed roughly every thirty seconds while the calculator is open and shown in your own currency. The default threshold is the lower of the two metals, in practice silver, and you can switch to gold only or silver only. Three weight conventions are available: AAOIFI at 85g gold and 595g silver, the classical Tola convention at 87.48g and 612.36g, and MUIS Singapore at 86g and 595g.</p>
                 <p>Prices are international spot rates, not local jeweller retail prices, and the app says so on screen.</p>
               </div>
             </details>
@@ -2277,15 +2277,15 @@
             <details class="surface faq-item">
               <summary>Can I deduct my mortgage from my Zakat?</summary>
               <div class="faq-content">
-                <p>Not in full &mdash; no school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat &mdash; nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible.</p>
+                <p>Not in full. No school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat: nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible.</p>
               </div>
             </details>
 
             <details class="surface faq-item">
               <summary>Is my financial data secure and private?</summary>
               <div class="faq-content">
-                <p>Your data is encrypted in transit and at rest, and Row Level Security enforces strict per-user isolation so no user of BarakahFlow can ever see another user&rsquo;s data. It is never sold, never shared with advertisers, and never used for advertising or profiling of any kind. The most sensitive figures &mdash; your income, your metal weights, your Zakat inputs &mdash; are deliberately stripped out of the offline copy cached on your device.</p>
-                <p>As the operator of the service, BarakahFlow&rsquo;s infrastructure technically permits administrative access to stored data for maintenance, debugging and legal compliance. We do not look at individual users&rsquo; data except where it is necessary to fix a technical problem you have reported, or where the law requires it. This is standard across effectively every cloud-based financial app, including major banks &mdash; we state it plainly rather than hiding behind a claim that nobody can see your data. Full detail is in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                <p>Your data is encrypted in transit and at rest, and Row Level Security enforces strict per-user isolation so no user of BarakahFlow can ever see another user&rsquo;s data. It is never sold, never shared with advertisers, and never used for advertising or profiling of any kind. The most sensitive figures, your income, metal weights and Zakat inputs, are deliberately stripped out of the offline copy cached on your device.</p>
+                <p>As the operator of the service, BarakahFlow&rsquo;s infrastructure technically permits administrative access to stored data for maintenance, debugging and legal compliance. We do not look at individual users&rsquo; data except where it is necessary to fix a technical problem you have reported, or where the law requires it. This is standard across effectively every cloud-based financial app, including major banks. We state it plainly rather than hiding behind a claim that nobody can see your data. Full detail is in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
               </div>
             </details>
 
@@ -2300,8 +2300,8 @@
               <summary>Do you track me? What analytics are running?</summary>
               <div class="faq-content">
                 <p>There is no advertising tracking, no ad networks, no third-party marketing pixels and no selling of data. What does run is <strong>Vercel Analytics &amp; Speed Insights</strong>, and it is worth saying exactly what that is rather than hiding it behind the word &ldquo;private&rdquo;.</p>
-                <p>It measures technical performance &mdash; how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It is how we find out that, say, the Zakat screen is sluggish on older Androids before you have to tell us.</p>
-                <p>It uses <strong>no cookies and no fingerprinting</strong>, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure &mdash; those live behind your login and are not part of what it measures.</p>
+                <p>It measures technical performance: how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It is how we find out that, say, the Zakat screen is sluggish on older Androids before you have to tell us.</p>
+                <p>It uses <strong>no cookies and no fingerprinting</strong>, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure. Those live behind your login and are not part of what it measures.</p>
                 <p>Separately, the app keeps a handful of anonymous counters, such as how many people finished setup. No personal information is attached to those either.</p>
               </div>
             </details>
@@ -2309,7 +2309,7 @@
             <details class="surface faq-item">
               <summary>What does it cost, and where does it run?</summary>
               <div class="faq-content">
-                <p>It&rsquo;s free &mdash; no subscription and no ads. It runs in any browser, as an installed Android app, and on iPhone once added to the Home Screen from Safari.</p>
+                <p>It&rsquo;s free, with no subscription and no ads. It runs in any browser, as an installed Android app, and on iPhone once added to the Home Screen from Safari.</p>
               </div>
             </details>
           </div>
@@ -2343,7 +2343,7 @@
     <div id="ios-prompt" class="ios-prompt" aria-hidden="true">
       <button class="ios-prompt-close" id="ios-prompt-close" aria-label="Dismiss">✕</button>
       <div class="ios-prompt-header">
-        <img src="Images/logopng.png" class="ios-prompt-icon" alt="BarakahFlow logo">
+        <img src="Images/apple-touch-icon.png" class="ios-prompt-icon" alt="BarakahFlow app icon">
         <div>
           <span class="ios-prompt-title">Install BarakahFlow</span>
           <span class="ios-prompt-subtitle">Get the app on your home screen</span>
