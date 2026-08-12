@@ -1802,9 +1802,75 @@
         padding: 1.35rem;
       }
 
+      .table-wrap {
+        overflow-x: visible;
+      }
+
+      .ref-table {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .ref-table caption {
+        display: block;
+        width: 100%;
+      }
+
+      .ref-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+
+      .ref-table,
+      .ref-table tbody {
+        display: block;
+        width: 100%;
+      }
+
+      .ref-table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.75rem;
+        padding: 1rem 1.1rem;
+      }
+
+      .ref-table tbody tr + tr {
+        border-top: 1px solid var(--surface-border);
+      }
+
+      .ref-table tbody tr + tr td {
+        border-top: none;
+      }
+
       .ref-table th,
       .ref-table td {
-        padding: 0.8rem 1rem;
+        display: block;
+        flex: 1 0 100%;
+        padding: 0.25rem 0;
+        white-space: normal;
+      }
+
+      .ref-table td.num {
+        flex: 0 0 auto;
+      }
+
+      .ref-table tbody th {
+        padding-bottom: 0.5rem;
+      }
+
+      .ref-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.66rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.15rem;
       }
     }
   </style>
@@ -1960,21 +2026,21 @@
               <tbody>
                 <tr>
                   <th scope="row">AAOIFI / majority <span style="font-weight:600;color:var(--muted);">(default)</span></th>
-                  <td class="num">85 g</td>
-                  <td class="num">595 g</td>
-                  <td>Most Islamic finance bodies worldwide</td>
+                  <td class="num" data-label="Gold">85 g</td>
+                  <td class="num" data-label="Silver">595 g</td>
+                  <td data-label="Used by">Most Islamic finance bodies worldwide</td>
                 </tr>
                 <tr>
                   <th scope="row">Classical Tola</th>
-                  <td class="num">87.48 g</td>
-                  <td class="num">612.36 g</td>
-                  <td>South Asian Hanafi convention; Pakistan&rsquo;s official notifications</td>
+                  <td class="num" data-label="Gold">87.48 g</td>
+                  <td class="num" data-label="Silver">612.36 g</td>
+                  <td data-label="Used by">South Asian Hanafi convention; Pakistan&rsquo;s official notifications</td>
                 </tr>
                 <tr>
                   <th scope="row">MUIS Singapore</th>
-                  <td class="num">86 g</td>
-                  <td class="num">595 g</td>
-                  <td>Singapore Fatwa Committee</td>
+                  <td class="num" data-label="Gold">86 g</td>
+                  <td class="num" data-label="Silver">595 g</td>
+                  <td data-label="Used by">Singapore Fatwa Committee</td>
                 </tr>
               </tbody>
             </table>
@@ -1993,27 +2059,27 @@
               <tbody>
                 <tr>
                   <th scope="row">Gulf / Arab states</th>
-                  <td>AAOIFI &middot; OIC Fiqh Academy &middot; UAE Council for Fatwa</td>
+                  <td data-label="Follows the positions of">AAOIFI &middot; OIC Fiqh Academy &middot; UAE Council for Fatwa</td>
                 </tr>
                 <tr>
                   <th scope="row">South Asia (Hanafi)</th>
-                  <td>Classical Hanafi &middot; Darul Uloom Deoband &middot; Jamia Binoria</td>
+                  <td data-label="Follows the positions of">Classical Hanafi &middot; Darul Uloom Deoband &middot; Jamia Binoria</td>
                 </tr>
                 <tr>
                   <th scope="row">Singapore</th>
-                  <td>MUIS &middot; Singapore Fatwa Committee</td>
+                  <td data-label="Follows the positions of">MUIS &middot; Singapore Fatwa Committee</td>
                 </tr>
                 <tr>
                   <th scope="row">Malaysia / Indonesia</th>
-                  <td>PPZ-MAIWP &middot; Lembaga Zakat Selangor &middot; BAZNAS Indonesia</td>
+                  <td data-label="Follows the positions of">PPZ-MAIWP &middot; Lembaga Zakat Selangor &middot; BAZNAS Indonesia</td>
                 </tr>
                 <tr>
                   <th scope="row">UK / Europe</th>
-                  <td>National Zakat Foundation UK &middot; ECFR &middot; Islamic Relief</td>
+                  <td data-label="Follows the positions of">National Zakat Foundation UK &middot; ECFR &middot; Islamic Relief</td>
                 </tr>
                 <tr>
                   <th scope="row">North America / Australia</th>
-                  <td>FCNA &middot; AMJA &middot; National Zakat Foundation</td>
+                  <td data-label="Follows the positions of">FCNA &middot; AMJA &middot; National Zakat Foundation</td>
                 </tr>
               </tbody>
             </table>
