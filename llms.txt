@@ -22,7 +22,7 @@ BarakahFlow handles the ordinary work of personal finance — income, spending, 
 - **Investments**: US-listed stocks and ETFs at market prices, feeding net worth and optionally Zakat.
 - **Multi-currency**: Twenty currencies, with separate base and display currency settings and daily cached FX rates.
 - **Notifications**: Six reminders in your local time zone — Friday Sadaqah, Zakat anniversary, bill due, payday, daily log, budget warning.
-- **Privacy**: Encrypted in transit and at rest, strict per-user isolation via Row Level Security, no ads, no trackers, never sold. The most sensitive figures are stripped from the offline device cache.
+- **Privacy**: Encrypted in transit and at rest, strict per-user isolation via Row Level Security, never sold, no ads and no advertising tracking. The most sensitive figures are stripped from the offline device cache. The only measurement running is Vercel Analytics & Speed Insights — anonymous technical performance monitoring (page load and render speed, errors, rough device and browser class) that uses no cookies or fingerprinting, is never joined to an account, and never sees a balance, transaction, metal weight or Zakat figure.
 
 ## Supported currencies
 AED, USD, SAR, KWD, BHD, QAR, OMR, EGP, INR, PKR, GBP, EUR, CAD, AUD, TRY, MYR, IDR, JPY, CNY, CHF.
@@ -32,7 +32,7 @@ BarakahFlow states scholarly positions and attributes them; it does not issue fa
 
 ## Technical Details
 - **Platform**: Web (any browser), Android (.apk), iPhone (add to Home Screen from Safari).
-- **Price**: Free. No subscription, no ads, no trackers.
+- **Price**: Free. No subscription, no ads.
 - **Status**: Live product.
 
 ## Key Links

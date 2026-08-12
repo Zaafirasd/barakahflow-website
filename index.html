@@ -124,6 +124,22 @@
           },
           {
             "@type": "Question",
+            "name": "Can I deduct my mortgage from my Zakat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not in full — no school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat — nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BarakahFlow give religious rulings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. BarakahFlow states positions and tells you who holds them; it does not issue fatwa. For a binding ruling on your own situation the app tells you to speak to a qualified scholar."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Is my financial data secure and private?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -132,10 +148,18 @@
           },
           {
             "@type": "Question",
+            "name": "Do you track me? What analytics are running?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no advertising tracking, no ad networks, no third-party marketing pixels and no selling of data. What does run is Vercel Analytics & Speed Insights. It measures technical performance — how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It uses no cookies and no fingerprinting, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure. Separately, the app keeps a handful of anonymous counters such as how many people finished setup, with no personal information attached."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Does BarakahFlow cost anything?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. BarakahFlow is free, with no subscription, no ads and no trackers."
+              "text": "No. BarakahFlow is free, with no subscription and no ads."
             }
           }
         ]
@@ -782,7 +806,7 @@
     .feature-card {
       position: relative;
       overflow: hidden;
-      padding: 1.45rem;
+      padding: 1.75rem;
       min-height: 14.2rem;
       transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease, border-color 0.35s ease;
     }
@@ -856,7 +880,7 @@
       align-items: center;
       text-align: center;
       gap: 2rem;
-      padding: clamp(1.5rem, 2.4vw, 2rem);
+      padding: clamp(1.75rem, 4vw, 3.75rem);
       margin-top: 2rem;
       border-radius: 40px;
       background:
@@ -911,7 +935,8 @@
     }
 
     .spotlight h2 {
-      margin: 0 0 1rem;
+      margin: 0 auto 1.25rem;
+      max-width: 30ch;
       font-size: clamp(2.2rem, 4vw, 3.7rem);
       line-height: 0.96;
       letter-spacing: -0.05em;
@@ -920,7 +945,7 @@
 
     .spotlight p {
       margin: 0 auto;
-      max-width: 34rem;
+      max-width: 44rem;
       color: var(--spotlight-copy);
       font-size: 1rem;
     }
@@ -1009,7 +1034,7 @@
     .download-panel {
       position: relative;
       overflow: hidden;
-      padding: clamp(1.5rem, 3vw, 2.3rem);
+      padding: clamp(1.75rem, 4vw, 3.5rem);
       text-align: center;
     }
 
@@ -1044,7 +1069,8 @@
     }
 
     .download-panel h2 {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 22ch;
       font-size: clamp(2rem, 4.8vw, 4rem);
       line-height: 0.95;
       letter-spacing: -0.05em;
@@ -1053,7 +1079,7 @@
 
     .download-panel p {
       margin: 1rem auto 0;
-      max-width: 34rem;
+      max-width: 42rem;
       color: var(--muted);
       font-size: 1rem;
       font-weight: 500;
@@ -1106,7 +1132,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
-      padding: 1.35rem 1.4rem;
+      padding: 1.75rem 1.85rem;
     }
 
     .footer-brand {
@@ -1383,7 +1409,7 @@
       }
 
       .spotlight {
-        padding: 1.25rem;
+        padding: 1.5rem;
         border-radius: 24px;
         gap: 1.25rem;
       }
@@ -1537,6 +1563,10 @@
 
     .faq-content p {
       margin: 0;
+    }
+
+    .faq-content p + p {
+      margin-top: 0.9rem;
     }
     /* ---- Proof stats strip ---- */
     .proof-grid {
@@ -2122,7 +2152,7 @@
             <article class="surface feature-card reveal">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
               <h3>Private by design</h3>
-              <p>Encrypted in transit and at rest, with strict per-user isolation. Never sold, never shared with advertisers, no ads and no trackers. The most sensitive figures are deliberately stripped from the offline cache on your device.</p>
+              <p>Encrypted in transit and at rest, with strict per-user isolation. Never sold, never shared with advertisers, and no ad tracking of any kind. The most sensitive figures are deliberately stripped from the offline cache on your device.</p>
             </article>
           </div>
         </div>
@@ -2191,7 +2221,7 @@
           <div class="surface download-panel reveal">
             <span class="section-label">Free &mdash; no subscription</span>
             <h2>Try BarakahFlow — No Install Needed</h2>
-            <p>Free, with no subscription, no ads and no trackers. Open the web app instantly in your browser, or download the Android APK to get started.</p>
+            <p>Free, with no subscription and no ads. Open the web app instantly in your browser, or download the Android APK to get started.</p>
 
             <div class="download-actions">
               <a class="button button-primary download-main" id="panel-open-btn" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open in browser &mdash; no install</a>
@@ -2267,9 +2297,19 @@
             </details>
 
             <details class="surface faq-item">
+              <summary>Do you track me? What analytics are running?</summary>
+              <div class="faq-content">
+                <p>There is no advertising tracking, no ad networks, no third-party marketing pixels and no selling of data. What does run is <strong>Vercel Analytics &amp; Speed Insights</strong>, and it is worth saying exactly what that is rather than hiding it behind the word &ldquo;private&rdquo;.</p>
+                <p>It measures technical performance &mdash; how quickly a page loads and renders on your device, which screens are slow, whether something errored, and rough device and browser class so we can tell a slow phone from a slow server. It is how we find out that, say, the Zakat screen is sluggish on older Androids before you have to tell us.</p>
+                <p>It uses <strong>no cookies and no fingerprinting</strong>, builds no profile of you, and is never joined to your account. It never sees a balance, a transaction, a metal weight or a Zakat figure &mdash; those live behind your login and are not part of what it measures.</p>
+                <p>Separately, the app keeps a handful of anonymous counters, such as how many people finished setup. No personal information is attached to those either.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
               <summary>What does it cost, and where does it run?</summary>
               <div class="faq-content">
-                <p>It&rsquo;s free &mdash; no subscription, no ads, no trackers. It runs in any browser, as an installed Android app, and on iPhone once added to the Home Screen from Safari.</p>
+                <p>It&rsquo;s free &mdash; no subscription and no ads. It runs in any browser, as an installed Android app, and on iPhone once added to the Home Screen from Safari.</p>
               </div>
             </details>
           </div>
