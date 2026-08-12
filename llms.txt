@@ -1,29 +1,50 @@
 # BarakahFlow (Barakaflow)
 
-> The Faith-First wealth management app for Muslims.
+> A halal personal finance app for Muslims — everyday budgeting, bills and savings built around a Zakat engine that follows your school of jurisprudence, not a one-size-fits-all formula.
 
 ## Overview
-BarakahFlow is a Faith-First wealth management and Zakat tracking application designed with Islamic finance principles in mind. It helps users manage their wealth, track expenses across halal categories, and calculate religious obligations like Zakat Al-Mal with real-time silver market data.
+BarakahFlow handles the ordinary work of personal finance — income, spending, bills, budgets, savings, net worth — and builds the obligations of Islamic finance into the same place. Its flagship is a Zakat rules engine covering the four Sunni schools, three nisab weight conventions, live gold and silver spot prices, and a true lunar Hawl countdown resolved against the Islamic calendar.
+
+## What makes it different
+- **Zakat is the product, not a widget.** Around fifteen genuinely contested questions are each presented as an explicit choice, and every option names the school or standards body it comes from.
+- **It follows your school, and says so.** Hanafi, Shafi'i, Maliki and Hanbali positions are all encoded and attributed.
+- **It records how a number was reached.** A saved calculation keeps the method, the metal prices, the exchange rates and the Hijri dates, so a figure from years ago can be reproduced and defended.
+- **Gold and multiple currencies are native**, not bolted onto a single-currency ledger.
 
 ## Features
-- **Smart Budgeting**: Halal expense categories (Sadaqah, Zakat, Hajj, Eid).
-- **Zakat Calculator**: Automated calculations using live gold & silver prices and Nisab thresholds.
-- **Metals Tracker**: Real-time gold and silver price monitoring per gram.
-- **Privacy First**: Strict data isolation (Row Level Security), no ads, no trackers.
+- **Dashboard**: Balance, total net worth split by asset class, accounts by currency, month spending, budget, bills, savings and investments. Quick Spend logs an expense in two taps.
+- **Transactions**: Recorded against a category and an account, stored in that account's own currency with no silent conversion. Works offline; entries sync when you reconnect.
+- **Budgeting**: A monthly amount per category, with Islamic Giving (Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj / Umrah, Eid Expenses) as its own heading rather than buried in a flat list. Unbudgeted spending is shown, not hidden.
+- **Bill tracker**: Monthly, quarterly or annual, with a "last day of the month" option. Marking a bill paid records the expense, stamps the cycle and rolls the due date forward.
+- **Savings goals**: Eight types including Hajj and Umrah as first-class goals, each with its own progress ring and deadline countdown.
+- **Zakat calculator**: Four Sunni schools, six regional presets (Gulf, South Asia, Singapore, Malaysia/Indonesia, UK/Europe, North America/Australia), three nisab weight conventions (AAOIFI 85g/595g, classical Tola 87.48g/612.36g, MUIS Singapore 86g/595g), live spot pricing, gold at 24/22/21/18 karat split into worn and investment, careful debt treatment, interest purification, and a cited line-by-line breakdown.
+- **Net worth**: Cash, gold, silver, investments and business stock in one figure, with per-account switches for net worth and Zakat inclusion.
+- **Investments**: US-listed stocks and ETFs at market prices, feeding net worth and optionally Zakat.
+- **Multi-currency**: Twenty currencies, with separate base and display currency settings and daily cached FX rates.
+- **Notifications**: Six reminders in your local time zone — Friday Sadaqah, Zakat anniversary, bill due, payday, daily log, budget warning.
+- **Privacy**: Encrypted in transit and at rest, strict per-user isolation via Row Level Security, no ads, no trackers, never sold. The most sensitive figures are stripped from the offline device cache.
+
+## Supported currencies
+AED, USD, SAR, KWD, BHD, QAR, OMR, EGP, INR, PKR, GBP, EUR, CAD, AUD, TRY, MYR, IDR, JPY, CNY, CHF.
+
+## Scope
+BarakahFlow states scholarly positions and attributes them; it does not issue fatwa. For a binding ruling on a personal situation it directs users to a qualified scholar.
 
 ## Technical Details
-- **Platform**: Android (.apk), iOS (PWA/Safari).
-- **Technology**: Built for speed and reliability with high-aesthetic modern UI.
-- **Status**: Alpha release (Android).
+- **Platform**: Web (any browser), Android (.apk), iPhone (add to Home Screen from Safari).
+- **Price**: Free. No subscription, no ads, no trackers.
+- **Status**: Live product.
 
 ## Key Links
 - [Homepage](https://barakahflowapp.com/)
+- [Open the app](https://app.barakahflowapp.com)
 - [Privacy Policy](https://barakahflowapp.com/privacy-policy.html)
+- [Terms of Service](https://barakahflowapp.com/terms.html)
 - [Android Download](https://barakahflowapp.com/downloads/barakahflow.apk)
-- [iOS Launch](https://app.barakahflowapp.com)
 
 ## Metadata
 - **Author**: BarakahFlow Team
 - **Name**: BarakahFlow
 - **Alternate Name**: Barakaflow (common typo)
+- **Contact**: barakahflowapp@gmail.com
 - **Repo**: https://github.com/Zaafirasd/barakahflow-website

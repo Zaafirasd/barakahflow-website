@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | BarakahFlow</title>
-  <meta name="description" content="Privacy policy for BarakahFlow - The Faith-First wealth management app for Muslims. Learn how we protect your financial data and Zakat calculations.">
+  <meta name="description" content="Privacy policy for BarakahFlow — the halal personal finance and Zakat app for Muslims. Exactly what data is held, who can reach it, and the rights you have over it.">
   <link rel="canonical" href="https://barakahflowapp.com/privacy-policy.html">
   <meta property="og:site_name" content="BarakahFlow">
   <meta name="application-name" content="BarakahFlow">
@@ -126,53 +126,83 @@
   <main class="container">
     <div class="content-box">
       <h1>BarakahFlow Privacy Policy</h1>
-      <p><strong>Last updated:</strong> April 2026</p>
-      
+      <p><strong>Last updated:</strong> August 2026</p>
+
+      <p>Written to be true, not to be reassuring. Your financial data is yours. It is never sold, never shared with advertisers, and never used for advertising or profiling of any kind. Below is exactly what is held and who can reach it.</p>
+
       <h2>1. Who we are</h2>
-      <p>BarakahFlow is a Faith-First wealth management tracker designed to help Muslims manage income, expenses, bills, and Zakat. Your financial data stays private and is never sold or shared with advertisers.</p>
+      <p>BarakahFlow is a halal personal finance app for Muslims — everyday budgeting, bills, savings and net worth, built around a Zakat engine. It is a personal finance tool, not a bank or a regulated financial service.</p>
 
       <h2>2. Data we collect</h2>
       <ul>
-        <li><strong>Account data</strong> — your email address, used only for authentication.</li>
-        <li><strong>Financial data</strong> — income, transactions, bills, and budgets you enter. This is stored securely in your private account and visible only to you.</li>
-        <li><strong>Zakat data</strong> — asset values you enter for Zakat calculations. Stored in your account and optionally cached locally on your device.</li>
-        <li><strong>Usage analytics</strong> — anonymous, aggregated event counts (e.g. how many users enabled Zakat). No personally identifiable information is attached to these events.</li>
+        <li><strong>Account data</strong> — your email address and, if you sign in with Google, your name and profile picture as Google provides them. Used for signing in and for display.</li>
+        <li><strong>Profile settings</strong> — your first name, base and display currency, income type and pay day, and your time zone (detected automatically so reminders arrive at a sensible local hour).</li>
+        <li><strong>Financial data</strong> — the accounts, income, transactions, bills, budgets and savings goals you enter.</li>
+        <li><strong>Asset data</strong> — gold and silver weights, investment holdings and the tickers you add, and business trading stock.</li>
+        <li><strong>Zakat data</strong> — the figures and method settings you enter for your calculations, and the calculations you choose to save.</li>
+        <li><strong>Push notification tokens</strong> — if you enable reminders, a device token is stored so notifications can be delivered to that device. Removing the device or turning reminders off removes it.</li>
+        <li><strong>Anonymous usage counts</strong> — aggregate counts such as how many people completed setup. No personal information is attached to these.</li>
       </ul>
 
       <h2>3. How we use your data</h2>
       <ul>
-        <li>To provide and sync the app across your devices.</li>
-        <li>To calculate your budget, Zakat estimates, and bill schedules.</li>
-        <li>To allow you to export or delete your data at any time.</li>
+        <li>To provide the app and sync it across your devices.</li>
+        <li>To calculate your budgets, bill schedules, net worth and Zakat estimates.</li>
+        <li>To send the reminders you have enabled.</li>
+        <li>To let you delete your data at any time, and to provide a copy of it on request.</li>
       </ul>
       <p><strong>Note:</strong> We do not use your financial data for advertising, profiling, or any purpose outside of operating the app for you.</p>
 
       <h2>4. Third-party services</h2>
+      <p>These are the only third parties involved in running BarakahFlow.</p>
+      <h3>Services that hold or process your data</h3>
       <ul>
-        <li><strong>Supabase</strong> — our database and authentication provider. Your data is stored on Supabase servers.</li>
-        <li><strong>Vercel</strong> — our hosting provider.</li>
-        <li><strong>Vercel Analytics & Speed Insights</strong> — anonymous, aggregated performance monitoring. No cookies, no fingerprinting.</li>
+        <li><strong>Supabase</strong> — our database and authentication provider. Your account and financial data is stored on Supabase servers. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
+        <li><strong>Vercel</strong> — our hosting provider. See <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">vercel.com/legal/privacy-policy</a>.</li>
+        <li><strong>Google</strong> — optional sign-in provider only. If you choose to sign in with Google, we receive your email, name and profile picture from Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
+        <li><strong>Firebase Cloud Messaging</strong> (Google) — delivers push notifications to Android devices. It receives your device token and the contents of the reminder being sent, which never include your balances or Zakat figures.</li>
+        <li><strong>Web Push</strong> — delivers push notifications in browsers and on iPhone via your browser vendor's push service, using the same device token arrangement.</li>
+        <li><strong>Vercel Analytics &amp; Speed Insights</strong> — anonymous, aggregated performance monitoring. No cookies, no fingerprinting.</li>
       </ul>
+      <h3>Market data feeds — no personal data is sent to these</h3>
+      <ul>
+        <li><strong>Swissquote</strong> — live international gold and silver spot prices.</li>
+        <li><strong>open.er-api.com</strong> — daily foreign exchange rates.</li>
+        <li><strong>Twelve Data</strong> — market prices for the stock and ETF tickers held by users. Requests carry ticker symbols only and are never linked to an individual account.</li>
+        <li><strong>Upstash</strong> — rate limiting on our price endpoint, to keep the service available.</li>
+      </ul>
+      <p>We request prices from these feeds from our own servers. They do not receive your identity, your holdings, or any figure you have entered.</p>
 
-      <h2>5. Data retention</h2>
+      <h2>5. Data on your device</h2>
+      <p>Your data is cached on your device so the app works offline and opens instantly. The most sensitive figures — your income, your metal weights and your Zakat inputs — are deliberately stripped out of that local copy. Transactions you enter while offline are held on the device and sent up automatically once you are back online.</p>
+
+      <h2>6. Data retention</h2>
       <p>Your data is retained as long as you have an account. You can delete your account at any time from Profile → Delete Account, which permanently removes all your data from our systems.</p>
 
-      <h2>6. Your rights</h2>
-      <p>You have the right to access the data we hold about you (all visible in the app), delete your account and all associated data, or request a copy of your data by contacting us.</p>
+      <h2>7. Your rights</h2>
+      <p>You can see everything held about you — it is all visible in the app. You can delete your account and all associated data at any time from Settings, which removes it permanently. You can request a copy of your data by getting in touch.</p>
+      <p>Depending on where you live, you may also have rights to correct your data, restrict or object to processing, or complain to a data protection authority. Email us and we will help.</p>
 
-      <h2>7. Data Security &amp; Access</h2>
-      <p>All data is encrypted in transit (TLS) and at rest. We use row-level security (RLS) to ensure no user can ever access another user's data — your financial information is never visible to other users, ever.</p>
-      <p>As the app operator, BarakahFlow's infrastructure (via our database provider) technically permits administrative access for maintenance, debugging, and legal compliance purposes. We do not access individual user data except when necessary to fix a technical issue you report, or when required by law. This is standard practice across virtually all cloud-based financial apps, including major banks.</p>
+      <h2>8. Data security &amp; access</h2>
+      <p>All data is encrypted in transit (TLS) and at rest. We use row-level security (RLS) to enforce strict per-user isolation — no user of BarakahFlow can ever see another user's data. Not now, not by accident.</p>
+      <p><strong>The part most apps don't say out loud:</strong> as the operator of the service, BarakahFlow's infrastructure technically permits administrative access to stored data for maintenance, debugging and legal compliance. The team does not look at individual users' data except where it is necessary to fix a technical problem you have reported, or where the law requires it. This is standard across effectively every cloud-based financial app, including major banks — but it is stated here plainly rather than hidden behind a claim that nobody can see your data.</p>
 
-      <h2>8. Changes to this policy</h2>
+      <h2>9. Children</h2>
+      <p>BarakahFlow is not directed at children. You must be 13 or older to create an account.</p>
+
+      <h2>10. International transfers</h2>
+      <p>BarakahFlow is operated from the United Arab Emirates and our providers operate infrastructure in a number of countries, so your data may be stored and processed outside the country you live in.</p>
+
+      <h2>11. Changes to this policy</h2>
       <p>We may update this policy as the app evolves. The “Last updated” date at the top will reflect any changes.</p>
 
-      <h2>9. Contact</h2>
+      <h2>12. Contact</h2>
       <p>Questions about your privacy? Email us at: <a href="mailto:barakahflowapp@gmail.com">barakahflowapp@gmail.com</a></p>
     </div>
   </main>
 
   <footer class="footer">
+    <p><a href="terms.html">Terms of Service</a> &middot; <a href="mailto:barakahflowapp@gmail.com">Contact</a></p>
     <p>&copy; 2026 BarakahFlow. Built for Muslims, by Muslims.</p>
   </footer>
 
