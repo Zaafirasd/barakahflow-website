@@ -52,7 +52,7 @@ const madhhabPages = [
       {
         h: 'Why the lower threshold, and why it matters',
         p: [
-          'Gold and silver were roughly interchangeable as thresholds in the Prophet’s ﷺ time. They are not now. Silver has fallen so far against gold that the two thresholds differ by roughly nine to one, and which one you use decides whether many ordinary savers owe anything at all.',
+          'Gold and silver were roughly interchangeable as thresholds in the Prophet’s ﷺ time. They are not now. Silver has fallen so far against gold that the two thresholds are now an order of magnitude apart, and which one you use decides whether many ordinary savers owe anything at all. The exact gap moves with the market, so read it off the live figures above rather than from any fixed multiple.',
           'AAOIFI resolves this by taking the lower figure. The reasoning is that Zakat is a right of the poor, and where two defensible thresholds exist, the one that brings more wealth into the obligation is the safer side of the dispute. Most large charity bodies reach the same conclusion independently.',
         ],
       },
@@ -294,7 +294,7 @@ const madhhabPages = [
         q: 'Which nisab does the Maliki school use?',
         a: [
           'Gold, at 85 grams, following the AAOIFI and majority weight conversion. At the time of writing that is roughly $12,994.',
-          'Because the gold threshold is around nine times the silver one, a person can owe nothing under the Maliki rule and owe a substantial amount under the Hanafi rule on precisely the same wealth.',
+          'Because the gold threshold sits far above the silver one, a person can owe nothing under the Maliki rule and owe a substantial amount under the Hanafi rule on precisely the same wealth. The live figures above show the current gap.',
         ],
       },
       {
@@ -395,7 +395,7 @@ const madhhabPages = [
         q: 'Is my wife’s gold jewellery zakatable in the Shafi’i school?',
         a: [
           'Not if it is in genuine personal use. The Shafi’i school exempts worn ornaments, in agreement with the Maliki and Hanbali schools.',
-          'Gold held as an investment or store of value is zakatable under every school. The test is use, not who owns it. Note also that Zakat is an individual obligation: each person calculates on their own wealth, and a wife’s gold is hers to account for.',
+          'Gold held as an investment or store of value is zakatable under every school. The test is use, not who owns it. On whose obligation it is, the schools treat Zakat as falling on each owner for their own wealth, so a wife’s gold is generally accounted for as hers — though a husband may discharge it on her behalf with her agreement. If that arrangement matters in your household, ask a scholar rather than assuming.',
         ],
       },
       {
@@ -576,17 +576,17 @@ const regionalPages = [
         ],
       },
       {
-        q: 'Is Zakat compulsory by law in the UAE?',
+        q: 'Is Zakat collected by the state in the UAE?',
         a: [
-          'No. Zakat in the UAE is a personal religious obligation rather than a state-collected tax, and there is no government assessment or filing. The UAE Zakat Fund exists to receive and distribute it, but paying through it is voluntary.',
-          'Saudi Arabia is the exception in the region: it levies Zakat on Saudi and GCC-owned businesses through ZATCA. That is a corporate assessment and is separate from the personal Zakat al-Mal this calculator deals with.',
+          'For individuals, the UAE Council for Fatwa treats Zakat as a personal religious obligation, and the UAE Zakat Fund exists to receive and distribute it. Saudi Arabia is different: ZATCA levies Zakat on the Saudi and GCC-owned share of businesses, which is a corporate assessment separate from the personal Zakat al-Mal this page deals with.',
+          'This is a description, not legal advice, and the rules attached to any particular arrangement can change. Check your own position with the relevant authority.',
         ],
       },
       {
-        q: 'I am an expatriate in Dubai sending money home. Where do I pay?',
+        q: 'I am an expatriate in the Gulf with money back home. How does that work?',
         a: [
-          'Zakat is calculated on your wealth wherever it is held, so money in a UAE account and money in an account back home both count towards the same total. Convert everything into one currency to test against nisab.',
-          'On where to pay it, the majority position favours the poor of the place where the wealth is located, but transferring it to relatives or a needy community elsewhere is widely permitted and in some cases preferred. This is a question worth putting to a scholar rather than settling from a calculator.',
+          'For the calculation, Zakat is assessed on your wealth wherever it is held, so a UAE account and an account back home both count towards the same total. Convert everything into one currency to test against nisab. BarakahFlow supports twenty currencies for exactly this reason.',
+          'Where that Zakat should then be paid, and to whom, is a separate question that scholars have written on at length and that this calculator does not address at all. BarakahFlow works out the amount; it does not advise on recipients or on transferring Zakat between countries. Put that one to a qualified scholar.',
         ],
       },
       {
@@ -643,8 +643,9 @@ const regionalPages = [
       {
         h: 'Pakistan’s statutory deduction is not your Zakat calculation',
         p: [
-          'Pakistan deducts Zakat at source from certain bank accounts each Ramadan under the Zakat and Ushr Ordinance, against a nisab figure the State Bank notifies annually.',
-          'That deduction covers a narrow band of assets and is not a complete assessment of what you owe. Gold, cash held outside those accounts, business stock and receivables are all outside it. Treat anything deducted at source as a payment on account, not as the finished calculation.',
+          'Under the Zakat and Ushr Ordinance, Zakat is deducted at source on 1 Ramadan from savings and PLS accounts meeting the notified threshold. The Administrator General Zakat notifies that threshold annually and it is issued to the State Bank; for 1446–1447 AH it was set at PKR 503,529.',
+          'That deduction covers a narrow band of assets and is not a complete assessment of what you owe. Current accounts sit outside it, a CZ-50 declaration opts a holder out of it entirely, and gold, cash held elsewhere, business stock and receivables are all beyond its reach.',
+          'Treat anything deducted at source as a payment on account rather than the finished calculation.',
         ],
       },
     ],
@@ -665,8 +666,9 @@ const regionalPages = [
       {
         q: 'What is the nisab in Pakistani rupees?',
         a: [
-          'On the Hanafi and tola basis the threshold is 52.5 tola of silver, which is 612.36 grams. At the metal prices current at the time of writing that is roughly PKR 408,518. The gold threshold of 7.5 tola, 87.48 grams, is roughly PKR 3,744,492.',
-          'The State Bank of Pakistan notifies a nisab figure each Ramadan for the purposes of the statutory bank deduction. That figure governs the deduction; it does not govern the wider calculation of what you personally owe.',
+          'There are two figures and they are not the same thing. The official one, notified by the Administrator General Zakat for the Zakat year 1446–1447 AH, is PKR 503,529. That is the figure that governs the statutory deduction from bank accounts, and it is fixed for the year once notified.',
+          'The other is the market figure: 52.5 tola of silver, 612.36 grams, priced at today’s rate. Derived from international spot prices around the time of writing that is roughly PKR 408,518, and it moves daily. The gold threshold of 7.5 tola, 87.48 grams, is roughly PKR 3,744,492.',
+          'Where the two differ, the notified figure governs the bank deduction and the market figure is the one to use when working out what you personally owe. Anything shown on this page is indicative; check the current notification before you rely on it.',
         ],
       },
       {
@@ -680,14 +682,15 @@ const regionalPages = [
         q: 'Is my wife’s gold jewellery zakatable in India and Pakistan?',
         a: [
           'Under the Hanafi school, yes — worn or not. This is the settled position of the South Asian darul iftas and it is the single biggest difference between a Hanafi calculation and the majority one.',
-          'Only the gold content counts. Stones, settings and alloy are excluded, and 22 karat is valued at 22 karat rather than at the 24 karat price. Note also that Zakat is individual: a wife calculates on her own gold, not her husband’s.',
+          'Only the gold content counts. Stones, settings and alloy are excluded, and 22 karat is valued at 22 karat rather than at the 24 karat price. On whose obligation it is, the schools treat Zakat as falling on each owner for their own wealth, so a wife’s gold is generally accounted for as hers, though a husband may discharge it on her behalf with her agreement.',
         ],
       },
       {
         q: 'Does the Zakat deducted from my Pakistani bank account cover my obligation?',
         a: [
-          'Almost certainly not. The statutory deduction reaches only certain categories of account and applies only to the balance in them on the deduction date.',
-          'Gold, cash outside those accounts, business inventory, receivables and investments are untouched by it. Calculate your full obligation and treat what was deducted as a credit against it.',
+          'Almost certainly not. Under the Zakat and Ushr Ordinance the deduction is taken on 1 Ramadan from savings and PLS accounts whose balance meets the notified nisab. Current accounts are outside it, and a CZ-50 declaration allows a holder to opt out of deduction at source.',
+          'Two details people often get wrong: the deduction is taken on the whole eligible balance, not only the part above nisab; and it reaches only those accounts. Gold, cash held elsewhere, business inventory, receivables and investments are untouched by it.',
+          'So treat anything deducted at source as a payment on account rather than a finished calculation, and work out the rest. If you have opted out with a CZ-50, the entire obligation is yours to discharge.',
         ],
       },
       {
@@ -714,7 +717,7 @@ const regionalPages = [
       'zakat calculator singapore, muis nisab, nisab singapore sgd, zakat harta singapore, singapore fatwa committee zakat',
     h1: 'Zakat calculator for Singapore',
     lede:
-      'Singapore is the one jurisdiction with its own weight convention. MUIS sets nisab against 86 grams of gold rather than the 85 used almost everywhere else — a small difference, but a deliberate one, and using the international figure will put your threshold out by roughly a percent.',
+      'Singapore is the one jurisdiction with its own weight convention. The Singapore Fatwa Committee sets nisab against 86 grams of gold rather than the 85 used almost everywhere else, and MUIS also points to the silver threshold of 595 grams as a practical default. MUIS publishes the official figure, and where it differs from anything derived here from spot prices, theirs governs.',
     conventionKey: 'MUIS',
     conventionWhy:
       'MUIS, the Islamic Religious Council of Singapore, sets nisab against 86 grams of gold. The Singapore Fatwa Committee publishes the resulting figure and revises it as the gold price moves. Singapore is predominantly Shafi’i, and the Shafi’i school uses the gold threshold rather than the silver one.',
@@ -731,17 +734,19 @@ const regionalPages = [
         ],
       },
       {
-        h: 'Gold, not silver',
+        h: 'Gold at 86g, and the silver figure alongside it',
         p: [
-          'Singapore’s Muslim community is predominantly Shafi’i, and the Shafi’i school sets the threshold by gold. That is a materially higher bar than the silver figure used by the Hanafi school and by AAOIFI.',
-          'The practical consequence is that a Singaporean with modest savings may be below the threshold and owe nothing, where the same person following the Hanafi school would be liable. This is not an inconsistency to be resolved by picking the cheaper answer; it is a question of which school you follow.',
+          'Singapore’s Muslim community is predominantly Shafi’i, and the Shafi’i school sets the threshold by gold. The Singapore Fatwa Committee’s figure of 86 grams of gold is the one usually quoted.',
+          'It is worth knowing that MUIS also points to the silver threshold of 595 grams as a practical default, which is a far lower bar. The two produce very different answers, and someone with modest savings can be below the gold threshold and above the silver one. Which applies to you is a question of which position you are following, not one to settle by picking the cheaper figure.',
+          'MUIS publishes the official figure and revises it as the metal price moves. Where its published number differs from anything derived here from international spot prices, MUIS is the authority and its figure governs.',
         ],
       },
       {
-        h: 'What to include, and one local question',
+        h: 'What to include, and two local questions',
         p: [
-          'Cash, savings, shares, unit trusts, gold and business assets are all counted. Debts falling due within the year reduce the base under the AAOIFI treatment, though the Shafi’i school itself allows no deduction at all — BarakahFlow will apply whichever you have selected.',
-          'CPF is the question Singaporean Muslims ask most, and scholars have not spoken with one voice on it. The considerations are whether the funds are accessible, and whether an inaccessible balance can be said to be fully owned. BarakahFlow handles restricted retirement savings by letting you count them net of the penalty and tax that would apply on withdrawal, which is a mainstream treatment — but it does not claim to settle the question, and MUIS is the right place to take it.',
+          'Cash, savings, shares, unit trusts, gold and business assets are all counted. Debts falling due within the year reduce the base: MUIS follows the Shafi’i school in general but still directs payers to deduct what they owe, so BarakahFlow’s Singapore setting deducts, and says so.',
+          'CPF is the question Singaporean Muslims ask most. MUIS treats monthly payouts as not zakatable because no Hawl has passed on them, and treats a lump sum above the minimum sum as zakatable a year after receipt. That is what BarakahFlow applies here.',
+          'The second is which balance is assessed. MUIS assesses the lowest balance held above nisab across the year, on the reasoning that only that amount completed a full Hawl. That is not the common practice elsewhere, where the balance on the Zakat date is used. BarakahFlow offers the MUIS option but does not yet keep a daily record of balances, so it falls back to the closing balance and tells you on screen that it has done so. If your balance swung a long way during the year, work the lower figure out yourself or ask MUIS.',
         ],
       },
     ],
@@ -756,14 +761,15 @@ const regionalPages = [
         { k: 'Zakat due at 2.5%', v: 'SGD 1,250', total: true, final: true },
       ],
       note:
-        'The MUIS gold threshold of 86 grams is roughly SGD 16,960 at the time of writing, so this person is comfortably liable. Someone with SGD 12,000 in total would be below the threshold and owe nothing — while the same person on the Hanafi silver threshold of roughly SGD 1,829 would be well above it and owe SGD 300.',
+        'This uses the balance on the Zakat date. MUIS assesses the lowest balance held above nisab across the year instead, so if this person dipped to SGD 30,000 in April the MUIS figure would be SGD 750 rather than SGD 1,250. Two further points: the SGD 16,960 gold threshold shown here is derived from international spot prices, and MUIS publishes its own official figure which governs; and someone below the gold threshold may still be above the silver one.',
     },
     faqs: [
       {
         q: 'What is the nisab in Singapore?',
         a: [
-          'MUIS sets nisab against 86 grams of gold. At the gold price current at the time of writing that is roughly SGD 16,960. MUIS publishes the official figure and updates it as the price moves, so check theirs before you pay.',
-          'BarakahFlow uses the 86 gram MUIS convention for Singapore by default and prices it from live international spot rates.',
+          'The Singapore Fatwa Committee sets nisab against 86 grams of gold, which at spot prices around the time of writing is roughly SGD 16,960. MUIS also points to the silver threshold of 595 grams as a practical default, which is far lower, in the region of SGD 1,829.',
+          'MUIS publishes the official figure and updates it as the price moves. Anything derived on this page comes from international spot prices and is indicative only — check the MUIS figure before you pay, and follow it where the two differ.',
+          'BarakahFlow uses the 86 gram MUIS weight convention for Singapore by default and prices it from live international spot rates.',
         ],
       },
       {
@@ -776,8 +782,9 @@ const regionalPages = [
       {
         q: 'Is Zakat on CPF payable in Singapore?',
         a: [
-          'Scholars differ, and BarakahFlow does not claim to settle it. The debate turns on accessibility: whether wealth you cannot presently withdraw is wealth you fully own for Zakat purposes.',
-          'The app’s treatment for restricted retirement savings is to count them net of the penalty and tax that withdrawal would attract, which is a mainstream contemporary position. If you want a ruling rather than a treatment, MUIS is the authority to ask.',
+          'MUIS treats CPF monthly payouts as not zakatable, on the reasoning that no Hawl has passed on them, and treats a lump sum drawn above the minimum sum as zakatable one year after it is received. That is the local position and it is the one BarakahFlow applies for Singapore: nothing while the money is locked, and Zakat once it has been received and held for a year.',
+          'That differs from the app’s default for the United States and United Kingdom, where retirement savings are counted each year net of the penalty and tax that withdrawal would attract, following FCNA and AMJA. Both positions are offered in the app and each names its source.',
+          'BarakahFlow does not issue rulings. If you want a binding answer for your own CPF position, MUIS is the authority to ask.',
         ],
       },
       {
@@ -867,10 +874,19 @@ const regionalPages = [
         ],
       },
       {
+        q: 'Is my EPF or KWSP savings zakatable?',
+        a: [
+          'The Malaysian position, following Lembaga Zakat Selangor, is that EPF is not subject to an annual Zakat while the money is locked. It falls due on withdrawal instead: before five years of ownership, 2.5% of the amount withdrawn; from age 55, the balance is treated like ordinary savings.',
+          'This differs from the default BarakahFlow applies in the United States and United Kingdom, where retirement savings are counted every year net of the penalty and tax that withdrawal would attract, following FCNA and AMJA. Both positions are in the app and each names its source. The Malaysian one is the default for this region.',
+          'Your own state body is the authority on this. Take a specific case to them rather than to a calculator.',
+        ],
+      },
+      {
         q: 'Does zakat pendapatan replace Zakat on my savings?',
         a: [
-          'No. Zakat pendapatan is assessed on income as it is earned; Zakat al-Mal is assessed on wealth held for a full lunar year. They address different things and both can apply.',
-          'What they should not do is charge you twice on the same money — income already zakated on receipt, then zakated again a year later as savings. How your state body reconciles this varies, so ask them. This calculator produces Zakat al-Mal only.',
+          'No. Zakat pendapatan is assessed on income as it is earned; Zakat al-Mal is assessed on wealth held for a full lunar year. They address different things and both can apply. Note that zakat pendapatan is a contemporary ijtihad adopted by the Malaysian and Indonesian bodies rather than a classical category, and the classical position across the four schools is that Zakat falls on wealth held a year, not on income as it arrives.',
+          'What the two should not do is charge you twice on the same money — income zakated on receipt, then zakated again a year later as savings. How your state body reconciles that varies, so ask them rather than working it out from a calculator.',
+          'The quick estimate on this page is Zakat al-Mal only. The app itself does carry an income-Zakat option, citing PPZ-MAIWP, Lembaga Zakat Selangor and BAZNAS, which you can switch on.',
         ],
       },
       {
@@ -911,7 +927,7 @@ const regionalPages = [
       {
         h: 'Why British institutions chose silver',
         p: [
-          'The silver threshold sits around a thousand pounds; the gold threshold sits around ten thousand. Which you pick decides whether a large part of the British Muslim community is liable at all.',
+          'The silver threshold sits far below the gold one, as the live figures above show. Which you pick decides whether a large part of the British Muslim community is liable at all.',
           'The National Zakat Foundation and most UK charities take silver, on the reasoning that Zakat is a right of the poor and the cautious side of a genuine scholarly difference is the side that brings more wealth into the obligation. The same logic AAOIFI applies.',
           'If you follow the Maliki, Shafi’i or Hanbali school personally, the gold threshold is your school’s position and BarakahFlow will apply it. The app shows you both figures so you can see exactly what the choice costs.',
         ],
@@ -919,7 +935,7 @@ const regionalPages = [
       {
         h: 'ISAs, pensions and the assets Britain actually holds',
         p: [
-          'A cash ISA is cash and is zakatable in full. A stocks and shares ISA is an investment holding and is counted at market value.',
+          'A cash ISA is cash and is zakatable in full. A stocks and shares ISA depends on why it is held: shares bought to resell count at full market value, while for long-term holdings scholars differ between full market value, which is the cautious position and BarakahFlow’s default, and counting only the company’s own zakatable share, for which the National Zakat Foundation publishes a 25% proxy.',
           'Workplace and personal pensions are harder. A defined contribution pot you cannot access until fifty-five is not wealth you can presently dispose of, and scholars differ on whether that changes its status. BarakahFlow’s treatment is to count restricted retirement savings net of the tax and penalty that would apply on access — a mainstream contemporary position, not a ruling. A defined benefit pension, having no capital value you own, is generally excluded until it pays out.',
           'Help to Buy and Lifetime ISA balances are accessible with a penalty and are treated the same way as other restricted savings.',
         ],
@@ -957,8 +973,9 @@ const regionalPages = [
       {
         q: 'Do I pay Zakat on my ISA?',
         a: [
-          'Yes. A cash ISA is cash and counts in full. A stocks and shares ISA counts at its market value on the day your Zakat year closes.',
-          'The ISA wrapper is a tax status under British law and has no bearing on the Sharia position. Money that is yours and accessible is zakatable whatever wrapper it sits in.',
+          'A cash ISA is cash and counts in full. A stocks and shares ISA is where it gets more interesting, and it depends on why you hold the shares.',
+          'Shares bought in order to resell are trade goods and count at full market value, which we understand to be agreed across the schools. For shares held long term, there is a genuine scholarly difference. BarakahFlow’s default is full market value, which is the cautious position and the one AMJA and Monzer Kahf take. The alternative is to count only the share of the company that is itself zakatable: the National Zakat Foundation publishes a 25% proxy for UK holdings, the Fiqh Council of North America uses 30%. The app offers those and names the source of whichever you pick.',
+          'The ISA wrapper is a tax status under British law and has no bearing on the Sharia position either way. Money that is yours is zakatable whatever wrapper it sits in.',
         ],
       },
       {
@@ -1022,7 +1039,7 @@ const regionalPages = [
       {
         h: 'Why silver, and what it costs',
         p: [
-          'The silver threshold sits near fourteen hundred dollars against roughly thirteen thousand for gold. The North American bodies take silver for the same reason their British counterparts do: where two defensible thresholds exist, the lower one serves the poor.',
+          'The silver threshold sits far below the gold one, as the live figures above show. The North American bodies take silver for the same reason their British counterparts do: where two defensible thresholds exist, the lower one serves the poor.',
           'This means many students, young professionals and households of modest means are liable in the US and Canada who would not be under a gold threshold. That is the intended result of the position, not an accident of it.',
         ],
       },
@@ -1070,10 +1087,10 @@ const regionalPages = [
         ],
       },
       {
-        q: 'Is Zakat tax-deductible in the United States?',
+        q: 'How does paying Zakat interact with my tax return?',
         a: [
-          'Zakat paid to a registered 501(c)(3) organisation is deductible as a charitable contribution under US tax law, and Canadian and Australian equivalents work similarly through their own registered charity regimes.',
-          'The tax treatment has no bearing on the Sharia calculation. Calculate what you owe, pay it, and handle the deduction separately with your accountant.',
+          'BarakahFlow does not give tax advice and this page is not tax advice. How a payment is treated for tax depends on the recipient organisation’s registration status and on your own circumstances, and it differs across the United States, Canada and Australia.',
+          'Take that question to a qualified accountant in your country. The tax treatment has no bearing on the Sharia calculation either way: work out what you owe, pay it, and handle the tax question separately.',
         ],
       },
       {

@@ -2051,6 +2051,23 @@
       color: #04211a;
     }
 
+    /* Standing fatwa / advice notice, high on the page. */
+    .standing-notice {
+      max-width: 560px;
+      margin: 1.1rem 0 0;
+      padding: 0.95rem 1.15rem;
+      border-radius: 18px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass-bg);
+      font-size: 0.84rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .standing-notice strong { color: var(--text-soft); }
+
+    .standing-notice a { color: var(--emerald); }
+
     /* Nisab figures with live currency fill */
     .nisab-cards {
       display: grid;

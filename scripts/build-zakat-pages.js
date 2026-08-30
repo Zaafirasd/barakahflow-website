@@ -133,13 +133,30 @@ ${options}
             <strong>This is an estimate, not your Zakat figure.</strong>
             It multiplies what you type by 2.5% and stops there. It does not check
             whether you are above nisab, deduct any debt, apply the ${esc(page.kind === 'madhhab' ? page.label : 'regional')}
-            rules described on this page, value gold by karat, or track your Hawl.
+            rules described on this page, value gold by karat, or track your Hawl. It
+            also shows the bare product rather than rounding up, which the app does so
+            that rounding can never reduce what reaches the one entitled to it.
             For the real number, with your school and your circumstances applied,
             use the calculator in the app.
           </p>
 
           <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
         </form>`;
+}
+
+/* Standing notice. Sits high on the page rather than only at the foot,
+ * because the page now leads with a calculator. Mirrors the disclaimers the
+ * app itself carries and the position stated in the Terms: BarakahFlow gives
+ * no fatwa and no financial, tax or legal advice. */
+function standingNotice() {
+  return `        <p class="standing-notice">
+          <strong>BarakahFlow does not issue fatwa, and nothing on this page is financial, tax or legal advice.</strong>
+          These pages set out scholarly positions and name where each one comes from. Nisab
+          values shown here are derived from international spot prices and are indicative
+          only &mdash; where your local Zakat authority publishes its own figure, theirs is the
+          one that governs. For a binding ruling on your own circumstances, speak to a
+          qualified scholar. See our <a href="/terms.html">Terms of Service</a>.
+        </p>`;
 }
 
 /* Lets someone who landed on the wrong variant switch without going back to
@@ -452,6 +469,8 @@ ${structuredData(page, url)}
 ${estimator(page)}
 
 ${variantSwitcher(page)}
+
+${standingNotice()}
 
           <p class="lede">${esc(page.lede)}</p>
         </div>
