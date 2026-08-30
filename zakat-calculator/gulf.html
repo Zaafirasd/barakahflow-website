@@ -179,8 +179,78 @@
           <div class="reveal">
             <span class="eyebrow">Regional guide</span>
             <h1>Zakat calculator for the Gulf and Arab states</h1>
-            <p class="lede">Across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, the reference point for Zakat is the AAOIFI standard — the same standard the region’s Islamic banks are audited against. Nisab here is shown in dirhams, and because the dirham and riyal are pegged to the dollar, the threshold moves only with the metal price.</p>
           </div>
+
+        <form class="surface estimator" data-estimator>
+          <h3>Quick Zakat estimate</h3>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter, and nothing more than that. Every rule described on this page lives in the app, not in this box.</p>
+
+          <div class="est-field">
+            <label for="est-amount">Your zakatable wealth</label>
+            <div class="est-input-row">
+              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
+              <select aria-label="Currency" data-est-currency>
+              <option value="AED">AED</option>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="EUR">EUR</option>
+              <option value="SAR">SAR</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="BDT">BDT</option>
+              <option value="SGD">SGD</option>
+              <option value="MYR">MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <span class="est-result-label">Estimated Zakat at 2.5%</span>
+            <span class="est-result-value" data-est-result>&mdash;</span>
+          </div>
+
+          <a class="est-result-cta" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Get your exact number in the app <span aria-hidden="true">&rarr;</span></a>
+
+          <p class="est-disclaimer">
+            <strong>This is an estimate, not your Zakat figure.</strong>
+            It multiplies what you type by 2.5% and stops there. It does not check
+            whether you are above nisab, deduct any debt, apply the regional
+            rules described on this page, value gold by karat, or track your Hawl.
+            For the real number, with your school and your circumstances applied,
+            use the calculator in the app.
+          </p>
+
+          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
+        </form>
+
+        <details class="variant-switch">
+          <summary>Follow a different school, or in another country?</summary>
+          <div class="variant-switch-body">
+            <h4>By school of jurisprudence</h4>
+            <div class="calc-link-row">
+              <a href="/zakat-calculator/aaoifi.html">AAOIFI standard</a>
+              <a href="/zakat-calculator/hanafi.html">Hanafi</a>
+              <a href="/zakat-calculator/maliki.html">Maliki</a>
+              <a href="/zakat-calculator/shafii.html">Shafi’i</a>
+              <a href="/zakat-calculator/hanbali.html">Hanbali</a>
+            </div>
+
+            <h4>By region</h4>
+            <div class="calc-link-row">
+              <span class="is-current" aria-current="page">Gulf &amp; Arab states</span>
+              <a href="/zakat-calculator/south-asia.html">South Asia</a>
+              <a href="/zakat-calculator/singapore.html">Singapore</a>
+              <a href="/zakat-calculator/malaysia-indonesia.html">Malaysia &amp; Indonesia</a>
+              <a href="/zakat-calculator/uk-europe.html">UK &amp; Europe</a>
+              <a href="/zakat-calculator/north-america-australia.html">North America &amp; Australia</a>
+            </div>
+          </div>
+        </details>
+
+          <p class="lede">Across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, the reference point for Zakat is the AAOIFI standard — the same standard the region’s Islamic banks are audited against. Nisab here is shown in dirhams, and because the dirham and riyal are pegged to the dollar, the threshold moves only with the metal price.</p>
         </div>
       </header>
 
@@ -267,59 +337,6 @@
           </dl>
           <p class="we-note">The silver threshold applied here is roughly AED 5,206, so this person is well clear of it. Note that the gold in this example is held as investment rather than worn — worn jewellery would be exempt on the AAOIFI default, and counted in full if you follow the Hanafi school.</p>
         </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
-            <span class="section-label">Rough figure</span>
-            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
-            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
-          </div>
-
-        <form class="surface estimator" data-estimator>
-          <h3>Quick Zakat estimate</h3>
-          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
-
-          <div class="est-field">
-            <label for="est-amount">Your zakatable wealth</label>
-            <div class="est-input-row">
-              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
-              <select aria-label="Currency" data-est-currency>
-              <option value="AED">AED</option>
-              <option value="USD">USD</option>
-              <option value="GBP">GBP</option>
-              <option value="EUR">EUR</option>
-              <option value="SAR">SAR</option>
-              <option value="PKR">PKR</option>
-              <option value="INR">INR</option>
-              <option value="BDT">BDT</option>
-              <option value="SGD">SGD</option>
-              <option value="MYR">MYR</option>
-              <option value="IDR">IDR</option>
-              <option value="CAD">CAD</option>
-              <option value="AUD">AUD</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="est-result">
-            <span class="est-result-label">Estimated Zakat at 2.5%</span>
-            <span class="est-result-value" data-est-result>&mdash;</span>
-          </div>
-
-          <p class="est-disclaimer">
-            <strong>This is an estimate, not your Zakat figure.</strong>
-            It multiplies what you type by 2.5% and stops there. It does not check
-            whether you are above nisab, deduct any debt, apply the regional
-            rules described on this page, value gold by karat, or track your Hawl.
-            For the real number, with your school and your circumstances applied,
-            use the calculator in the app.
-          </p>
-
-          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
-        </form>
         </div>
       </section>
 

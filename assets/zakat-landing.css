@@ -1704,8 +1704,12 @@
        from the homepage so the two cannot drift visually.
        ============================================================ */
 
+    /* The navbar is position:sticky, so it occupies its own space in flow and
+       nothing needs to clear it. An earlier revision padded this out as if the
+       nav were fixed, which cost ~100px of dead space above the fold on
+       phones — exactly where the calculator now sits. */
     .breadcrumb {
-      padding: 7rem 0 0;
+      padding: 1.5rem 0 0;
       font-size: 0.85rem;
       color: var(--muted);
     }
@@ -1749,11 +1753,14 @@
       color: var(--text);
     }
 
+    /* The lede now sits below the calculator, so it reads as the opening of
+       the explanatory content rather than as hero copy. */
     .page-hero .lede {
       font-size: clamp(1.02rem, 2vw, 1.18rem);
       color: var(--text-soft);
       max-width: 62ch;
       line-height: 1.65;
+      margin: 2.5rem 0 0;
     }
 
     .prose { max-width: 68ch; }
@@ -1923,6 +1930,127 @@
 
     .estimator .button { margin-top: 1.25rem; }
 
+    /* Secondary CTA. Sits directly under the estimate figure so it is in view
+       the moment the number appears, rather than only at the foot of the page.
+       The full-width button below the disclaimer and the page-end CTA both
+       remain — this is an addition, not a replacement. */
+    .est-result-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--emerald);
+      text-decoration: none;
+      transition: gap 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+
+    .est-result-cta:hover { gap: 0.7rem; opacity: 0.85; }
+
+    .est-result-cta:focus-visible {
+      outline: 2px solid var(--emerald);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Hero placement. The widget now sits immediately under the lede, so cap
+       its width rather than letting it stretch across the 1200px container. */
+    .page-hero .estimator {
+      max-width: 560px;
+      margin: 2.25rem 0 0;
+    }
+
+    /* Variant switcher — sits under the estimate widget in the hero so
+       someone who landed on the wrong school or country can move sideways
+       instead of going back to search. */
+    .variant-switch {
+      max-width: 560px;
+      margin: 1.1rem 0 0;
+      border: 1px solid var(--glass-border);
+      background: var(--glass-bg);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .variant-switch summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 0.85rem 1.15rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      transition: color 0.2s var(--ease-out);
+    }
+
+    .variant-switch summary::-webkit-details-marker { display: none; }
+
+    .variant-switch summary::after {
+      content: "+";
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--muted);
+      flex: 0 0 auto;
+      line-height: 1;
+    }
+
+    .variant-switch[open] summary::after { content: "\2212"; }
+
+    .variant-switch summary:hover { color: var(--emerald); }
+
+    .variant-switch summary:focus-visible {
+      outline: 2px solid var(--emerald);
+      outline-offset: -2px;
+    }
+
+    .variant-switch-body { padding: 0.25rem 1.15rem 1.15rem; }
+
+    .variant-switch-body h4 {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0.9rem 0 0.6rem;
+    }
+
+    .variant-switch-body .calc-link-row { margin-bottom: 0; gap: 0.45rem; }
+
+    .variant-switch-body .calc-link-row a,
+    .variant-switch-body .calc-link-row .is-current {
+      display: inline-block;
+      padding: 0.42rem 0.85rem;
+      border-radius: 999px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+
+    .variant-switch-body .calc-link-row a:hover {
+      color: var(--emerald);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .variant-switch-body .calc-link-row .is-current {
+      color: var(--emerald-ink);
+      background: var(--emerald);
+      border-color: var(--emerald);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    html[data-theme="dark"] .variant-switch-body .calc-link-row .is-current {
+      color: #04211a;
+    }
+
     /* Nisab figures with live currency fill */
     .nisab-cards {
       display: grid;
@@ -2012,9 +2140,18 @@
     .calc-link-row a:hover { color: var(--emerald); border-color: rgba(16, 185, 129, 0.4); }
 
     @media (max-width: 640px) {
-      .breadcrumb { padding-top: 6rem; }
+      .breadcrumb { padding-top: 1rem; }
+      .page-hero { padding-top: 1rem; }
       .worked-example dl { grid-template-columns: 1fr auto; gap: 0.55rem 1rem; }
       .est-input-row { flex-wrap: wrap; }
       .est-input-row input { flex: 1 1 100%; }
       .est-input-row select { flex: 1 1 100%; }
+
+      /* The widget is above the fold on phones now, so tighten it up and let
+         the label and figure sit on their own lines instead of squeezing
+         onto one row. */
+      .estimator { padding: 1.4rem; }
+      .page-hero .estimator { margin-top: 1.75rem; }
+      .est-result { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+      .estimator .button { width: 100%; justify-content: center; }
     }

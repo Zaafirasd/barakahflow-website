@@ -110,7 +110,7 @@ function estimator(page) {
 
   return `        <form class="surface estimator" data-estimator>
           <h3>Quick Zakat estimate</h3>
-          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter, and nothing more than that. Every rule described on this page lives in the app, not in this box.</p>
 
           <div class="est-field">
             <label for="est-amount">Your zakatable wealth</label>
@@ -127,6 +127,8 @@ ${options}
             <span class="est-result-value" data-est-result>&mdash;</span>
           </div>
 
+          <a class="est-result-cta" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Get your exact number in the app <span aria-hidden="true">&rarr;</span></a>
+
           <p class="est-disclaimer">
             <strong>This is an estimate, not your Zakat figure.</strong>
             It multiplies what you type by 2.5% and stops there. It does not check
@@ -138,6 +140,37 @@ ${options}
 
           <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
         </form>`;
+}
+
+/* Lets someone who landed on the wrong variant switch without going back to
+ * search. Built from real <a> links inside a <details>, not a JS dropdown, so
+ * it works with JavaScript off and gives every page a crawlable link to all
+ * ten siblings. The current page is rendered as a marked, non-clickable chip. */
+function variantSwitcher(page) {
+  const row = (pages) =>
+    pages
+      .map((p) => {
+        if (p.slug === page.slug) {
+          return `              <span class="is-current" aria-current="page">${esc(p.navLabel)}</span>`;
+        }
+        return `              <a href="/zakat-calculator/${esc(p.slug)}.html">${esc(p.navLabel)}</a>`;
+      })
+      .join('\n');
+
+  return `        <details class="variant-switch">
+          <summary>Follow a different school, or in another country?</summary>
+          <div class="variant-switch-body">
+            <h4>By school of jurisprudence</h4>
+            <div class="calc-link-row">
+${row(madhhabPages)}
+            </div>
+
+            <h4>By region</h4>
+            <div class="calc-link-row">
+${row(regionalPages)}
+            </div>
+          </div>
+        </details>`;
 }
 
 function faqSection(page) {
@@ -414,8 +447,13 @@ ${structuredData(page, url)}
           <div class="reveal">
             <span class="eyebrow">${esc(page.kind === 'madhhab' ? 'School of jurisprudence' : 'Regional guide')}</span>
             <h1>${esc(page.h1)}</h1>
-            <p class="lede">${esc(page.lede)}</p>
           </div>
+
+${estimator(page)}
+
+${variantSwitcher(page)}
+
+          <p class="lede">${esc(page.lede)}</p>
         </div>
       </header>
 
@@ -441,18 +479,6 @@ ${bodySections(page)}
           </div>
 
 ${workedExample(page.example)}
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
-            <span class="section-label">Rough figure</span>
-            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
-            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
-          </div>
-
-${estimator(page)}
         </div>
       </section>
 
