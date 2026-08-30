@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zakat Calculator UK — Nisab in Pounds and Euros</title>
+  <meta name="description" content="Zakat calculator for the UK and Europe. Silver nisab in GBP and EUR following National Zakat Foundation practice, with live gold and silver spot prices.">
+  <link rel="canonical" href="https://barakahflowapp.com/zakat-calculator/uk-europe.html">
+  <meta name="keywords" content="zakat calculator uk, nisab uk, nisab in pounds, zakat calculator europe, nisab in euros, national zakat foundation nisab, zakat on isa">
+  <meta name="theme-color" content="#10B981">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BarakahFlow Team">
+  <meta name="publisher" content="BarakahFlow">
+  <meta name="application-name" content="BarakahFlow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://barakahflowapp.com/zakat-calculator/uk-europe.html">
+  <meta property="og:title" content="Zakat Calculator UK — Nisab in Pounds and Euros">
+  <meta property="og:description" content="Zakat calculator for the UK and Europe. Silver nisab in GBP and EUR following National Zakat Foundation practice, with live gold and silver spot prices.">
+  <meta property="og:image" content="https://barakahflowapp.com/Images/logopng.png">
+  <meta property="og:site_name" content="BarakahFlow">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://barakahflowapp.com/zakat-calculator/uk-europe.html">
+  <meta property="twitter:title" content="Zakat Calculator UK — Nisab in Pounds and Euros">
+  <meta property="twitter:description" content="Zakat calculator for the UK and Europe. Silver nisab in GBP and EUR following National Zakat Foundation practice, with live gold and silver spot prices.">
+  <meta property="twitter:image" content="https://barakahflowapp.com/Images/logopng.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/zakat-landing.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Apply the stored theme before first paint so the page does not flash. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("barakahflow-theme");
+        document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://barakahflowapp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zakat Calculator",
+          "item": "https://barakahflowapp.com/#zakat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UK & Europe",
+          "item": "https://barakahflowapp.com/zakat-calculator/uk-europe.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the nisab in the UK right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the silver threshold of 595 grams, roughly £1,106 at the metal prices current at the time of writing. The gold threshold of 85 grams is roughly £10,135. The National Zakat Foundation publishes an updated figure and most UK Muslims follow it. BarakahFlow prices the same thresholds from live spot rates in sterling, refreshing while the calculator is open."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I pay Zakat on my ISA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A cash ISA is cash and counts in full. A stocks and shares ISA counts at its market value on the day your Zakat year closes. The ISA wrapper is a tax status under British law and has no bearing on the Sharia position. Money that is yours and accessible is zakatable whatever wrapper it sits in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my UK pension zakatable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the type and on which position you follow. A defined contribution pot is wealth you own but cannot yet access, and scholars differ on how that affects its status. BarakahFlow counts restricted retirement savings net of the penalty and tax that access would attract, which is a mainstream contemporary treatment. A defined benefit pension is generally excluded until it starts paying, since you own no capital sum. Neither of these is a fatwa — if the amounts are significant, ask a scholar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I deduct my UK mortgage from my Zakat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not the balance. No school permits netting an entire housing debt against your savings, and calculators that allow it produce figures that are simply wrong. Only principal actually falling due within your Zakat year can reduce the base, and BarakahFlow deducts nothing from a mortgage by default. You can add one month or twelve lunar months of principal if you hold that view. The interest element is never deductible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which school should I follow in the UK?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most British Muslims follow the school of their family’s background — commonly Hanafi for those with South Asian heritage, Maliki for many with North and West African heritage, Shafi’i for many with East African, Levantine or Southeast Asian heritage. The institutional default in the UK is closer to the AAOIFI position, which is why BarakahFlow starts there and then asks. If you know your school, set it and the app applies that school’s rules throughout."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://barakahflowapp.com/#webapp",
+      "name": "BarakahFlow",
+      "url": "https://app.barakahflowapp.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "description": "Halal personal finance app with a Zakat engine covering the four Sunni schools, three nisab weight conventions, six regional presets, live gold and silver spot prices and a true lunar Hawl.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://barakahflowapp.com/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://barakahflowapp.com/#org",
+      "name": "BarakahFlow",
+      "url": "https://barakahflowapp.com/",
+      "logo": "https://barakahflowapp.com/Images/logopng.png"
+    }
+  ]
+}
+  </script>
+</head>
+<body data-page-currency="GBP">
+  <div class="page">
+    <nav class="navbar" id="navbar" aria-label="Primary">
+      <div class="container">
+        <div class="navbar-inner">
+          <a class="brand" href="/" aria-label="BarakahFlow home">
+            <img src="/Images/monogram.png" alt="BarakahFlow - Halal Personal Finance &amp; Zakat App">
+            <span>
+              <span class="brand-name">BarakahFlow</span>
+              <span class="brand-tag">Halal finance. Built for the Ummah.</span>
+            </span>
+          </a>
+
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+              <span class="theme-icon" aria-hidden="true">&#x2600;</span>
+            </button>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open><span class="button-text">Open App</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#zakat">Zakat Calculator</a></li>
+            <li><span aria-current="page">UK &amp; Europe</span></li>
+          </ol>
+        </nav>
+      </div>
+
+      <header class="section page-hero">
+        <div class="container">
+          <div class="reveal">
+            <span class="eyebrow">Regional guide</span>
+            <h1>Zakat calculator for the UK and Europe</h1>
+            <p class="lede">British and European Muslim institutions have largely settled on the silver threshold — a low bar, deliberately chosen so that more people are captured by the obligation rather than fewer. It is the position the National Zakat Foundation uses, and it is the BarakahFlow default here.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container">
+        <div class="table-wrap reveal">
+          <table class="ref-table">
+            <caption>How Zakat is calculated for UK &amp; Europe</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Weight convention</th>
+                <td data-label="Weight convention">AAOIFI / majority convention &mdash; 85 g gold, 595 g silver</td>
+              </tr>
+              <tr>
+                <th scope="row">Operative threshold</th>
+                <td data-label="Operative threshold">Silver</td>
+              </tr>
+              <tr>
+                <th scope="row">Follows the positions of</th>
+                <td data-label="Follows the positions of">National Zakat Foundation UK · ECFR · Islamic Relief</td>
+              </tr>
+              <tr>
+                <th scope="row">Currencies</th>
+                <td data-label="Currencies">Pound sterling (GBP); Euro (EUR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">The UK and Europe use the AAOIFI and majority weight conversion of 85 grams of gold and 595 grams of silver, with the silver threshold applied as the operative one. The National Zakat Foundation, the European Council for Fatwa and Research, and the major British Muslim charities converge on this.</p>
+
+          <div class="reveal" style="margin-top: 2.5rem;">
+            <h2 class="section-heading" style="text-align: left;">The threshold, in GBP</h2>
+            <p class="section-copy" style="text-align: left; margin-left: 0;">Nisab is a weight of metal, so its value in your currency moves with the market. The figures below are refreshed from live international spot prices when the page loads.</p>
+          </div>
+
+          <div class="nisab-cards">
+            <div class="surface nisab-card">
+              <span class="nc-metal">Gold threshold</span>
+              <strong class="nc-weight">85 g</strong>
+              <span class="nc-value" data-nisab="gold" data-grams="85">&asymp; £10,135</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+            <div class="surface nisab-card">
+              <span class="nc-metal">Silver threshold &middot; applies to you</span>
+              <strong class="nc-weight">595 g</strong>
+              <span class="nc-value" data-nisab="silver" data-grams="595">&asymp; £1,106</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+          </div>
+
+          <p class="table-note" style="text-align: left;">Gram weights are fixed and are stated above. The currency values are indicative: they are rendered into the page as static figures and upgraded to live spot prices when the price feed responds.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="prose reveal">
+          <h2>Why British institutions chose silver</h2>
+          <p>The silver threshold sits around a thousand pounds; the gold threshold sits around ten thousand. Which you pick decides whether a large part of the British Muslim community is liable at all.</p>
+          <p>The National Zakat Foundation and most UK charities take silver, on the reasoning that Zakat is a right of the poor and the cautious side of a genuine scholarly difference is the side that brings more wealth into the obligation. The same logic AAOIFI applies.</p>
+          <p>If you follow the Maliki, Shafi’i or Hanbali school personally, the gold threshold is your school’s position and BarakahFlow will apply it. The app shows you both figures so you can see exactly what the choice costs.</p>
+
+          <h2>ISAs, pensions and the assets Britain actually holds</h2>
+          <p>A cash ISA is cash and is zakatable in full. A stocks and shares ISA is an investment holding and is counted at market value.</p>
+          <p>Workplace and personal pensions are harder. A defined contribution pot you cannot access until fifty-five is not wealth you can presently dispose of, and scholars differ on whether that changes its status. BarakahFlow’s treatment is to count restricted retirement savings net of the tax and penalty that would apply on access — a mainstream contemporary position, not a ruling. A defined benefit pension, having no capital value you own, is generally excluded until it pays out.</p>
+          <p>Help to Buy and Lifetime ISA balances are accessible with a penalty and are treated the same way as other restricted savings.</p>
+
+          <h2>Two currencies, one threshold</h2>
+          <p>Sterling and the euro both float against the dollar, and gold and silver are priced in dollars. Your nisab therefore moves on two axes at once — the metal price, and your currency against the dollar. A threshold figure someone published eight months ago can be materially wrong today.</p>
+          <p>BarakahFlow prices from live international spot rates in your own currency and timestamps what it used, so the figure you paid on is reproducible later.</p>
+          </div>
+
+        <div class="surface worked-example">
+          <h3>A worked example in pounds</h3>
+          <dl>
+              <dt>Current account and cash ISA</dt>
+              <dd class="">£12,000</dd>
+              <dt>Stocks and shares ISA at market value</dt>
+              <dd class="">£8,000</dd>
+              <dt>Gold jewellery worn regularly</dt>
+              <dd class="">Exempt</dd>
+              <dt>Less: card balances and bills due within the year</dt>
+              <dd class="">− £2,500</dd>
+              <dt class="we-total">Zakatable base</dt>
+              <dd class="we-total">£17,500</dd>
+              <dt class="we-total">Zakat due at 2.5%</dt>
+              <dd class="we-total">£438</dd>
+          </dl>
+          <p class="we-note">The silver threshold applied here is roughly £1,106. Had the gold threshold of about £10,135 been used instead, this person would still be liable — but someone with £5,000 in total would owe £125 on silver and nothing at all on gold. That is the choice British institutions have made on the community’s behalf, and it is worth understanding rather than inheriting.</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Rough figure</span>
+            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
+            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
+          </div>
+
+        <form class="surface estimator" data-estimator>
+          <h3>Quick Zakat estimate</h3>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
+
+          <div class="est-field">
+            <label for="est-amount">Your zakatable wealth</label>
+            <div class="est-input-row">
+              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
+              <select aria-label="Currency" data-est-currency>
+              <option value="GBP">GBP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="BDT">BDT</option>
+              <option value="SGD">SGD</option>
+              <option value="MYR">MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <span class="est-result-label">Estimated Zakat at 2.5%</span>
+            <span class="est-result-value" data-est-result>&mdash;</span>
+          </div>
+
+          <p class="est-disclaimer">
+            <strong>This is an estimate, not your Zakat figure.</strong>
+            It multiplies what you type by 2.5% and stops there. It does not check
+            whether you are above nisab, deduct any debt, apply the regional
+            rules described on this page, value gold by karat, or track your Hawl.
+            For the real number, with your school and your circumstances applied,
+            use the calculator in the app.
+          </p>
+
+          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
+        </form>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Questions?</span>
+            <h2 class="section-heading">UK &amp; Europe Zakat, commonly asked</h2>
+          </div>
+
+          <div class="faq-grid reveal" data-stagger>
+            <details class="surface faq-item">
+              <summary>What is the nisab in the UK right now?</summary>
+              <div class="faq-content">
+                <p>On the silver threshold of 595 grams, roughly £1,106 at the metal prices current at the time of writing. The gold threshold of 85 grams is roughly £10,135.</p>
+                <p>The National Zakat Foundation publishes an updated figure and most UK Muslims follow it. BarakahFlow prices the same thresholds from live spot rates in sterling, refreshing while the calculator is open.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Do I pay Zakat on my ISA?</summary>
+              <div class="faq-content">
+                <p>Yes. A cash ISA is cash and counts in full. A stocks and shares ISA counts at its market value on the day your Zakat year closes.</p>
+                <p>The ISA wrapper is a tax status under British law and has no bearing on the Sharia position. Money that is yours and accessible is zakatable whatever wrapper it sits in.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Is my UK pension zakatable?</summary>
+              <div class="faq-content">
+                <p>It depends on the type and on which position you follow. A defined contribution pot is wealth you own but cannot yet access, and scholars differ on how that affects its status.</p>
+                <p>BarakahFlow counts restricted retirement savings net of the penalty and tax that access would attract, which is a mainstream contemporary treatment. A defined benefit pension is generally excluded until it starts paying, since you own no capital sum. Neither of these is a fatwa — if the amounts are significant, ask a scholar.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Can I deduct my UK mortgage from my Zakat?</summary>
+              <div class="faq-content">
+                <p>Not the balance. No school permits netting an entire housing debt against your savings, and calculators that allow it produce figures that are simply wrong.</p>
+                <p>Only principal actually falling due within your Zakat year can reduce the base, and BarakahFlow deducts nothing from a mortgage by default. You can add one month or twelve lunar months of principal if you hold that view. The interest element is never deductible.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Which school should I follow in the UK?</summary>
+              <div class="faq-content">
+                <p>Most British Muslims follow the school of their family’s background — commonly Hanafi for those with South Asian heritage, Maliki for many with North and West African heritage, Shafi’i for many with East African, Levantine or Southeast Asian heritage.</p>
+                <p>The institutional default in the UK is closer to the AAOIFI position, which is why BarakahFlow starts there and then asks. If you know your school, set it and the app applies that school’s rules throughout.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Related</span>
+            <h2 class="section-heading">Compare with another method</h2>
+            <p class="section-copy">The same holdings produce different figures under different schools and conventions. Seeing the comparison is the point.</p>
+          </div>
+          <div class="related-grid reveal">
+            <a class="surface related-card" href="/zakat-calculator/hanafi.html">
+              <strong>Hanafi Zakat calculator</strong>
+              <span>The Hanafi position on nisab, jewellery, debt and timing.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/maliki.html">
+              <strong>Maliki Zakat calculator</strong>
+              <span>The Maliki position on nisab, jewellery, debt and timing.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/aaoifi.html">
+              <strong>AAOIFI Standard Zakat calculator</strong>
+              <span>The AAOIFI Standard position on nisab, jewellery, debt and timing.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight surface">
+            <div class="spotlight-copy reveal">
+              <div class="status-chip">Free</div>
+              <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
+              <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
+              <p class="fiqh-note">BarakahFlow states scholarly positions and attributes them. It does not issue fatwa. For a binding ruling on your own circumstances, speak to a qualified scholar.</p>
+              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow &mdash; free, no install</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="surface footer-inner">
+          <div class="footer-brand">
+            <img src="/Images/monogram.png" alt="BarakahFlow branding">
+            <span>
+              <strong>BarakahFlow</strong>
+              <span>Halal finance. Built for the Ummah.</span>
+            </span>
+          </div>
+
+          <div class="footer-meta">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
+            <span>&copy; 2026 BarakahFlow. Built for Muslims by the BarakahFlow Team.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/zakat-landing.js" defer></script>
+</body>
+</html>

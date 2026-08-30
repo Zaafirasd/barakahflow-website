@@ -2,19 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://barakahflowapp.com/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/aaoifi.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/hanafi.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/maliki.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/shafii.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/hanbali.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/gulf.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/south-asia.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/singapore.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/malaysia-indonesia.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/uk-europe.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barakahflowapp.com/zakat-calculator/north-america-australia.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://barakahflowapp.com/privacy-policy.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://barakahflowapp.com/terms.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

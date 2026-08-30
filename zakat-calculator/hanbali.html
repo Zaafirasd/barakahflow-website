@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanbali Zakat Calculator — Gold Nisab and Immediate Debts</title>
+  <meta name="description" content="Zakat on the Hanbali method: the 85g gold threshold, worn jewellery exempt, immediate debts deducted, and nisab held across the whole lunar year.">
+  <link rel="canonical" href="https://barakahflowapp.com/zakat-calculator/hanbali.html">
+  <meta name="keywords" content="hanbali zakat calculator, hanbali nisab, gold nisab 85g, hanbali debt deduction, zakat hanbali madhhab">
+  <meta name="theme-color" content="#10B981">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BarakahFlow Team">
+  <meta name="publisher" content="BarakahFlow">
+  <meta name="application-name" content="BarakahFlow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://barakahflowapp.com/zakat-calculator/hanbali.html">
+  <meta property="og:title" content="Hanbali Zakat Calculator — Gold Nisab and Immediate Debts">
+  <meta property="og:description" content="Zakat on the Hanbali method: the 85g gold threshold, worn jewellery exempt, immediate debts deducted, and nisab held across the whole lunar year.">
+  <meta property="og:image" content="https://barakahflowapp.com/Images/logopng.png">
+  <meta property="og:site_name" content="BarakahFlow">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://barakahflowapp.com/zakat-calculator/hanbali.html">
+  <meta property="twitter:title" content="Hanbali Zakat Calculator — Gold Nisab and Immediate Debts">
+  <meta property="twitter:description" content="Zakat on the Hanbali method: the 85g gold threshold, worn jewellery exempt, immediate debts deducted, and nisab held across the whole lunar year.">
+  <meta property="twitter:image" content="https://barakahflowapp.com/Images/logopng.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/zakat-landing.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Apply the stored theme before first paint so the page does not flash. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("barakahflow-theme");
+        document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://barakahflowapp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zakat Calculator",
+          "item": "https://barakahflowapp.com/#zakat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hanbali",
+          "item": "https://barakahflowapp.com/zakat-calculator/hanbali.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What counts as an immediate debt in the Hanbali school?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A liability that is presently demandable — rent for the current month, a bill already issued, an instalment whose due date has arrived. The test is whether the creditor could require payment today. A loan repayable over several years is not immediate in its entirety. Only the part currently due qualifies, which is why BarakahFlow asks you to separate the principal outstanding from the principal actually falling due."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Hanbali position differ from the Maliki one on debt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Maliki school deducts the debt in full regardless of when it matures. The Hanbali school deducts only what is presently demandable. For someone carrying a long-dated liability the gap is large. On a $6,000 instalment plan not yet due, the Maliki base is $6,000 lower and the bill $150 lower on the same holdings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which nisab does the Hanbali school use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gold, at 85 grams — roughly $12,994 at the time of writing. This is shared with the Maliki and Shafi’i schools and stands against the Hanafi silver threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Hanbali school the one followed in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the school with the deepest historical roots in the Arabian peninsula and remains dominant in Saudi Arabia and Qatar. Contemporary Gulf practice on Zakat, particularly for banks and companies, more often follows the AAOIFI standard, which draws across all four schools. Individuals frequently follow one and encounter the other in their bank statements."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://barakahflowapp.com/#webapp",
+      "name": "BarakahFlow",
+      "url": "https://app.barakahflowapp.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "description": "Halal personal finance app with a Zakat engine covering the four Sunni schools, three nisab weight conventions, six regional presets, live gold and silver spot prices and a true lunar Hawl.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://barakahflowapp.com/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://barakahflowapp.com/#org",
+      "name": "BarakahFlow",
+      "url": "https://barakahflowapp.com/",
+      "logo": "https://barakahflowapp.com/Images/logopng.png"
+    }
+  ]
+}
+  </script>
+</head>
+<body data-page-currency="USD">
+  <div class="page">
+    <nav class="navbar" id="navbar" aria-label="Primary">
+      <div class="container">
+        <div class="navbar-inner">
+          <a class="brand" href="/" aria-label="BarakahFlow home">
+            <img src="/Images/monogram.png" alt="BarakahFlow - Halal Personal Finance &amp; Zakat App">
+            <span>
+              <span class="brand-name">BarakahFlow</span>
+              <span class="brand-tag">Halal finance. Built for the Ummah.</span>
+            </span>
+          </a>
+
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+              <span class="theme-icon" aria-hidden="true">&#x2600;</span>
+            </button>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open><span class="button-text">Open App</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#zakat">Zakat Calculator</a></li>
+            <li><span aria-current="page">Hanbali</span></li>
+          </ol>
+        </nav>
+      </div>
+
+      <header class="section page-hero">
+        <div class="container">
+          <div class="reveal">
+            <span class="eyebrow">School of jurisprudence</span>
+            <h1>Zakat according to the Hanbali school</h1>
+            <p class="lede">The Hanbali school sits between the Maliki and Shafi’i positions on debt. What is due now comes off; what is merely owed in the abstract does not. It is the narrowest of the deduction rules that actually allows a deduction, and it is the school followed across much of the Arabian peninsula.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container">
+        <div class="table-wrap reveal">
+          <table class="ref-table">
+            <caption>The Hanbali position at a glance</caption>
+            <thead>
+              <tr>
+                <th scope="col">Question</th>
+                <th scope="col">Hanbali position</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th scope="row">Nisab basis</th>
+                  <td data-label="Nisab basis">Gold, 85 grams</td>
+                </tr>
+                <tr>
+                  <th scope="row">Worn jewellery</th>
+                  <td data-label="Worn jewellery">Exempt</td>
+                </tr>
+                <tr>
+                  <th scope="row">Debt deduction</th>
+                  <td data-label="Debt deduction">Immediate debts deducted</td>
+                </tr>
+                <tr>
+                  <th scope="row">Nisab timing</th>
+                  <td data-label="Nisab timing">The threshold must be held for the whole year</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+          <div class="reveal" style="margin-top: 2.5rem;">
+            <h2 class="section-heading" style="text-align: left;">The threshold, in USD</h2>
+            <p class="section-copy" style="text-align: left; margin-left: 0;">The Hanbali school sets the threshold by gold, 85 grams — the higher of the two thresholds, shared with the Maliki and Shafi’i schools.</p>
+          </div>
+
+          <div class="nisab-cards">
+            <div class="surface nisab-card">
+              <span class="nc-metal">Gold threshold &middot; applies to you</span>
+              <strong class="nc-weight">85 g</strong>
+              <span class="nc-value" data-nisab="gold" data-grams="85">&asymp; $12,994</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+            <div class="surface nisab-card">
+              <span class="nc-metal">Silver threshold</span>
+              <strong class="nc-weight">595 g</strong>
+              <span class="nc-value" data-nisab="silver" data-grams="595">&asymp; $1,418</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+          </div>
+
+          <p class="table-note" style="text-align: left;">Gram weights are fixed and are stated above. The currency values are indicative: they are rendered into the page as static figures and upgraded to live spot prices when the price feed responds.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="prose reveal">
+          <h2>Immediate debts, and where the line falls</h2>
+          <p>The Hanbali position deducts what is presently demandable. Rent due this month, an invoice payable now, an instalment that has already fallen due — these reduce your zakatable wealth because the money is already spoken for.</p>
+          <p>A liability that will not be demanded until later does not, even though you know it is coming. The test is whether the creditor could ask for it today.</p>
+          <p>This is narrower than the Maliki rule, which subtracts the whole debt, and wider than the Shafi’i rule, which subtracts nothing. In practice it produces a figure between the two.</p>
+
+          <h2>The gold threshold and the full year</h2>
+          <p>The Hanbali school uses the 85 gram gold threshold and, with the Maliki and Shafi’i schools, requires it to be held continuously across the lunar year.</p>
+          <p>A dip below the threshold breaks the year. Your count restarts from the day you next rise above it, and BarakahFlow resets the Hijri anniversary accordingly rather than carrying the old date forward.</p>
+
+          <h2>Jewellery</h2>
+          <p>Exempt where in genuine personal use, in agreement with the Maliki and Shafi’i schools. Gold held as bullion, coin or investment remains zakatable in full.</p>
+          </div>
+
+        <div class="surface worked-example">
+          <h3>A worked example on the Hanbali method</h3>
+          <dl>
+              <dt>Cash and savings</dt>
+              <dd class="">$25,000</dd>
+              <dt>Gold bullion, 50g, held as investment</dt>
+              <dd class="">$7,640</dd>
+              <dt>Less: rent and invoices payable now</dt>
+              <dd class="">− $1,500</dd>
+              <dt>Instalments not yet fallen due</dt>
+              <dd class="">Not deducted</dd>
+              <dt class="we-total">Zakatable base</dt>
+              <dd class="we-total">$31,140</dd>
+              <dt class="we-total">Zakat due at 2.5%</dt>
+              <dd class="we-total">$779</dd>
+          </dl>
+          <p class="we-note">The Maliki method would subtract the $6,000 of future instalments as well, bringing the base to $25,140 and the bill to $629. The Shafi’i method would deduct neither and charge $816. The Hanbali answer sits between them, which is characteristic of the school on this question.</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Rough figure</span>
+            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
+            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
+          </div>
+
+        <form class="surface estimator" data-estimator>
+          <h3>Quick Zakat estimate</h3>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
+
+          <div class="est-field">
+            <label for="est-amount">Your zakatable wealth</label>
+            <div class="est-input-row">
+              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
+              <select aria-label="Currency" data-est-currency>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="EUR">EUR</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="BDT">BDT</option>
+              <option value="SGD">SGD</option>
+              <option value="MYR">MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <span class="est-result-label">Estimated Zakat at 2.5%</span>
+            <span class="est-result-value" data-est-result>&mdash;</span>
+          </div>
+
+          <p class="est-disclaimer">
+            <strong>This is an estimate, not your Zakat figure.</strong>
+            It multiplies what you type by 2.5% and stops there. It does not check
+            whether you are above nisab, deduct any debt, apply the Hanbali
+            rules described on this page, value gold by karat, or track your Hawl.
+            For the real number, with your school and your circumstances applied,
+            use the calculator in the app.
+          </p>
+
+          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
+        </form>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Questions?</span>
+            <h2 class="section-heading">Hanbali Zakat, commonly asked</h2>
+          </div>
+
+          <div class="faq-grid reveal" data-stagger>
+            <details class="surface faq-item">
+              <summary>What counts as an immediate debt in the Hanbali school?</summary>
+              <div class="faq-content">
+                <p>A liability that is presently demandable — rent for the current month, a bill already issued, an instalment whose due date has arrived. The test is whether the creditor could require payment today.</p>
+                <p>A loan repayable over several years is not immediate in its entirety. Only the part currently due qualifies, which is why BarakahFlow asks you to separate the principal outstanding from the principal actually falling due.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>How does the Hanbali position differ from the Maliki one on debt?</summary>
+              <div class="faq-content">
+                <p>The Maliki school deducts the debt in full regardless of when it matures. The Hanbali school deducts only what is presently demandable.</p>
+                <p>For someone carrying a long-dated liability the gap is large. On a $6,000 instalment plan not yet due, the Maliki base is $6,000 lower and the bill $150 lower on the same holdings.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Which nisab does the Hanbali school use?</summary>
+              <div class="faq-content">
+                <p>Gold, at 85 grams — roughly $12,994 at the time of writing. This is shared with the Maliki and Shafi’i schools and stands against the Hanafi silver threshold.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Is the Hanbali school the one followed in Saudi Arabia?</summary>
+              <div class="faq-content">
+                <p>It is the school with the deepest historical roots in the Arabian peninsula and remains dominant in Saudi Arabia and Qatar.</p>
+                <p>Contemporary Gulf practice on Zakat, particularly for banks and companies, more often follows the AAOIFI standard, which draws across all four schools. Individuals frequently follow one and encounter the other in their bank statements.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Related</span>
+            <h2 class="section-heading">Compare with another method</h2>
+            <p class="section-copy">The same holdings produce different figures under different schools and conventions. Seeing the comparison is the point.</p>
+          </div>
+          <div class="related-grid reveal">
+            <a class="surface related-card" href="/zakat-calculator/gulf.html">
+              <strong>Zakat calculator, Gulf &amp; Arab States</strong>
+              <span>Nisab, currency and local practice for Gulf &amp; Arab States.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/north-america-australia.html">
+              <strong>Zakat calculator, North America &amp; Australia</strong>
+              <span>Nisab, currency and local practice for North America &amp; Australia.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/aaoifi.html">
+              <strong>AAOIFI Standard Zakat calculator</strong>
+              <span>The AAOIFI Standard position on nisab, jewellery, debt and timing.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight surface">
+            <div class="spotlight-copy reveal">
+              <div class="status-chip">Free</div>
+              <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
+              <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
+              <p class="fiqh-note">BarakahFlow states scholarly positions and attributes them. It does not issue fatwa. For a binding ruling on your own circumstances, speak to a qualified scholar.</p>
+              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow &mdash; free, no install</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="surface footer-inner">
+          <div class="footer-brand">
+            <img src="/Images/monogram.png" alt="BarakahFlow branding">
+            <span>
+              <strong>BarakahFlow</strong>
+              <span>Halal finance. Built for the Ummah.</span>
+            </span>
+          </div>
+
+          <div class="footer-meta">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
+            <span>&copy; 2026 BarakahFlow. Built for Muslims by the BarakahFlow Team.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/zakat-landing.js" defer></script>
+</body>
+</html>

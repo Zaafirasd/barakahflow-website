@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAOIFI Zakat Calculator — The Contemporary Standard Explained</title>
+  <meta name="description" content="Calculate Zakat on the AAOIFI standard: the lower of the gold or silver threshold, worn jewellery exempt, short-term debts deducted, nisab checked at both ends of the year.">
+  <link rel="canonical" href="https://barakahflowapp.com/zakat-calculator/aaoifi.html">
+  <meta name="keywords" content="aaoifi zakat calculator, aaoifi nisab, contemporary zakat standard, islamic finance zakat, zakat 2.5 percent">
+  <meta name="theme-color" content="#10B981">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BarakahFlow Team">
+  <meta name="publisher" content="BarakahFlow">
+  <meta name="application-name" content="BarakahFlow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://barakahflowapp.com/zakat-calculator/aaoifi.html">
+  <meta property="og:title" content="AAOIFI Zakat Calculator — The Contemporary Standard Explained">
+  <meta property="og:description" content="Calculate Zakat on the AAOIFI standard: the lower of the gold or silver threshold, worn jewellery exempt, short-term debts deducted, nisab checked at both ends of the year.">
+  <meta property="og:image" content="https://barakahflowapp.com/Images/logopng.png">
+  <meta property="og:site_name" content="BarakahFlow">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://barakahflowapp.com/zakat-calculator/aaoifi.html">
+  <meta property="twitter:title" content="AAOIFI Zakat Calculator — The Contemporary Standard Explained">
+  <meta property="twitter:description" content="Calculate Zakat on the AAOIFI standard: the lower of the gold or silver threshold, worn jewellery exempt, short-term debts deducted, nisab checked at both ends of the year.">
+  <meta property="twitter:image" content="https://barakahflowapp.com/Images/logopng.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/zakat-landing.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Apply the stored theme before first paint so the page does not flash. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("barakahflow-theme");
+        document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://barakahflowapp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zakat Calculator",
+          "item": "https://barakahflowapp.com/#zakat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AAOIFI Standard",
+          "item": "https://barakahflowapp.com/zakat-calculator/aaoifi.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is AAOIFI a fifth school of thought?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AAOIFI is the Accounting and Auditing Organisation for Islamic Financial Institutions, a standards body based in Bahrain whose Sharia board is drawn from scholars across the four Sunni schools. Its Zakah standard does not invent rulings. It selects among existing classical positions and states which one it has taken and why, so that banks and funds in different countries produce comparable numbers. Following it is following classical fiqh, filtered through a contemporary committee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does BarakahFlow default to AAOIFI rather than my own madhhab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because a default has to be something, and AAOIFI is the position with the broadest cross-school acceptance among people whose wealth is in modern financial instruments. It is only a starting point. Every contested question is a switch you can move, and if you tell the app you follow the Hanafi, Maliki, Shafi’i or Hanbali school it will apply that school’s positions instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the AAOIFI standard exempt gold jewellery I wear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. AAOIFI follows the majority of the schools in exempting jewellery that is genuinely in personal use, on the reasoning that it is a possession in service rather than wealth being stored. The Hanafi school disagrees and counts it whether worn or not. If you follow the Hanafi position, switch to it in the app and the same holdings will produce a different and higher figure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I deduct my mortgage under AAOIFI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not the balance, no. Only the portion of principal actually falling due within your Zakat year can reduce your base, and BarakahFlow defaults to deducting nothing from a mortgage at all as the safest position. You can change that to one month or twelve lunar months of principal. The interest element of any repayment is never deductible under any setting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What rate does AAOIFI apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zakat is 2.5% of qualifying wealth held for one lunar (Hijri) year. If you anchor your Zakat year to a Gregorian date instead, the rate rises to 2.577% because a solar year runs about eleven days longer, which keeps your lifetime obligation whole."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://barakahflowapp.com/#webapp",
+      "name": "BarakahFlow",
+      "url": "https://app.barakahflowapp.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "description": "Halal personal finance app with a Zakat engine covering the four Sunni schools, three nisab weight conventions, six regional presets, live gold and silver spot prices and a true lunar Hawl.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://barakahflowapp.com/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://barakahflowapp.com/#org",
+      "name": "BarakahFlow",
+      "url": "https://barakahflowapp.com/",
+      "logo": "https://barakahflowapp.com/Images/logopng.png"
+    }
+  ]
+}
+  </script>
+</head>
+<body data-page-currency="USD">
+  <div class="page">
+    <nav class="navbar" id="navbar" aria-label="Primary">
+      <div class="container">
+        <div class="navbar-inner">
+          <a class="brand" href="/" aria-label="BarakahFlow home">
+            <img src="/Images/monogram.png" alt="BarakahFlow - Halal Personal Finance &amp; Zakat App">
+            <span>
+              <span class="brand-name">BarakahFlow</span>
+              <span class="brand-tag">Halal finance. Built for the Ummah.</span>
+            </span>
+          </a>
+
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+              <span class="theme-icon" aria-hidden="true">&#x2600;</span>
+            </button>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open><span class="button-text">Open App</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#zakat">Zakat Calculator</a></li>
+            <li><span aria-current="page">AAOIFI Standard</span></li>
+          </ol>
+        </nav>
+      </div>
+
+      <header class="section page-hero">
+        <div class="container">
+          <div class="reveal">
+            <span class="eyebrow">School of jurisprudence</span>
+            <h1>Zakat on the AAOIFI standard</h1>
+            <p class="lede">AAOIFI is the standards body most Islamic banks and finance houses follow, and its Zakah standard is BarakahFlow’s default. It is not a fifth school. It is a contemporary synthesis that picks, from the classical positions, the ones most workable for people whose wealth sits in bank accounts and funds rather than livestock and crops.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container">
+        <div class="table-wrap reveal">
+          <table class="ref-table">
+            <caption>The AAOIFI Standard position at a glance</caption>
+            <thead>
+              <tr>
+                <th scope="col">Question</th>
+                <th scope="col">AAOIFI Standard position</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th scope="row">Nisab basis</th>
+                  <td data-label="Nisab basis">The lower of the gold or silver threshold — silver, in practice</td>
+                </tr>
+                <tr>
+                  <th scope="row">Worn jewellery</th>
+                  <td data-label="Worn jewellery">Exempt</td>
+                </tr>
+                <tr>
+                  <th scope="row">Debt deduction</th>
+                  <td data-label="Debt deduction">Short-term and near-term debts deducted</td>
+                </tr>
+                <tr>
+                  <th scope="row">Nisab timing</th>
+                  <td data-label="Nisab timing">Checked at the start and the end of the year</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+          <div class="reveal" style="margin-top: 2.5rem;">
+            <h2 class="section-heading" style="text-align: left;">The threshold, in USD</h2>
+            <p class="section-copy" style="text-align: left; margin-left: 0;">AAOIFI takes the lower of the two thresholds, which in practice means silver. A lower threshold means more people cross it and become liable, which is the cautious position on an obligation.</p>
+          </div>
+
+          <div class="nisab-cards">
+            <div class="surface nisab-card">
+              <span class="nc-metal">Gold threshold</span>
+              <strong class="nc-weight">85 g</strong>
+              <span class="nc-value" data-nisab="gold" data-grams="85">&asymp; $12,994</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+            <div class="surface nisab-card">
+              <span class="nc-metal">Silver threshold &middot; applies to you</span>
+              <strong class="nc-weight">595 g</strong>
+              <span class="nc-value" data-nisab="silver" data-grams="595">&asymp; $1,418</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+          </div>
+
+          <p class="table-note" style="text-align: left;">Gram weights are fixed and are stated above. The currency values are indicative: they are rendered into the page as static figures and upgraded to live spot prices when the price feed responds.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="prose reveal">
+          <h2>Why the lower threshold, and why it matters</h2>
+          <p>Gold and silver were roughly interchangeable as thresholds in the Prophet’s ﷺ time. They are not now. Silver has fallen so far against gold that the two thresholds differ by roughly nine to one, and which one you use decides whether many ordinary savers owe anything at all.</p>
+          <p>AAOIFI resolves this by taking the lower figure. The reasoning is that Zakat is a right of the poor, and where two defensible thresholds exist, the one that brings more wealth into the obligation is the safer side of the dispute. Most large charity bodies reach the same conclusion independently.</p>
+
+          <h2>What AAOIFI does with debt</h2>
+          <p>Debts falling due within the coming year are deducted from your wealth before the 2.5% is applied. Debts that stretch far beyond that — most obviously a mortgage — are not deducted wholesale.</p>
+          <p>This is the middle position. Deducting nothing ignores that a debt due next month is not really your wealth. Deducting an entire mortgage balance would wipe out the Zakat of almost every homeowner, which no school permits and which AAOIFI explicitly rejects.</p>
+
+          <h2>Checking the threshold at both ends</h2>
+          <p>AAOIFI requires your wealth to be above nisab when your Zakat year opens and again when it closes. What happens in between does not break the year.</p>
+          <p>This is the Hanafi position on timing rather than the majority one, and it is the practical choice: someone paid monthly will dip below the threshold most months, and a rule requiring continuous possession would excuse almost everyone.</p>
+          </div>
+
+        <div class="surface worked-example">
+          <h3>A worked example on the AAOIFI standard</h3>
+          <dl>
+              <dt>Cash across current and savings accounts</dt>
+              <dd class="">$6,000</dd>
+              <dt>Shares and funds at market value</dt>
+              <dd class="">$4,000</dd>
+              <dt>Gold jewellery worn regularly, 25g</dt>
+              <dd class="">Exempt</dd>
+              <dt>Less: credit card and bills due within the year</dt>
+              <dd class="">− $1,500</dd>
+              <dt class="we-total">Zakatable base</dt>
+              <dd class="we-total">$8,500</dd>
+              <dt class="we-total">Zakat due at 2.5%</dt>
+              <dd class="we-total">$213</dd>
+          </dl>
+          <p class="we-note">The threshold here is the silver figure, around $1,418, so this person is comfortably liable. Had the gold threshold of roughly $12,994 been used instead, the same person would owe nothing at all. That single choice is the difference between a Zakat bill and none, which is why BarakahFlow asks rather than assumes.</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Rough figure</span>
+            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
+            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
+          </div>
+
+        <form class="surface estimator" data-estimator>
+          <h3>Quick Zakat estimate</h3>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
+
+          <div class="est-field">
+            <label for="est-amount">Your zakatable wealth</label>
+            <div class="est-input-row">
+              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
+              <select aria-label="Currency" data-est-currency>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="EUR">EUR</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="BDT">BDT</option>
+              <option value="SGD">SGD</option>
+              <option value="MYR">MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <span class="est-result-label">Estimated Zakat at 2.5%</span>
+            <span class="est-result-value" data-est-result>&mdash;</span>
+          </div>
+
+          <p class="est-disclaimer">
+            <strong>This is an estimate, not your Zakat figure.</strong>
+            It multiplies what you type by 2.5% and stops there. It does not check
+            whether you are above nisab, deduct any debt, apply the AAOIFI Standard
+            rules described on this page, value gold by karat, or track your Hawl.
+            For the real number, with your school and your circumstances applied,
+            use the calculator in the app.
+          </p>
+
+          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
+        </form>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Questions?</span>
+            <h2 class="section-heading">AAOIFI Standard Zakat, commonly asked</h2>
+          </div>
+
+          <div class="faq-grid reveal" data-stagger>
+            <details class="surface faq-item">
+              <summary>Is AAOIFI a fifth school of thought?</summary>
+              <div class="faq-content">
+                <p>No. AAOIFI is the Accounting and Auditing Organisation for Islamic Financial Institutions, a standards body based in Bahrain whose Sharia board is drawn from scholars across the four Sunni schools.</p>
+                <p>Its Zakah standard does not invent rulings. It selects among existing classical positions and states which one it has taken and why, so that banks and funds in different countries produce comparable numbers. Following it is following classical fiqh, filtered through a contemporary committee.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Why does BarakahFlow default to AAOIFI rather than my own madhhab?</summary>
+              <div class="faq-content">
+                <p>Because a default has to be something, and AAOIFI is the position with the broadest cross-school acceptance among people whose wealth is in modern financial instruments.</p>
+                <p>It is only a starting point. Every contested question is a switch you can move, and if you tell the app you follow the Hanafi, Maliki, Shafi’i or Hanbali school it will apply that school’s positions instead.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Does the AAOIFI standard exempt gold jewellery I wear?</summary>
+              <div class="faq-content">
+                <p>Yes. AAOIFI follows the majority of the schools in exempting jewellery that is genuinely in personal use, on the reasoning that it is a possession in service rather than wealth being stored.</p>
+                <p>The Hanafi school disagrees and counts it whether worn or not. If you follow the Hanafi position, switch to it in the app and the same holdings will produce a different and higher figure.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Can I deduct my mortgage under AAOIFI?</summary>
+              <div class="faq-content">
+                <p>Not the balance, no. Only the portion of principal actually falling due within your Zakat year can reduce your base, and BarakahFlow defaults to deducting nothing from a mortgage at all as the safest position.</p>
+                <p>You can change that to one month or twelve lunar months of principal. The interest element of any repayment is never deductible under any setting.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>What rate does AAOIFI apply?</summary>
+              <div class="faq-content">
+                <p>Zakat is 2.5% of qualifying wealth held for one lunar (Hijri) year. If you anchor your Zakat year to a Gregorian date instead, the rate rises to 2.577% because a solar year runs about eleven days longer, which keeps your lifetime obligation whole.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Related</span>
+            <h2 class="section-heading">Compare with another method</h2>
+            <p class="section-copy">The same holdings produce different figures under different schools and conventions. Seeing the comparison is the point.</p>
+          </div>
+          <div class="related-grid reveal">
+            <a class="surface related-card" href="/zakat-calculator/gulf.html">
+              <strong>Zakat calculator, Gulf &amp; Arab States</strong>
+              <span>Nisab, currency and local practice for Gulf &amp; Arab States.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/uk-europe.html">
+              <strong>Zakat calculator, UK &amp; Europe</strong>
+              <span>Nisab, currency and local practice for UK &amp; Europe.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/north-america-australia.html">
+              <strong>Zakat calculator, North America &amp; Australia</strong>
+              <span>Nisab, currency and local practice for North America &amp; Australia.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight surface">
+            <div class="spotlight-copy reveal">
+              <div class="status-chip">Free</div>
+              <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
+              <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
+              <p class="fiqh-note">BarakahFlow states scholarly positions and attributes them. It does not issue fatwa. For a binding ruling on your own circumstances, speak to a qualified scholar.</p>
+              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow &mdash; free, no install</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="surface footer-inner">
+          <div class="footer-brand">
+            <img src="/Images/monogram.png" alt="BarakahFlow branding">
+            <span>
+              <strong>BarakahFlow</strong>
+              <span>Halal finance. Built for the Ummah.</span>
+            </span>
+          </div>
+
+          <div class="footer-meta">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
+            <span>&copy; 2026 BarakahFlow. Built for Muslims by the BarakahFlow Team.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/zakat-landing.js" defer></script>
+</body>
+</html>

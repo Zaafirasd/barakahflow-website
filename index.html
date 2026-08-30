@@ -1873,6 +1873,36 @@
         margin-bottom: 0.15rem;
       }
     }
+
+    /* Links out to the /zakat-calculator/ landing pages. Kept in sync with
+       the same rules in assets/zakat-landing.css. */
+    .calc-links { margin-top: 2.5rem; }
+
+    .calc-links h3 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.9rem;
+    }
+
+    .calc-link-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.6rem; }
+
+    .calc-link-row a {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+
+    .calc-link-row a:hover { color: var(--emerald); border-color: rgba(16, 185, 129, 0.4); }
   </style>
 </head>
 <body>
@@ -1979,6 +2009,27 @@
             <div class="proof-item">
               <strong>20</strong>
               <span>Currencies</span>
+            </div>
+          </div>
+
+          <div class="calc-links reveal">
+            <h3>Zakat calculator by school of jurisprudence</h3>
+            <div class="calc-link-row">
+              <a href="zakat-calculator/aaoifi.html">AAOIFI standard</a>
+              <a href="zakat-calculator/hanafi.html">Hanafi</a>
+              <a href="zakat-calculator/maliki.html">Maliki</a>
+              <a href="zakat-calculator/shafii.html">Shafi&rsquo;i</a>
+              <a href="zakat-calculator/hanbali.html">Hanbali</a>
+            </div>
+
+            <h3>Zakat calculator by region</h3>
+            <div class="calc-link-row">
+              <a href="zakat-calculator/gulf.html">Gulf &amp; Arab states</a>
+              <a href="zakat-calculator/south-asia.html">South Asia</a>
+              <a href="zakat-calculator/singapore.html">Singapore</a>
+              <a href="zakat-calculator/malaysia-indonesia.html">Malaysia &amp; Indonesia</a>
+              <a href="zakat-calculator/uk-europe.html">UK &amp; Europe</a>
+              <a href="zakat-calculator/north-america-australia.html">North America &amp; Australia</a>
             </div>
           </div>
         </div>

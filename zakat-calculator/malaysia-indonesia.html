@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zakat Calculator Malaysia &amp; Indonesia — Nisab in MYR and IDR</title>
+  <meta name="description" content="Zakat calculator for Malaysia and Indonesia. Nisab on the 85 gram gold threshold used by the state zakat bodies, in ringgit and rupiah, with Shafi’i rules applied.">
+  <link rel="canonical" href="https://barakahflowapp.com/zakat-calculator/malaysia-indonesia.html">
+  <meta name="keywords" content="kalkulator zakat malaysia, nisab zakat malaysia, zakat calculator indonesia, nisab emas 85 gram, baznas nisab, lembaga zakat selangor">
+  <meta name="theme-color" content="#10B981">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BarakahFlow Team">
+  <meta name="publisher" content="BarakahFlow">
+  <meta name="application-name" content="BarakahFlow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://barakahflowapp.com/zakat-calculator/malaysia-indonesia.html">
+  <meta property="og:title" content="Zakat Calculator Malaysia &amp; Indonesia — Nisab in MYR and IDR">
+  <meta property="og:description" content="Zakat calculator for Malaysia and Indonesia. Nisab on the 85 gram gold threshold used by the state zakat bodies, in ringgit and rupiah, with Shafi’i rules applied.">
+  <meta property="og:image" content="https://barakahflowapp.com/Images/logopng.png">
+  <meta property="og:site_name" content="BarakahFlow">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://barakahflowapp.com/zakat-calculator/malaysia-indonesia.html">
+  <meta property="twitter:title" content="Zakat Calculator Malaysia &amp; Indonesia — Nisab in MYR and IDR">
+  <meta property="twitter:description" content="Zakat calculator for Malaysia and Indonesia. Nisab on the 85 gram gold threshold used by the state zakat bodies, in ringgit and rupiah, with Shafi’i rules applied.">
+  <meta property="twitter:image" content="https://barakahflowapp.com/Images/logopng.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/zakat-landing.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Apply the stored theme before first paint so the page does not flash. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("barakahflow-theme");
+        document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://barakahflowapp.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zakat Calculator",
+          "item": "https://barakahflowapp.com/#zakat"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Malaysia & Indonesia",
+          "item": "https://barakahflowapp.com/zakat-calculator/malaysia-indonesia.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the nisab in Malaysia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The state zakat bodies set nisab against 85 grams of gold, which at the gold price current at the time of writing is roughly MYR 54,575. Your own state institution — Lembaga Zakat Selangor, PPZ-MAIWP or your state equivalent — publishes the official figure, and some use a local uruf gold price rather than the international spot rate. Where the two differ, follow your state body."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the nisab in Indonesian rupiah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BAZNAS sets nisab at the equivalent of 85 grams of gold, which at the time of writing is in the region of IDR 211.8 million. BAZNAS publishes an updated figure periodically and that is the one to reconcile against. BarakahFlow supports the rupiah and prices the threshold from live international gold spot rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does zakat pendapatan replace Zakat on my savings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Zakat pendapatan is assessed on income as it is earned; Zakat al-Mal is assessed on wealth held for a full lunar year. They address different things and both can apply. What they should not do is charge you twice on the same money — income already zakated on receipt, then zakated again a year later as savings. How your state body reconciles this varies, so ask them. This calculator produces Zakat al-Mal only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ASB or ASNB zakatable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unit holdings of this kind are generally treated as zakatable wealth at their redeemable value, in the same way as other investment funds. The finer questions — how to treat undistributed income, and the underlying screening of the fund itself — are matters your state body has published positions on. BarakahFlow counts shares and funds at market value and leaves the fund-level rulings to the scholars who issue them."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://barakahflowapp.com/#webapp",
+      "name": "BarakahFlow",
+      "url": "https://app.barakahflowapp.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "description": "Halal personal finance app with a Zakat engine covering the four Sunni schools, three nisab weight conventions, six regional presets, live gold and silver spot prices and a true lunar Hawl.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://barakahflowapp.com/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://barakahflowapp.com/#org",
+      "name": "BarakahFlow",
+      "url": "https://barakahflowapp.com/",
+      "logo": "https://barakahflowapp.com/Images/logopng.png"
+    }
+  ]
+}
+  </script>
+</head>
+<body data-page-currency="MYR">
+  <div class="page">
+    <nav class="navbar" id="navbar" aria-label="Primary">
+      <div class="container">
+        <div class="navbar-inner">
+          <a class="brand" href="/" aria-label="BarakahFlow home">
+            <img src="/Images/monogram.png" alt="BarakahFlow - Halal Personal Finance &amp; Zakat App">
+            <span>
+              <span class="brand-name">BarakahFlow</span>
+              <span class="brand-tag">Halal finance. Built for the Ummah.</span>
+            </span>
+          </a>
+
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+              <span class="theme-icon" aria-hidden="true">&#x2600;</span>
+            </button>
+            <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open><span class="button-text">Open App</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#zakat">Zakat Calculator</a></li>
+            <li><span aria-current="page">Malaysia &amp; Indonesia</span></li>
+          </ol>
+        </nav>
+      </div>
+
+      <header class="section page-hero">
+        <div class="container">
+          <div class="reveal">
+            <span class="eyebrow">Regional guide</span>
+            <h1>Zakat calculator for Malaysia and Indonesia</h1>
+            <p class="lede">Malaysia and Indonesia both set nisab against gold rather than silver, at 85 grams, and both are predominantly Shafi’i. The institutional landscape is unusually developed here — Malaysia collects through state-level bodies, Indonesia through BAZNAS — and their published figures are the ones to reconcile against.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="container">
+        <div class="table-wrap reveal">
+          <table class="ref-table">
+            <caption>How Zakat is calculated for Malaysia &amp; Indonesia</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Weight convention</th>
+                <td data-label="Weight convention">AAOIFI / majority convention &mdash; 85 g gold, 595 g silver</td>
+              </tr>
+              <tr>
+                <th scope="row">Operative threshold</th>
+                <td data-label="Operative threshold">Gold</td>
+              </tr>
+              <tr>
+                <th scope="row">Follows the positions of</th>
+                <td data-label="Follows the positions of">PPZ-MAIWP · Lembaga Zakat Selangor · BAZNAS Indonesia</td>
+              </tr>
+              <tr>
+                <th scope="row">Currencies</th>
+                <td data-label="Currencies">Malaysian ringgit (MYR); Indonesian rupiah (IDR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">The state zakat institutions across Malaysia and Indonesia set nisab against 85 grams of gold, matching the AAOIFI weight conversion. Note that they apply it to gold specifically rather than taking the lower of gold and silver as AAOIFI itself does — the weight is shared, the metal choice is not.</p>
+
+          <div class="reveal" style="margin-top: 2.5rem;">
+            <h2 class="section-heading" style="text-align: left;">The threshold, in MYR</h2>
+            <p class="section-copy" style="text-align: left; margin-left: 0;">Nisab is a weight of metal, so its value in your currency moves with the market. The figures below are refreshed from live international spot prices when the page loads.</p>
+          </div>
+
+          <div class="nisab-cards">
+            <div class="surface nisab-card">
+              <span class="nc-metal">Gold threshold &middot; applies to you</span>
+              <strong class="nc-weight">85 g</strong>
+              <span class="nc-value" data-nisab="gold" data-grams="85">&asymp; MYR 54,575</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+            <div class="surface nisab-card">
+              <span class="nc-metal">Silver threshold</span>
+              <strong class="nc-weight">595 g</strong>
+              <span class="nc-value" data-nisab="silver" data-grams="595">&asymp; MYR 5,954</span>
+              <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
+            </div>
+          </div>
+
+          <p class="table-note" style="text-align: left;">Gram weights are fixed and are stated above. The currency values are indicative: they are rendered into the page as static figures and upgraded to live spot prices when the price feed responds.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="prose reveal">
+          <h2>Gold at 85 grams, and one thing to watch</h2>
+          <p>Both countries use the 85 gram gold weight, which is the AAOIFI conversion. But there is a distinction worth understanding: AAOIFI itself takes the lower of the gold and silver thresholds, which in current prices means silver. The Malaysian and Indonesian bodies apply the gold figure directly.</p>
+          <p>So selecting &quot;AAOIFI&quot; and selecting &quot;Malaysia&quot; will give you the same weight but potentially a different threshold. BarakahFlow’s regional preset for Malaysia and Indonesia follows local practice and uses gold.</p>
+          <p>Some Malaysian states also publish a nisab based on local uruf — prevailing local custom on the gold price — rather than the international spot rate. Where that applies, your state body’s published figure takes precedence over anything a calculator derives from a global feed.</p>
+
+          <h2>The Shafi’i rules underneath</h2>
+          <p>Both countries are overwhelmingly Shafi’i. That means worn jewellery is exempt, and in the strict Shafi’i position debts are not deducted at all.</p>
+          <p>In practice the state bodies often apply a more accommodating treatment on debt than the classical Shafi’i position, closer to the AAOIFI approach of deducting near-term liabilities. BarakahFlow lets you pick either and tells you which you have chosen.</p>
+
+          <h2>Zakat pendapatan, and why it is not in this calculator</h2>
+          <p>Malaysia has an unusually well-established practice of zakat pendapatan — Zakat on income, assessed and often paid monthly through salary deduction. Indonesia has an analogous zakat penghasilan.</p>
+          <p>This is a contemporary ijtihad rather than a classical category, and it interacts with Zakat al-Mal rather than replacing it. What this calculator produces is Zakat al-Mal on accumulated wealth. If you already pay zakat pendapatan by monthly deduction, treat those payments as a credit and speak to your state body about how the two fit together, rather than paying twice on the same money.</p>
+          </div>
+
+        <div class="surface worked-example">
+          <h3>A worked example in Malaysian ringgit</h3>
+          <dl>
+              <dt>Cash, savings and ASB holdings</dt>
+              <dd class="">MYR 80,000</dd>
+              <dt>Gold bullion, 100g, held as investment</dt>
+              <dd class="">MYR 64,200</dd>
+              <dt>Less: bills and instalments due within the year</dt>
+              <dd class="">− MYR 14,000</dd>
+              <dt class="we-total">Zakatable base</dt>
+              <dd class="we-total">MYR 130,200</dd>
+              <dt class="we-total">Zakat due at 2.5%</dt>
+              <dd class="we-total">MYR 3,255</dd>
+          </dl>
+          <p class="we-note">The gold threshold of 85 grams is roughly MYR 54,575 at the time of writing. Bullion held as an investment is zakatable under every school; had this been jewellery in regular use it would have been exempt on the Shafi’i position that predominates locally, dropping the base to MYR 66,000 and the bill to MYR 1,650.</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Rough figure</span>
+            <h2 class="section-heading">A 2.5% estimate, and where the real one lives</h2>
+            <p class="section-copy">This does one multiplication. Every rule described on this page lives in the app, not in this box.</p>
+          </div>
+
+        <form class="surface estimator" data-estimator>
+          <h3>Quick Zakat estimate</h3>
+          <p class="est-sub">A flat 2.5% of whatever figure you enter. Nothing more than that.</p>
+
+          <div class="est-field">
+            <label for="est-amount">Your zakatable wealth</label>
+            <div class="est-input-row">
+              <input id="est-amount" type="text" inputmode="decimal" placeholder="10000" data-est-amount autocomplete="off">
+              <select aria-label="Currency" data-est-currency>
+              <option value="MYR">MYR</option>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="EUR">EUR</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="BDT">BDT</option>
+              <option value="SGD">SGD</option>
+              <option value="IDR">IDR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <span class="est-result-label">Estimated Zakat at 2.5%</span>
+            <span class="est-result-value" data-est-result>&mdash;</span>
+          </div>
+
+          <p class="est-disclaimer">
+            <strong>This is an estimate, not your Zakat figure.</strong>
+            It multiplies what you type by 2.5% and stops there. It does not check
+            whether you are above nisab, deduct any debt, apply the regional
+            rules described on this page, value gold by karat, or track your Hawl.
+            For the real number, with your school and your circumstances applied,
+            use the calculator in the app.
+          </p>
+
+          <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open the full calculator</a>
+        </form>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Questions?</span>
+            <h2 class="section-heading">Malaysia &amp; Indonesia Zakat, commonly asked</h2>
+          </div>
+
+          <div class="faq-grid reveal" data-stagger>
+            <details class="surface faq-item">
+              <summary>What is the nisab in Malaysia?</summary>
+              <div class="faq-content">
+                <p>The state zakat bodies set nisab against 85 grams of gold, which at the gold price current at the time of writing is roughly MYR 54,575.</p>
+                <p>Your own state institution — Lembaga Zakat Selangor, PPZ-MAIWP or your state equivalent — publishes the official figure, and some use a local uruf gold price rather than the international spot rate. Where the two differ, follow your state body.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>What is the nisab in Indonesian rupiah?</summary>
+              <div class="faq-content">
+                <p>BAZNAS sets nisab at the equivalent of 85 grams of gold, which at the time of writing is in the region of IDR 211.8 million. BAZNAS publishes an updated figure periodically and that is the one to reconcile against.</p>
+                <p>BarakahFlow supports the rupiah and prices the threshold from live international gold spot rates.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Does zakat pendapatan replace Zakat on my savings?</summary>
+              <div class="faq-content">
+                <p>No. Zakat pendapatan is assessed on income as it is earned; Zakat al-Mal is assessed on wealth held for a full lunar year. They address different things and both can apply.</p>
+                <p>What they should not do is charge you twice on the same money — income already zakated on receipt, then zakated again a year later as savings. How your state body reconciles this varies, so ask them. This calculator produces Zakat al-Mal only.</p>
+              </div>
+            </details>
+
+            <details class="surface faq-item">
+              <summary>Is ASB or ASNB zakatable?</summary>
+              <div class="faq-content">
+                <p>Unit holdings of this kind are generally treated as zakatable wealth at their redeemable value, in the same way as other investment funds.</p>
+                <p>The finer questions — how to treat undistributed income, and the underlying screening of the fund itself — are matters your state body has published positions on. BarakahFlow counts shares and funds at market value and leaves the fund-level rulings to the scholars who issue them.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+            <span class="section-label">Related</span>
+            <h2 class="section-heading">Compare with another method</h2>
+            <p class="section-copy">The same holdings produce different figures under different schools and conventions. Seeing the comparison is the point.</p>
+          </div>
+          <div class="related-grid reveal">
+            <a class="surface related-card" href="/zakat-calculator/shafii.html">
+              <strong>Shafi'i Zakat calculator</strong>
+              <span>The Shafi'i position on nisab, jewellery, debt and timing.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/singapore.html">
+              <strong>Zakat calculator, Singapore</strong>
+              <span>Nisab, currency and local practice for Singapore.</span>
+            </a>
+            <a class="surface related-card" href="/zakat-calculator/aaoifi.html">
+              <strong>AAOIFI Standard Zakat calculator</strong>
+              <span>The AAOIFI Standard position on nisab, jewellery, debt and timing.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight surface">
+            <div class="spotlight-copy reveal">
+              <div class="status-chip">Free</div>
+              <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
+              <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
+              <p class="fiqh-note">BarakahFlow states scholarly positions and attributes them. It does not issue fatwa. For a binding ruling on your own circumstances, speak to a qualified scholar.</p>
+              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow &mdash; free, no install</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="surface footer-inner">
+          <div class="footer-brand">
+            <img src="/Images/monogram.png" alt="BarakahFlow branding">
+            <span>
+              <strong>BarakahFlow</strong>
+              <span>Halal finance. Built for the Ummah.</span>
+            </span>
+          </div>
+
+          <div class="footer-meta">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:barakahflowapp@gmail.com" title="For bugs, suggestions, etc.">Contact Us</a>
+            <span>&copy; 2026 BarakahFlow. Built for Muslims by the BarakahFlow Team.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/zakat-landing.js" defer></script>
+</body>
+</html>
