@@ -153,7 +153,7 @@ function standingNotice() {
           <strong>BarakahFlow does not issue fatwa, and nothing on this page is financial, tax or legal advice.</strong>
           These pages set out scholarly positions and name where each one comes from. Nisab
           values shown here are derived from international spot prices and are indicative
-          only &mdash; where your local Zakat authority publishes its own figure, theirs is the
+          only. Where your local Zakat authority publishes its own figure, theirs is the
           one that governs. For a binding ruling on your own circumstances, speak to a
           qualified scholar. See our <a href="/terms.html">Terms of Service</a>.
         </p>`;
@@ -294,7 +294,7 @@ function regionMeta(page) {
             <tbody>
               <tr>
                 <th scope="row">Weight convention</th>
-                <td data-label="Weight convention">${esc(conventionLabels[page.conventionKey])} &mdash; ${esc(nisabFallbacks[page.conventionKey].gold)} g gold, ${esc(nisabFallbacks[page.conventionKey].silver)} g silver</td>
+                <td data-label="Weight convention">${esc(conventionLabels[page.conventionKey])} (${esc(nisabFallbacks[page.conventionKey].gold)} g gold, ${esc(nisabFallbacks[page.conventionKey].silver)} g silver)</td>
               </tr>
               <tr>
                 <th scope="row">Operative threshold</th>
@@ -513,7 +513,7 @@ ${relatedSection(page)}
               <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
               <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
               <p class="fiqh-note">${esc(NOT_FATWA)}</p>
-              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow &mdash; free, no install</a>
+              <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow (Free, no install needed)</a>
             </div>
           </div>
         </div>
@@ -561,6 +561,7 @@ function renderSitemap() {
     ...allPages.map((p) =>
       entry(`${ORIGIN}/zakat-calculator/${p.slug}.html`, '0.8', 'weekly')
     ),
+    entry(`${ORIGIN}/delete-account`, '0.5', 'monthly'),
     entry(`${ORIGIN}/privacy-policy.html`, '0.5', 'monthly'),
     entry(`${ORIGIN}/terms.html`, '0.5', 'monthly'),
   ];

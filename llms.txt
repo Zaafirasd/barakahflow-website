@@ -1,9 +1,9 @@
 # BarakahFlow (Barakaflow)
 
-> A halal personal finance app for Muslims — everyday budgeting, bills and savings built around a Zakat engine that follows your school of jurisprudence, not a one-size-fits-all formula.
+> A halal personal finance app for Muslims. Everyday budgeting, bills and savings built around a Zakat engine that follows your school of jurisprudence instead of a one-size-fits-all formula.
 
 ## Overview
-BarakahFlow handles the ordinary work of personal finance — income, spending, bills, budgets, savings, net worth — and builds the obligations of Islamic finance into the same place. Its flagship is a Zakat rules engine covering the four Sunni schools, three nisab weight conventions, live gold and silver spot prices, and a true lunar Hawl countdown resolved against the Islamic calendar.
+BarakahFlow handles the ordinary work of personal finance (income, spending, bills, budgets, savings, net worth) and builds the obligations of Islamic finance into the same place. Its flagship is a Zakat rules engine covering the four Sunni schools, three nisab weight conventions, live gold and silver spot prices, and a true lunar Hawl countdown resolved against the Islamic calendar.
 
 ## What makes it different
 - **Zakat is the product, not a widget.** Around fifteen genuinely contested questions are each presented as an explicit choice, and every option names the school or standards body it comes from.
@@ -21,8 +21,8 @@ BarakahFlow handles the ordinary work of personal finance — income, spending, 
 - **Net worth**: Cash, gold, silver, investments and business stock in one figure, with per-account switches for net worth and Zakat inclusion.
 - **Investments**: US-listed stocks and ETFs at market prices, feeding net worth and optionally Zakat.
 - **Multi-currency**: Twenty currencies, with separate base and display currency settings and daily cached FX rates.
-- **Notifications**: Six reminders in your local time zone — Friday Sadaqah, Zakat anniversary, bill due, payday, daily log, budget warning.
-- **Privacy**: Encrypted in transit and at rest, strict per-user isolation via Row Level Security, never sold, no ads and no advertising tracking. The most sensitive figures are stripped from the offline device cache. The only measurement running is Vercel Analytics & Speed Insights — anonymous technical performance monitoring (page load and render speed, errors, rough device and browser class) that uses no cookies or fingerprinting, is never joined to an account, and never sees a balance, transaction, metal weight or Zakat figure.
+- **Notifications**: Six reminders in your local time zone: Friday Sadaqah, Zakat anniversary, bill due, payday, daily log, budget warning.
+- **Privacy**: Encrypted in transit and at rest, strict per-user isolation via Row Level Security, never sold, no ads and no advertising tracking. The most sensitive figures are stripped from the local device cache. The only measurement running is Vercel Analytics & Speed Insights (anonymous technical performance monitoring for page load and render speed, errors, rough device and browser class) that uses no cookies or fingerprinting, is never joined to an account, and never sees a balance, transaction, metal weight or Zakat figure.
 
 ## Supported currencies
 AED, USD, SAR, KWD, BHD, QAR, OMR, EGP, INR, PKR, GBP, EUR, CAD, AUD, TRY, MYR, IDR, JPY, CNY, CHF.
