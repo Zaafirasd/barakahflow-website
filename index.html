@@ -1728,6 +1728,11 @@
 
       .hero-actions .button {
         width: 100%;
+        /* Stacked full-width buttons: let long labels wrap. Otherwise
+           white-space:nowrap forces a min-content wider than the hero
+           grid column, which breaks .hero-copy's margin:0 auto and
+           shoves the whole hero (title + phones) off-centre. */
+        white-space: normal;
       }
 
       .download-main {
