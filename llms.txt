@@ -13,7 +13,7 @@ BarakahFlow handles the ordinary work of personal finance — income, spending, 
 
 ## Features
 - **Dashboard**: Balance, total net worth split by asset class, accounts by currency, month spending, budget, bills, savings and investments. Quick Spend logs an expense in two taps.
-- **Transactions**: Recorded against a category and an account, stored in that account's own currency with no silent conversion. Works offline; entries sync when you reconnect.
+- **Transactions**: Recorded against a category and an account, stored in that account's own currency with no silent conversion.
 - **Budgeting**: A monthly amount per category, with Islamic Giving (Zakat Al-Mal, Zakat Al-Fitr, Sadaqah, Hajj / Umrah, Eid Expenses) as its own heading rather than buried in a flat list. Unbudgeted spending is shown, not hidden.
 - **Bill tracker**: Monthly, quarterly or annual, with a "last day of the month" option. Marking a bill paid records the expense, stamps the cycle and rolls the due date forward.
 - **Savings goals**: Eight types including Hajj and Umrah as first-class goals, each with its own progress ring and deadline countdown.
