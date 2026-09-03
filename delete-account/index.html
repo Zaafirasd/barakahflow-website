@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your BarakahFlow account | BarakahFlow</title>
+  <meta name="description" content="Request permanent deletion of your BarakahFlow account and all data associated with it.">
+  <link rel="canonical" href="https://barakahflowapp.com/delete-account">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="BarakahFlow">
+  <meta name="application-name" content="BarakahFlow">
+
+  <meta name="theme-color" content="#10B981">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald: #10b981;
+      --emerald-strong: #34d399;
+      --emerald-ink: #04211a;
+      --radius: 28px;
+    }
+    
+    html[data-theme="dark"] {
+      --text: #f8fafc;
+      --text-soft: #cbd5e1;
+      --muted: #94a3b8;
+      --nav-bg: rgba(15, 23, 42, 0.72);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --page-backdrop: linear-gradient(180deg, #0e0b23 0%, #020617 100%);
+      --surface: rgba(15, 23, 42, 0.65);
+      --surface-border: rgba(255, 255, 255, 0.06);
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+    }
+    
+    html[data-theme="light"] {
+      --text: #1e293b;
+      --text-soft: #475569;
+      --muted: #64748b;
+      --nav-bg: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(15, 23, 42, 0.06);
+      --page-backdrop: linear-gradient(180deg, #eeecf4 0%, #feffff 100%);
+      --surface: rgba(255, 255, 255, 0.76);
+      --surface-border: rgba(15, 23, 42, 0.04);
+      --card-bg: rgba(15, 23, 42, 0.03);
+      --card-border: rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      background: var(--page-backdrop);
+      line-height: 1.6;
+    }
+    
+    a { color: var(--emerald-strong); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(800px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+
+    .navbar {
+      padding: 1rem;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--surface-border);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none !important;
+      color: inherit;
+    }
+
+    .brand img { width: auto; height: 1.9rem; }
+    .brand-name { font-weight: 800; font-size: 1.02rem; display: block; }
+    .brand-tag { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;}
+
+    .content-box {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 3rem;
+      margin-top: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--emerald-strong);
+      letter-spacing: -0.02em;
+    }
+
+    p { color: var(--text-soft); margin: 0 0 1rem; }
+    ul, ol { color: var(--text-soft); padding-left: 1.5rem; margin: 0 0 1rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .action-panel {
+      margin: 2rem 0 2.5rem;
+      padding: 1.75rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      min-height: 3.35rem;
+      padding: 0.95rem 2rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      text-decoration: none !important;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: normal;
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: linear-gradient(180deg, #34d399 0%, #10b981 100%);
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.24);
+      box-shadow:
+        0 16px 34px -18px rgba(16, 185, 129, 0.78),
+        inset 0 1px 0 rgba(255, 255, 255, 0.36);
+    }
+
+    .email-copy {
+      margin-top: 1.25rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    .email-link {
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    .note-box {
+      border-left: 4px solid var(--emerald);
+      padding: 0.85rem 1.25rem;
+      background: var(--card-bg);
+      border-radius: 0 14px 14px 0;
+      margin: 1.25rem 0;
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: var(--text-soft);
+      margin: 0 0.5rem;
+    }
+
+    .footer a:hover {
+      color: var(--emerald-strong);
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 1.5rem 0; }
+      .content-box { padding: 1.5rem; border-radius: 20px; }
+      h1 { font-size: 1.85rem; }
+      .action-panel { padding: 1.25rem; }
+      .button { width: 100%; min-height: 3.25rem; padding: 0.85rem 1rem; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div style="width: min(1200px, calc(100% - 2rem)); margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a class="brand" href="/">
+        <img src="/Images/monogram.png" alt="BarakahFlow">
+        <span>
+          <span class="brand-name">BarakahFlow</span>
+          <span class="brand-tag">Finance with Barakah</span>
+        </span>
+      </a>
+      <a href="/" style="color: var(--text); font-weight: 600; text-decoration: none;">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-box">
+      <h1>Delete your BarakahFlow account</h1>
+
+      <p>This page is for requesting deletion of a BarakahFlow account and all data associated with it. If you still have the BarakahFlow app installed on your device, the fastest route is <strong>Settings &rarr; Delete Account</strong> inside the app, where deletion is immediate. This page exists for people who have already uninstalled the app or cannot sign in.</p>
+
+      <div class="action-panel">
+        <a
+          href="mailto:barakahflowapp@gmail.com?subject=Account%20deletion%20request&body=I%20am%20requesting%20permanent%20deletion%20of%20my%20BarakahFlow%20account%20and%20all%20associated%20data.%0A%0AI%20confirm%20that%3A%0A1.%20I%20am%20sending%20this%20request%20from%20the%20email%20address%20registered%20to%20my%20BarakahFlow%20account.%0A2.%20I%20understand%20that%20this%20deletion%20is%20permanent%2C%20irreversible%2C%20and%20removes%20all%20my%20stored%20transactions%2C%20accounts%2C%20budgets%2C%20bills%2C%20savings%20goals%2C%20holdings%2C%20and%20Zakat%20history.%0A%0AAccount%20email%3A%20"
+          class="button button-primary"
+        >
+          Email Account Deletion Request
+        </a>
+
+        <div class="email-copy">
+          Or send an email directly to: <a href="mailto:barakahflowapp@gmail.com" class="email-link">barakahflowapp@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="note-box">
+        Please send your request from the exact email address associated with your BarakahFlow account so we can verify ownership before actioning it.
+      </div>
+
+      <h2>What gets deleted</h2>
+      <p>Requesting deletion permanently removes your account and everything linked to it:</p>
+      <ol>
+        <li><strong>Account profile, name and email</strong></li>
+        <li><strong>Linked accounts and balances</strong></li>
+        <li><strong>Logged transactions and categories</strong></li>
+        <li><strong>Budgets, bills and savings goals</strong></li>
+        <li><strong>Gold and silver holdings</strong></li>
+        <li><strong>Investment records</strong></li>
+        <li><strong>Zakat calculation method, hawl dates and Zakat history</strong></li>
+        <li><strong>Push notification device tokens</strong></li>
+      </ol>
+
+      <h2>Data held by our service providers</h2>
+      <p>BarakahFlow&rsquo;s data is hosted with third-party infrastructure providers. When an account is deleted, the data is removed from BarakahFlow&rsquo;s own systems and deletion is requested from those providers in line with their retention schedules:</p>
+      <ul>
+        <li><strong>Supabase</strong>: Our database and authentication provider. Your account, profile records, and all financial data are purged from Supabase servers upon deletion.</li>
+        <li><strong>Firebase Cloud Messaging (Google)</strong>: Delivers push notifications to Android devices. Device tokens are purged from our records upon deletion.</li>
+        <li><strong>Web Push</strong>: Delivers push notifications in browsers and on iPhone. Device tokens and push endpoints are purged from our records upon deletion.</li>
+        <li><strong>Vercel</strong>: Our hosting provider. Ephemeral server access and runtime logs roll off in accordance with Vercel&rsquo;s standard log retention schedules.</li>
+      </ul>
+
+      <h2>How long it takes</h2>
+      <p>Requests are actioned within 30 days of verification, and a confirmation is sent once complete.</p>
+
+      <h2>What we keep</h2>
+      <p>Nothing. BarakahFlow retains no personal financial data, account credentials, transaction logs, or profile records once an account is deleted.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <a href="/">Home</a> &middot;
+      <a href="/privacy-policy.html">Privacy Policy</a> &middot;
+      <a href="/terms.html">Terms of Service</a> &middot;
+      <a href="mailto:barakahflowapp@gmail.com">Contact</a>
+    </p>
+    <p>&copy; 2026 BarakahFlow. Built for Muslims, by Muslims.</p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem("barakahflow-theme");
+    root.dataset.theme = storedTheme === "light" ? "light" : "dark";
+  </script>
+</body>
+</html>
