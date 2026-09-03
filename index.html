@@ -786,8 +786,8 @@
     }
 
     @keyframes hero-float {
-      0%, 100% { transform: translateY(0) rotateX(6deg) rotateY(-8deg); }
-      50% { transform: translateY(-10px) rotateX(4deg) rotateY(-4deg); }
+      0%, 100% { transform: translateY(0) rotateX(4deg) rotateY(-6deg); }
+      50% { transform: translateY(-12px) rotateX(2deg) rotateY(-3deg); }
     }
 
     .hero-app-card:nth-child(2) {
@@ -795,8 +795,311 @@
     }
 
     @keyframes hero-float-alt {
-      0%, 100% { transform: translateY(0) rotateX(6deg) rotateY(8deg); }
-      50% { transform: translateY(-10px) rotateX(4deg) rotateY(4deg); }
+      0%, 100% { transform: translateY(0) rotateX(4deg) rotateY(6deg); }
+      50% { transform: translateY(-12px) rotateX(2deg) rotateY(3deg); }
+    }
+
+    /* Modern Phone Mockup Styling */
+    .phone-mockup {
+      position: relative;
+      width: min(100%, 280px);
+      border-radius: 46px;
+      padding: 9px;
+      background: #0f172a;
+      border: 3px solid rgba(255, 255, 255, 0.14);
+      box-shadow:
+        0 30px 70px -15px rgba(0, 0, 0, 0.75),
+        0 0 50px -10px rgba(16, 185, 129, 0.22),
+        inset 0 1px 2px rgba(255, 255, 255, 0.2);
+      transition: transform 0.5s var(--ease-out), box-shadow 0.5s ease;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    html[data-theme="light"] .phone-mockup {
+      background: #1e293b;
+      border-color: rgba(15, 23, 42, 0.15);
+      box-shadow:
+        0 25px 60px -15px rgba(15, 23, 42, 0.25),
+        0 0 40px -8px rgba(16, 185, 129, 0.25);
+    }
+
+    .phone-mockup::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 76px;
+      height: 18px;
+      background: #000000;
+      border-radius: 20px;
+      z-index: 10;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .phone-mockup img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 36px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Hero Showcase with Floating Badges */
+    .hero-showcase {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      perspective: 1400px;
+    }
+
+    .hero-mockup-primary {
+      transform: rotateX(4deg) rotateY(-6deg) rotateZ(1deg);
+      animation: hero-float 7s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    .hero-mockup-secondary {
+      transform: rotateX(4deg) rotateY(6deg) rotateZ(-1deg);
+      animation: hero-float-alt 7s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .hero-mockup-primary:hover,
+    .hero-mockup-secondary:hover {
+      transform: rotateX(0) rotateY(0) rotateZ(0) scale(1.03);
+      z-index: 20;
+    }
+
+    .mockup-floating-badge {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.15rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(16, 185, 129, 0.25);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #f8fafc;
+      font-size: 0.84rem;
+      font-weight: 700;
+      z-index: 15;
+      white-space: nowrap;
+      pointer-events: none;
+      animation: badge-float 5s ease-in-out infinite;
+    }
+
+    html[data-theme="light"] .mockup-floating-badge {
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      box-shadow: 0 15px 35px -8px rgba(15, 23, 42, 0.15), 0 0 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .mockup-badge-left {
+      left: 6%;
+      top: 30%;
+    }
+
+    .mockup-badge-right {
+      right: 6%;
+      bottom: 25%;
+      animation-delay: -2.5s;
+    }
+
+    .mockup-floating-badge svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      color: var(--emerald);
+    }
+
+    @keyframes badge-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Spotlight Two-Column Layout */
+    .spotlight-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      text-align: left;
+      width: 100%;
+    }
+
+    .spotlight-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .spotlight-visual::before {
+      content: "";
+      position: absolute;
+      width: 22rem;
+      height: 22rem;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(16, 185, 129, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .spotlight-visual .phone-mockup {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 290px);
+    }
+
+    /* App Tour / Interactive Gallery Section */
+    .tour-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.4rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 999px;
+      margin: 2rem 0 2.5rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tour-tab-btn {
+      padding: 0.65rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-soft);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s var(--ease-out);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tour-tab-btn:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tour-tab-btn.active {
+      background: var(--emerald);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+    }
+
+    .tour-panels {
+      position: relative;
+      max-width: 58rem;
+      margin: 0 auto;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      box-shadow: var(--surface-shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .tour-panel {
+      display: none;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 3rem;
+      text-align: left;
+      animation: tour-fade 0.4s var(--ease-out);
+    }
+
+    .tour-panel.active {
+      display: grid;
+    }
+
+    @keyframes tour-fade {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tour-copy h3 {
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .tour-copy p {
+      color: var(--text-soft);
+      font-size: 1.02rem;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+    }
+
+    .tour-copy ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .tour-copy li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .tour-copy li svg {
+      color: var(--emerald);
+      width: 1.1rem;
+      height: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .spotlight-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .spotlight-points {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .tour-panel {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .tour-copy {
+        order: 2;
+      }
+      .tour-copy ul {
+        align-items: center;
+      }
+      .mockup-floating-badge {
+        display: none;
+      }
+      .hero-showcase {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .hero-mockup-primary,
+      .hero-mockup-secondary {
+        transform: none !important;
+        animation: none !important;
+      }
     }
 
     .features-grid {
@@ -1956,7 +2259,32 @@
                   <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
                 </div>
 
-                <div class="hero-meta" data-stagger>
+                <!-- Hero App Showcase: Dashboard & Zakat Phones -->
+                <div class="hero-showcase reveal">
+                  <!-- Floating Trust Badge Left -->
+                  <div class="mockup-floating-badge mockup-badge-left">
+                    <i data-lucide="shield-check"></i>
+                    <span>AAOIFI Verified Zakat</span>
+                  </div>
+
+                  <!-- Main Dashboard Phone Mockup -->
+                  <div class="phone-mockup hero-mockup-primary" aria-label="BarakahFlow Dashboard Preview">
+                    <img src="Images/screenshots/01_dashboard_main.png" alt="BarakahFlow Halal Personal Finance Dashboard showing Available Balance and Consolidated Wealth" loading="eager">
+                  </div>
+
+                  <!-- Zakat Due Phone Mockup -->
+                  <div class="phone-mockup hero-mockup-secondary" aria-label="BarakahFlow Zakat Engine Preview">
+                    <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Fiqh Zakat Calculator showing Zakat Due and Nisab Met" loading="eager">
+                  </div>
+
+                  <!-- Floating Trust Badge Right -->
+                  <div class="mockup-floating-badge mockup-badge-right">
+                    <i data-lucide="sparkles"></i>
+                    <span>Live Spot Gold &amp; Silver</span>
+                  </div>
+                </div>
+
+                <div class="hero-meta" data-stagger style="margin-top: 2.5rem;">
                   <div class="hero-stat">
                     <strong>Your school, applied</strong>
                     <span>Hanafi, Shafi&rsquo;i, Maliki and Hanbali positions, each attributed</span>
@@ -1972,7 +2300,6 @@
                 </div>
               </div>
 
-
             </div>
           </div>
         </div>
@@ -1981,19 +2308,32 @@
       <section class="section" id="zakat">
         <div class="container">
           <div class="spotlight surface">
-            <div class="spotlight-copy reveal">
-              <div class="status-chip">Live now</div>
-              <h2 style="margin-top: 0.5rem;">Most Zakat tools give you one answer. There isn&rsquo;t one answer.</h2>
-              <p>Scholars have differed on these questions for fourteen centuries. A calculator that hides that difference is not being accurate, it is being silent. BarakahFlow does the opposite: it asks which position you follow, tells you who holds it, applies it, and keeps the record.</p>
+            <div class="spotlight-layout">
+              <div class="spotlight-copy reveal">
+                <div class="status-chip">Live now</div>
+                <h2 style="margin-top: 0.5rem;">Most Zakat tools give you one answer. There isn&rsquo;t one answer.</h2>
+                <p>Scholars have differed on these questions for fourteen centuries. A calculator that hides that difference is not being accurate, it is being silent. BarakahFlow does the opposite: it asks which position you follow, tells you who holds it, applies it, and keeps the record.</p>
 
-              <ul class="spotlight-points">
-                <li>Around fifteen genuinely contested questions, each an explicit choice.</li>
-                <li>Every option names the school or standards body it comes from.</li>
-                <li>Positions marked as the cautious, balanced or lenient side of the dispute.</li>
-                <li>A line-by-line breakdown of every amount counted, and every amount left out.</li>
-              </ul>
+                <ul class="spotlight-points">
+                  <li>Around fifteen genuinely contested questions, each an explicit choice.</li>
+                  <li>Every option names the school or standards body it comes from.</li>
+                  <li>Positions marked as the cautious, balanced or lenient side of the dispute.</li>
+                  <li>A line-by-line breakdown of every amount counted, and every amount left out.</li>
+                </ul>
 
-              <p class="fiqh-note">BarakahFlow states positions; it does not issue fatwa. For a binding ruling on your own situation, speak to a qualified scholar.</p>
+                <p class="fiqh-note">BarakahFlow states positions; it does not issue fatwa. For a binding ruling on your own situation, speak to a qualified scholar.</p>
+
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                  <a class="button button-primary" href="zakat-calculator/aaoifi.html">Calculate Zakat Now</a>
+                  <a class="button button-secondary" href="#app-tour">Explore All Features</a>
+                </div>
+              </div>
+
+              <div class="spotlight-visual reveal" aria-label="Zakat Calculator Interface Demonstration">
+                <div class="phone-mockup">
+                  <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Zakat Calculator Showing Due Amount, Lunar Hawl Passed, and Nisab Met Badges" loading="lazy">
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2194,6 +2534,150 @@
         </div>
       </section>
 
+      <!-- Interactive App Tour Section -->
+      <section class="section" id="app-tour">
+        <div class="container">
+          <div class="reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="section-label">Inside BarakahFlow</span>
+            <h2 class="section-heading">Designed for clarity. Grounded in your deen.</h2>
+            <p class="section-copy">Explore the core screens that elevate everyday financial discipline into an organized, stress-free habit.</p>
+          </div>
+
+          <div class="tour-section reveal">
+            <!-- Tour Navigation Tabs -->
+            <div class="tour-tabs" role="tablist" aria-label="App feature tour">
+              <button class="tour-tab-btn active" role="tab" aria-selected="true" data-tab="dashboard">
+                <i data-lucide="layout-dashboard"></i> <span>Dashboard &amp; Net Worth</span>
+              </button>
+              <button class="tour-tab-btn" role="tab" aria-selected="false" data-tab="zakat">
+                <i data-lucide="moon"></i> <span>Zakat Engine</span>
+              </button>
+              <button class="tour-tab-btn" role="tab" aria-selected="false" data-tab="transactions">
+                <i data-lucide="arrow-left-right"></i> <span>Halal Ledger</span>
+              </button>
+              <button class="tour-tab-btn" role="tab" aria-selected="false" data-tab="budgets">
+                <i data-lucide="pie-chart"></i> <span>Budgets &amp; Goals</span>
+              </button>
+              <button class="tour-tab-btn" role="tab" aria-selected="false" data-tab="quick-spend">
+                <i data-lucide="zap"></i> <span>Quick Spend</span>
+              </button>
+            </div>
+
+            <!-- Tour Panels -->
+            <div class="tour-panels surface" style="padding: clamp(1.5rem, 3.5vw, 2.75rem); border-radius: var(--radius-lg);">
+              <!-- Panel 1: Dashboard -->
+              <div class="tour-panel active" id="panel-dashboard">
+                <div class="tour-copy">
+                  <div class="status-chip" style="margin-bottom: 0.8rem;">Consolidated View</div>
+                  <h3>Your complete financial picture, answered first.</h3>
+                  <p>Check available cash across all accounts, track your monthly net cashflow, and see your consolidated net worth with live bullion market valuations.</p>
+                  <ul>
+                    <li><i data-lucide="check"></i> Multi-account balances (Bank, Savings, Cash) in one glance</li>
+                    <li><i data-lucide="check"></i> Monthly income vs spending with net flow tracking</li>
+                    <li><i data-lucide="check"></i> Live spot gold and silver valuation per karat</li>
+                  </ul>
+                  <div style="margin-top: 1.5rem;">
+                    <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Launch Web App</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div class="phone-mockup">
+                    <img src="Images/screenshots/01_dashboard_main.png" alt="BarakahFlow Main Dashboard screen showing net worth and balances" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 2: Zakat -->
+              <div class="tour-panel" id="panel-zakat">
+                <div class="tour-copy">
+                  <div class="status-chip" style="margin-bottom: 0.8rem;">Scholarly Precision</div>
+                  <h3>Zakat calculated according to your Madhab.</h3>
+                  <p>AAOIFI, Hanafi, Shafi'i, Maliki, and Hanbali rulings built natively into the engine. Every line is auditable, with true lunar Hawl countdown and spot Nisab checks.</p>
+                  <ul>
+                    <li><i data-lucide="check"></i> Live market Nisab check (Silver and Gold spot thresholds)</li>
+                    <li><i data-lucide="check"></i> True lunar anniversary tracking with Hijri dates</li>
+                    <li><i data-lucide="check"></i> 1-tap "Log as Paid Zakat" record keeper</li>
+                  </ul>
+                  <div style="margin-top: 1.5rem;">
+                    <a class="button button-primary" href="zakat-calculator/aaoifi.html">Try Zakat Calculator</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div class="phone-mockup">
+                    <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Zakat Engine screen showing calculated Zakat Due and Due Now badge" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 3: Transactions -->
+              <div class="tour-panel" id="panel-transactions">
+                <div class="tour-copy">
+                  <div class="status-chip" style="margin-bottom: 0.8rem;">Halal Categorization</div>
+                  <h3>A ledger that treats charity as essential.</h3>
+                  <p>Sadaqah, Zakat Al-Mal, and family support are first-class citizens alongside utilities, dining, and income. Zero silent conversions, with native multi-currency support.</p>
+                  <ul>
+                    <li><i data-lucide="check"></i> Dedicated Islamic Giving categories (Sadaqah, Zakat, Eid)</li>
+                    <li><i data-lucide="check"></i> Multi-currency transactions stored in their genuine denomination</li>
+                    <li><i data-lucide="check"></i> Clean, searchable timeline with instant receipt filtering</li>
+                  </ul>
+                  <div style="margin-top: 1.5rem;">
+                    <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">View Transactions Demo</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div class="phone-mockup">
+                    <img src="Images/screenshots/04_transactions_history.png" alt="BarakahFlow Transactions feed with Sadaqah and categorized expenses" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 4: Budgets & Goals -->
+              <div class="tour-panel" id="panel-budgets">
+                <div class="tour-copy">
+                  <div class="status-chip" style="margin-bottom: 0.8rem;">Goal Discipline</div>
+                  <h3>Budgets and targets that protect your peace.</h3>
+                  <p>Set category spending limits with visual progress rings, stay ahead of upcoming utility bills with auto-rollover, and save for Hajj, Umrah, or emergency cushions.</p>
+                  <ul>
+                    <li><i data-lucide="check"></i> Visual budget rings with 80% and 100% threshold alerts</li>
+                    <li><i data-lucide="check"></i> Dedicated Hajj and Umrah pilgrimage goals with countdowns</li>
+                    <li><i data-lucide="check"></i> Smart bill tracker with calendar-accurate due dates</li>
+                  </ul>
+                  <div style="margin-top: 1.5rem;">
+                    <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Start Budgeting</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div class="phone-mockup">
+                    <img src="Images/screenshots/03_dashboard_bills_goals.png" alt="BarakahFlow Budgets, Bills, and Hajj Savings Goals" loading="lazy">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 5: Quick Spend -->
+              <div class="tour-panel" id="panel-quick-spend">
+                <div class="tour-copy">
+                  <div class="status-chip" style="margin-bottom: 0.8rem;">Frictionless Logging</div>
+                  <h3>Log expenses in 2 seconds right at the counter.</h3>
+                  <p>Logging a small expense shouldn't take five taps and three menus. Type the amount, tap one of your top categories, pick your account, and you're done.</p>
+                  <ul>
+                    <li><i data-lucide="check"></i> Quick action accessible from the dashboard header</li>
+                    <li><i data-lucide="check"></i> One-tap category chips with instant account selection</li>
+                    <li><i data-lucide="check"></i> Works offline and syncs immediately when connected</li>
+                  </ul>
+                  <div style="margin-top: 1.5rem;">
+                    <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer">Open App</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <div class="phone-mockup">
+                    <img src="Images/screenshots/08_quick_spend_modal.png" alt="BarakahFlow Quick Spend sheet for instant one-tap expense logging" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 <section class="section" id="features">
         <div class="container">
@@ -2621,6 +3105,32 @@
       handlePlatformSpecifics();
       checkIOS();
       lucide.createIcons();
+
+      // App Tour Tabs Interaction
+      const tourTabs = document.querySelectorAll('.tour-tab-btn');
+      const tourPanels = document.querySelectorAll('.tour-panel');
+      tourTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          const target = tab.getAttribute('data-tab');
+          tourTabs.forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          tourPanels.forEach(function(panel) {
+            if (panel.id === 'panel-' + target) {
+              panel.classList.add('active');
+            } else {
+              panel.classList.remove('active');
+            }
+          });
+          // Re-trigger Lucide icons for dynamically revealed tabs if needed
+          if (window.lucide) {
+            lucide.createIcons();
+          }
+        });
+      });
 
       // BarakahFlow website analytics
       const ANALYTICS_URL = 'https://app.barakahflowapp.com/api/analytics/website';
