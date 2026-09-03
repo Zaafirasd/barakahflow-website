@@ -897,7 +897,7 @@
 
     /* App Tour / Interactive Gallery Section */
     .tour-tabs {
-      display: inline-flex;
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.5rem;
@@ -905,7 +905,11 @@
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
       border-radius: 999px;
-      margin: 2rem 0 2.5rem;
+      /* fit-content + auto side margins centres the pill over the panel below;
+         inline-flex made it sit flush-left while the panel is margin:0 auto. */
+      width: fit-content;
+      max-width: 100%;
+      margin: 2rem auto 2.5rem;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
     }
