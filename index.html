@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BarakahFlow is a halal personal finance app for Muslims covering budgeting, bills, savings, and net worth built around a Zakat engine that follows your school of jurisprudence. Four Sunni schools, six regional presets, live gold &amp; silver prices and a true lunar Hawl. Free on web, Android and iPhone.">
+  <meta name="description" content="BarakahFlow is a halal personal finance app built around a comprehensive, auditable four-madhhab Zakat calculator covering cash, metals, investments, pensions, business assets, debts and digital assets. Free on web, Android and iPhone.">
   <link rel="canonical" href="https://barakahflowapp.com/">
   <meta name="keywords" content="BarakahFlow, barakaflow, halal personal finance, zakat calculator, hanafi zakat calculator, nisab calculator, islamic budgeting app, muslim expense tracker, hawl tracker, gold and silver nisab, aaoifi zakat, multi currency muslim finance app">
   <meta name="theme-color" content="#10B981">
@@ -129,7 +129,7 @@
             "name": "Can I deduct my mortgage from my Zakat?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not in full. No school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat: nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible."
+              "text": "Not in full. BarakahFlow itemizes short-term and long-term debt instead of subtracting an entire mortgage balance. For methods that recognize personal debt, you record the principal outstanding and principal falling due within the year, then apply the configured relief: none, one month, or twelve lunar months. The Shafi'i profile does not deduct personal debt from its mu'tamad base, and interest is never deductible."
             }
           },
           {
@@ -849,50 +849,18 @@
       z-index: 2;
     }
 
-    .hero-mockup-secondary {
-      transform: rotateX(4deg) rotateY(6deg) rotateZ(-1deg);
-      animation: hero-float-alt 7s ease-in-out infinite;
-      z-index: 1;
-    }
-
-    .hero-mockup-primary:hover,
-    .hero-mockup-secondary:hover {
+    .hero-mockup-primary:hover {
       transform: rotateX(0) rotateY(0) rotateZ(0) scale(1.03);
       z-index: 20;
     }
 
-    /* Spotlight Two-Column Layout */
     .spotlight-layout {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 3.5rem;
       text-align: left;
       width: 100%;
-    }
-
-    .spotlight-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .spotlight-visual::before {
-      content: "";
-      position: absolute;
-      width: 22rem;
-      height: 22rem;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(16, 185, 129, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .spotlight-visual .phone-mockup {
-      position: relative;
-      z-index: 1;
-      width: min(100%, 290px);
     }
 
     /* App Tour / Interactive Gallery Section */
@@ -962,6 +930,10 @@
 
     .tour-panel.active {
       display: grid;
+    }
+
+    .tour-panel.no-image {
+      grid-template-columns: 1fr;
     }
 
     /* Smaller than the hero phones so the feature copy isn't dwarfed and the
@@ -1038,8 +1010,7 @@
         flex-direction: column;
         gap: 1.5rem;
       }
-      .hero-mockup-primary,
-      .hero-mockup-secondary {
+      .hero-mockup-primary {
         transform: none !important;
         animation: none !important;
       }
@@ -2191,7 +2162,7 @@
                   <span>the way your deen</span>
                   <span>asks it to be.</span>
                 </h1>
-                <p>Everyday budgeting, bills and savings, built around a Zakat engine that follows your school of jurisprudence, not a one-size-fits-all formula.</p>
+                <p>Everyday budgeting, bills and savings, built around a comprehensive four-madhhab Zakat engine with auditable calculations instead of a one-size-fits-all formula.</p>
 
                 <div class="hero-actions" id="hero-actions">
                   <!-- Primary: Web App (all platforms) -->
@@ -2207,16 +2178,11 @@
                   <a class="button button-secondary platform-android-only" id="hero-android-btn" href="downloads/barakahflow.apk" download>Download APK for Android</a>
                 </div>
 
-                <!-- Hero App Showcase: Dashboard & Zakat Phones -->
+                <!-- Hero App Showcase -->
                 <div class="hero-showcase reveal">
                   <!-- Main Dashboard Phone Mockup -->
                   <div class="phone-mockup hero-mockup-primary" aria-label="BarakahFlow Dashboard Preview">
                     <img src="Images/screenshots/01_dashboard_main.png" alt="BarakahFlow Halal Personal Finance Dashboard showing Available Balance and Consolidated Wealth" loading="eager">
-                  </div>
-
-                  <!-- Zakat Due Phone Mockup -->
-                  <div class="phone-mockup hero-mockup-secondary" aria-label="BarakahFlow Zakat Engine Preview">
-                    <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Fiqh Zakat Calculator showing Zakat Due and Nisab Met" loading="eager">
                   </div>
                 </div>
 
@@ -2247,14 +2213,14 @@
             <div class="spotlight-layout">
               <div class="spotlight-copy reveal">
                 <div class="status-chip">Live now</div>
-                <h2 style="margin-top: 0.5rem;">Most Zakat tools give you one answer. There isn&rsquo;t one answer.</h2>
-                <p>Scholars have differed on these questions for fourteen centuries. A calculator that hides that difference is not being accurate, it is being silent. BarakahFlow does the opposite: it asks which position you follow, tells you who holds it, applies it, and keeps the record.</p>
+                <h2 style="margin-top: 0.5rem;">A comprehensive four-madhhab Zakat engine, with every number explained.</h2>
+                <p>BarakahFlow separates classical madhhab rulings from contemporary policy choices, applies the position you select, and records exactly what was included, excluded and deducted.</p>
 
                 <ul class="spotlight-points">
-                  <li>Around fifteen genuinely contested questions, each an explicit choice.</li>
-                  <li>Every option names the school or standards body it comes from.</li>
-                  <li>Positions marked as the cautious, balanced or lenient side of the dispute.</li>
-                  <li>A line-by-line breakdown of every amount counted, and every amount left out.</li>
+                  <li>Hanafi, Maliki, Shafi&rsquo;i and Hanbali ruling layers.</li>
+                  <li>Cash, gold, silver, shares, pensions, business stock, receivables, rentals and digital assets.</li>
+                  <li>Separate entries for each debt, mortgage, coin, stablecoin, token and NFT.</li>
+                  <li>Clear asset totals, applied deductions, assessed wealth and final Zakat.</li>
                 </ul>
 
                 <p class="fiqh-note">BarakahFlow states positions; it does not issue fatwa. For a binding ruling on your own situation, speak to a qualified scholar.</p>
@@ -2262,12 +2228,6 @@
                 <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
                   <a class="button button-primary" href="zakat-calculator/aaoifi.html">Calculate Zakat Now</a>
                   <a class="button button-secondary" href="#app-tour">Explore All Features</a>
-                </div>
-              </div>
-
-              <div class="spotlight-visual reveal" aria-label="Zakat Calculator Interface Demonstration">
-                <div class="phone-mockup">
-                  <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Zakat Calculator Showing Due Amount, Lunar Hawl Passed, and Nisab Met Badges" loading="lazy">
                 </div>
               </div>
             </div>
@@ -2443,7 +2403,7 @@
             <article class="surface detail-card reveal">
               <h3>How debts reduce what you owe</h3>
               <p>Most calculators let people deduct an entire mortgage balance and wipe out their Zakat. No school permits that.</p>
-              <p>Liabilities due within twelve months are deducted in full. For a mortgage you choose how much of the principal counts: nothing at all (the default), one month, or twelve lunar months. Interest is never deductible.</p>
+              <p>For methods that recognize personal debt, short-term liabilities and long-term principal are kept separate. Mortgage relief can be none, one month, or twelve lunar months; the Shafi&rsquo;i profile does not deduct personal debt from its mu&rsquo;tamad base. Interest is never deductible.</p>
             </article>
 
             <article class="surface detail-card reveal">
@@ -2459,7 +2419,7 @@
 
             <article class="surface detail-card reveal">
               <h3>Everything that counts</h3>
-              <p>Cash, unspent salary, gold at four karats, silver by weight, shares and funds at market prices, business stock, retirement savings net of penalty and tax, digital assets, rental property under four scholarly treatments, money owed to you, and debts as deductions.</p>
+              <p>Cash, unspent salary, gold at four karats, silver by weight, shares and funds, business stock, retirement savings net of penalty and tax, rental income, money owed to you, and itemized debts. Add each coin, stablecoin, token and NFT separately with its purpose and value.</p>
             </article>
           </div>
 
@@ -2524,11 +2484,11 @@
               </div>
 
               <!-- Panel 2: Zakat -->
-              <div class="tour-panel" id="panel-zakat">
+              <div class="tour-panel no-image" id="panel-zakat">
                 <div class="tour-copy">
                   <div class="status-chip" style="margin-bottom: 0.8rem;">Scholarly Precision</div>
                   <h3>Zakat calculated according to your Madhab.</h3>
-                  <p>AAOIFI, Hanafi, Shafi'i, Maliki, and Hanbali rulings built natively into the engine. Every line is auditable, with true lunar Hawl countdown and spot Nisab checks.</p>
+                  <p>Hanafi, Shafi'i, Maliki and Hanbali ruling layers are built natively into the engine, while AAOIFI and regional standards remain separate contemporary policy choices. Every line is auditable, with true lunar Hawl countdown and spot Nisab checks.</p>
                   <ul>
                     <li><i data-lucide="check"></i> Live market Nisab check (Silver and Gold spot thresholds)</li>
                     <li><i data-lucide="check"></i> True lunar anniversary tracking with Hijri dates</li>
@@ -2536,11 +2496,6 @@
                   </ul>
                   <div style="margin-top: 1.5rem;">
                     <a class="button button-primary" href="zakat-calculator/aaoifi.html">Try Zakat Calculator</a>
-                  </div>
-                </div>
-                <div style="display: flex; justify-content: center;">
-                  <div class="phone-mockup">
-                    <img src="Images/screenshots/07_zakat_due_results.png" alt="BarakahFlow Zakat Engine screen showing calculated Zakat Due and Due Now badge" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -2812,7 +2767,7 @@
             <details class="surface faq-item">
               <summary>Can I deduct my mortgage from my Zakat?</summary>
               <div class="faq-content">
-                <p>Not in full. No school permits deducting an entire mortgage balance, and calculators that allow it do real damage. BarakahFlow separates debt: liabilities payable within the next twelve months are deducted in full, which the schools agree on. For a mortgage you record the principal outstanding and the principal falling due within the year, then choose how much reduces your Zakat: nothing at all (the default and safest position), one month of principal, or twelve lunar months. The interest portion of any repayment is never deductible.</p>
+                <p>Not in full. BarakahFlow itemizes short-term and long-term debt instead of subtracting an entire mortgage balance. For methods that recognize personal debt, you record the outstanding principal and principal due within the year, then apply the configured relief: none, one month, or twelve lunar months. The Shafi&rsquo;i profile does not deduct personal debt from its mu&rsquo;tamad base, and interest is never deductible.</p>
               </div>
             </details>
 
