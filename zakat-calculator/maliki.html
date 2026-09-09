@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maliki Zakat Calculator — Gold Nisab and Full Debt Deduction</title>
-  <meta name="description" content="Zakat on the Maliki method: the 85g gold threshold, worn jewellery exempt, debts deducted in full, and nisab that must be held for the whole lunar year.">
+  <title>Maliki Zakat Calculator — Nisab, Debt and Hawl Rules</title>
+  <meta name="description" content="Zakat on the Maliki method: configurable fiat nisab policy, worn jewellery exempt, conditional monetary-debt relief, and continuous nisab through the lunar year.">
   <link rel="canonical" href="https://barakahflowapp.com/zakat-calculator/maliki.html">
   <meta name="keywords" content="maliki zakat calculator, maliki nisab, gold nisab 85g, maliki debt deduction zakat, zakat maliki madhhab">
   <meta name="theme-color" content="#10B981">
@@ -20,15 +20,15 @@
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://barakahflowapp.com/zakat-calculator/maliki.html">
-  <meta property="og:title" content="Maliki Zakat Calculator — Gold Nisab and Full Debt Deduction">
-  <meta property="og:description" content="Zakat on the Maliki method: the 85g gold threshold, worn jewellery exempt, debts deducted in full, and nisab that must be held for the whole lunar year.">
+  <meta property="og:title" content="Maliki Zakat Calculator — Nisab, Debt and Hawl Rules">
+  <meta property="og:description" content="Zakat on the Maliki method: configurable fiat nisab policy, worn jewellery exempt, conditional monetary-debt relief, and continuous nisab through the lunar year.">
   <meta property="og:image" content="https://barakahflowapp.com/Images/logopng.png">
   <meta property="og:site_name" content="BarakahFlow">
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://barakahflowapp.com/zakat-calculator/maliki.html">
-  <meta property="twitter:title" content="Maliki Zakat Calculator — Gold Nisab and Full Debt Deduction">
-  <meta property="twitter:description" content="Zakat on the Maliki method: the 85g gold threshold, worn jewellery exempt, debts deducted in full, and nisab that must be held for the whole lunar year.">
+  <meta property="twitter:title" content="Maliki Zakat Calculator — Nisab, Debt and Hawl Rules">
+  <meta property="twitter:description" content="Zakat on the Maliki method: configurable fiat nisab policy, worn jewellery exempt, conditional monetary-debt relief, and continuous nisab through the lunar year.">
   <meta property="twitter:image" content="https://barakahflowapp.com/Images/logopng.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,10 +80,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Can I really deduct all my debts under the Maliki school?",
+          "name": "Which debts can reduce Zakat under the Maliki school?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Debts genuinely owed are deducted, and the Maliki school does not restrict this to liabilities maturing within the year as the other schools do. That is the school’s distinctive position. It is not a licence to net a thirty-year mortgage against a modest savings balance and declare nothing due. BarakahFlow defaults to deducting no mortgage principal at all and makes any wider treatment an explicit choice you make knowingly."
+            "text": "Qualifying debt may reduce monetary wealth when you lack surplus non-zakatable assets with which to meet it. It is not a universal deduction against every Zakat category. The app itemizes mortgage principal, due dates and the selected debt horizon; it never deducts interest or silently nets the full multi-year balance."
           }
         },
         {
@@ -91,7 +91,7 @@
           "name": "Which nisab does the Maliki school use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gold, at 85 grams, following the AAOIFI and majority weight conversion. At the time of writing that is roughly $12,994. Because the gold threshold sits far above the silver one, a person can owe nothing under the Maliki rule and owe a substantial amount under the Hanafi rule on precisely the same wealth. The live figures above show the current gap."
+            "text": "The classical Maliki method does not itself select one benchmark for modern fiat currency. Gold, silver or lower-of-both must come from a named contemporary policy. BarakahFlow shows both live values and records the policy used, because the choice can materially change whether nisab is met."
           }
         },
         {
@@ -183,7 +183,7 @@
 
         <form class="surface estimator" data-estimator>
           <h3>Quick Zakat estimate</h3>
-          <p class="est-sub">A flat 2.5% of whatever figure you enter, and nothing more than that. Every rule described on this page lives in the app, not in this box.</p>
+          <p class="est-sub">A flat 2.5% of the already-calculated zakatable wealth you enter. The full app separately handles cash, metals, investments, pensions, business assets, receivables, digital assets and eligible debts.</p>
 
           <div class="est-field">
             <label for="est-amount">Your zakatable wealth</label>
@@ -261,7 +261,7 @@
           qualified scholar. See our <a href="/terms.html">Terms of Service</a>.
         </p>
 
-          <p class="lede">The Maliki school is the most generous of the four on debt: what you owe comes off in full, not merely the part falling due this year. It is also among the stricter schools on timing, because the threshold has to be held for the entire year rather than checked at its two ends.</p>
+          <p class="lede">The Maliki school can recognize debt against monetary wealth under conditions, including whether other non-zakatable assets can meet it; it is not a universal full-balance deduction. It also requires the threshold to be maintained through the lunar year.</p>
         </div>
       </header>
 
@@ -279,7 +279,7 @@
             <tbody>
                 <tr>
                   <th scope="row">Nisab basis</th>
-                  <td data-label="Nisab basis">Gold, 85 grams</td>
+                  <td data-label="Nisab basis">Explicit contemporary fiat policy; both metal values shown</td>
                 </tr>
                 <tr>
                   <th scope="row">Worn jewellery</th>
@@ -287,7 +287,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Debt deduction</th>
-                  <td data-label="Debt deduction">Debts deducted in full</td>
+                  <td data-label="Debt deduction">Conditional for monetary wealth; not universal</td>
                 </tr>
                 <tr>
                   <th scope="row">Nisab timing</th>
@@ -299,12 +299,12 @@
 
           <div class="reveal" style="margin-top: 2.5rem;">
             <h2 class="section-heading" style="text-align: left;">The threshold, in USD</h2>
-            <p class="section-copy" style="text-align: left; margin-left: 0;">The Maliki school sets the threshold by gold, 85 grams of it. That is a materially higher bar than the silver figure, so fewer people are liable than under the Hanafi rule.</p>
+            <p class="section-copy" style="text-align: left; margin-left: 0;">Fiat currency is modern, so the Maliki school alone does not silently choose gold or silver for it. Select the named contemporary policy you follow; both values are shown below.</p>
           </div>
 
           <div class="nisab-cards">
             <div class="surface nisab-card">
-              <span class="nc-metal">Gold threshold &middot; applies to you</span>
+              <span class="nc-metal">Gold threshold</span>
               <strong class="nc-weight">85 g</strong>
               <span class="nc-value" data-nisab="gold" data-grams="85">&asymp; $12,994</span>
               <span class="nc-asof" data-nisab-asof>Approximate, at time of writing</span>
@@ -324,10 +324,9 @@
       <section class="section">
         <div class="container">
           <div class="prose reveal">
-          <h2>Debt deducted in full, and what that actually means</h2>
-          <p>The Maliki position is that Zakat falls on wealth you genuinely own, and wealth encumbered by a debt is not fully yours. So the debt is subtracted, not merely the portion maturing inside the year.</p>
-          <p>This is the widest deduction any of the four schools allows, and it is why the Maliki method often produces the lowest bill of the four for someone carrying real liabilities.</p>
-          <p>It still does not license deducting a whole mortgage against a small savings balance to reach zero. BarakahFlow keeps the mortgage handling explicit and conservative by default, and asks rather than assuming, precisely because this is the setting most often abused.</p>
+          <h2>Debt relief is conditional, not a blanket subtraction</h2>
+          <p>Under the Maliki method, qualifying debt can reduce monetary wealth when the payer lacks surplus non-zakatable assets capable of meeting it. The rule is category-specific rather than a universal offset against every Zakat asset.</p>
+          <p>A multi-year mortgage balance is therefore itemized rather than automatically netted in full. The app records principal and the amount due within the chosen horizon, excludes interest, and makes the applied policy visible.</p>
 
           <h2>Holding the threshold for the whole year</h2>
           <p>The Maliki school sits with the majority on timing: your wealth must remain at or above the threshold across the entire lunar year. If it falls below at any point the year is broken and the count restarts from the day you next cross the threshold.</p>
@@ -347,14 +346,14 @@
               <dd class="">$5,000</dd>
               <dt>Gold jewellery worn regularly</dt>
               <dd class="">Exempt</dd>
-              <dt>Less: debts, deducted in full</dt>
+              <dt>Less: qualifying debt under the selected profile</dt>
               <dd class="">− $8,000</dd>
               <dt class="we-total">Zakatable base</dt>
               <dd class="we-total">$27,000</dd>
               <dt class="we-total">Zakat due at 2.5%</dt>
               <dd class="we-total">$675</dd>
           </dl>
-          <p class="we-note">The same person on the Shafi’i method deducts no debt at all, giving a base of $35,000 and a bill of $875 — two hundred dollars more from identical holdings. And under the Maliki timing rule, if this person’s wealth had fallen below the roughly $12,994 gold threshold at any point during the year, nothing would be due at all.</p>
+          <p class="we-note">This example assumes the full $8,000 qualifies under the selected Maliki debt profile and no surplus non-zakatable assets cover it. The Shafi’i mu’tamad baseline deducts no personal debt, giving a base of $35,000 and $875 due. Nisab still depends on the separately selected fiat benchmark.</p>
         </div>
         </div>
       </section>
@@ -368,18 +367,18 @@
 
           <div class="faq-grid reveal" data-stagger>
             <details class="surface faq-item">
-              <summary>Can I really deduct all my debts under the Maliki school?</summary>
+              <summary>Which debts can reduce Zakat under the Maliki school?</summary>
               <div class="faq-content">
-                <p>Debts genuinely owed are deducted, and the Maliki school does not restrict this to liabilities maturing within the year as the other schools do. That is the school’s distinctive position.</p>
-                <p>It is not a licence to net a thirty-year mortgage against a modest savings balance and declare nothing due. BarakahFlow defaults to deducting no mortgage principal at all and makes any wider treatment an explicit choice you make knowingly.</p>
+                <p>Qualifying debt may reduce monetary wealth when you lack surplus non-zakatable assets with which to meet it. It is not a universal deduction against every Zakat category.</p>
+                <p>The app itemizes mortgage principal, due dates and the selected debt horizon; it never deducts interest or silently nets the full multi-year balance.</p>
               </div>
             </details>
 
             <details class="surface faq-item">
               <summary>Which nisab does the Maliki school use?</summary>
               <div class="faq-content">
-                <p>Gold, at 85 grams, following the AAOIFI and majority weight conversion. At the time of writing that is roughly $12,994.</p>
-                <p>Because the gold threshold sits far above the silver one, a person can owe nothing under the Maliki rule and owe a substantial amount under the Hanafi rule on precisely the same wealth. The live figures above show the current gap.</p>
+                <p>The classical Maliki method does not itself select one benchmark for modern fiat currency. Gold, silver or lower-of-both must come from a named contemporary policy.</p>
+                <p>BarakahFlow shows both live values and records the policy used, because the choice can materially change whether nisab is met.</p>
               </div>
             </details>
 
@@ -432,7 +431,7 @@
             <div class="spotlight-copy reveal">
               <div class="status-chip">Free</div>
               <h2 style="margin-top: 0.5rem;">Get the number that actually applies to you.</h2>
-              <p>BarakahFlow applies your school, your region, your currency and your Hawl, values gold at each karat separately, handles debt properly, and keeps a record you can defend three years from now.</p>
+              <p>BarakahFlow applies your school, policy choices, region, currency and Hawl; itemizes cash, metals, shares, pensions, business inventory, receivables, property income, coins, stablecoins, tokens and NFTs; separates short- and long-term debts; and shows an auditable calculation record.</p>
               <p class="fiqh-note">BarakahFlow states scholarly positions and attributes them. It does not issue fatwa. For a binding ruling on your own circumstances, speak to a qualified scholar.</p>
               <a class="button button-primary" href="https://app.barakahflowapp.com" target="_blank" rel="noopener noreferrer" data-track-open>Open BarakahFlow (Free, no install needed)</a>
             </div>

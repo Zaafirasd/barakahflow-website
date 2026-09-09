@@ -128,20 +128,20 @@ const madhhabPages = [
     label: 'Hanafi',
     navLabel: 'Hanafi',
     currency: 'USD',
-    title: 'Hanafi Zakat Calculator — Silver Nisab and Jewellery Included',
+    title: 'Hanafi Zakat Calculator — Nisab, Jewellery and Hawl Rules',
     description:
-      'Zakat the Hanafi way: the silver threshold of 595g, gold jewellery counted whether you wear it or not, near-term debts deducted, and the year judged at its two ends.',
+      'Zakat the Hanafi way: explicit fiat nisab policy, gold jewellery included, qualifying present debts considered, and the year judged at its two ends.',
     keywords:
       'hanafi zakat calculator, hanafi nisab, silver nisab 595g, zakat on gold jewellery hanafi, deobandi zakat calculator',
     h1: 'Zakat according to the Hanafi school',
     lede:
-      'The Hanafi school produces a higher Zakat bill than the other three, for two reasons that compound: it sets the threshold by silver rather than gold, and it counts the gold you wear. If you follow the Hanafi school and your calculator has not asked you about your jewellery, it has given you the wrong number.',
-    nisabBasis: 'silver',
+      'The Hanafi school counts qualifying gold jewellery and judges nisab at the beginning and end of the lunar year. For modern fiat money, the app keeps the selected gold, silver or lower-of-both benchmark explicit instead of treating it as an automatic school rule.',
+    nisabBasis: null,
     nisabNote:
-      'The Hanafi school sets the threshold by silver, 595 grams of it. That is a far lower bar than the gold figure, so many people who owe nothing on a gold threshold are liable on this one.',
+      'Silver is common in contemporary Hanafi practice, but fiat currency is modern and the benchmark must be an explicit policy choice. BarakahFlow shows both thresholds and records the selected convention.',
     conventionKey: 'AAOIFI',
     rules: [
-      { k: 'Nisab basis', v: 'Silver, 595 grams' },
+      { k: 'Nisab basis', v: 'Explicit contemporary fiat policy; both metal values shown' },
       { k: 'Worn jewellery', v: 'Counted, whether worn or not' },
       { k: 'Debt deduction', v: 'Near-term debts deducted' },
       { k: 'Nisab timing', v: 'Checked at the start and the end of the year' },
@@ -156,10 +156,9 @@ const madhhabPages = [
         ],
       },
       {
-        h: 'Why the silver threshold',
+        h: 'Why the fiat benchmark is explicit',
         p: [
-          'The Hanafi position is that where someone holds a mixture of assets — some cash, some gold, some silver — the lower of the two thresholds applies. In today’s prices that is always silver.',
-          'The practical effect is a threshold in the region of a thousand US dollars rather than thirteen thousand. Far more people are liable, and that is the intended result rather than a side effect.',
+          'Hanafi valuation doctrine supports completing nisab across monetary assets and often produces a silver or lower-threshold policy. Some contemporary Hanafi authorities instead select gold where silver devaluation would undermine nisab’s welfare function, so the app names the adopted policy rather than hiding it.',
         ],
       },
       {
@@ -192,10 +191,10 @@ const madhhabPages = [
         ],
       },
       {
-        q: 'Which nisab do Hanafis use, gold or silver?',
+        q: 'Which fiat nisab benchmark do Hanafis use?',
         a: [
-          'Silver, at 595 grams. Where a person holds a mixture of asset types the school applies the lower threshold, and silver has been the lower one for well over a century.',
-          'South Asian Hanafi practice often uses the classical Tola conversion instead, which puts silver nisab at 612.36 grams. The difference is about 2.8% and BarakahFlow supports both.',
+          'Silver or the lower threshold is common, but it is not the only contemporary Hanafi policy for modern fiat money. Some authorities select gold where silver devaluation defeats nisab’s purpose.',
+          'BarakahFlow therefore keeps the benchmark and weight convention explicit, including 595g and the classical Tola-derived 612.36g silver options.',
         ],
       },
       {
@@ -226,31 +225,30 @@ const madhhabPages = [
     label: 'Maliki',
     navLabel: 'Maliki',
     currency: 'USD',
-    title: 'Maliki Zakat Calculator — Gold Nisab and Full Debt Deduction',
+    title: 'Maliki Zakat Calculator — Nisab, Debt and Hawl Rules',
     description:
-      'Zakat on the Maliki method: the 85g gold threshold, worn jewellery exempt, debts deducted in full, and nisab that must be held for the whole lunar year.',
+      'Zakat on the Maliki method: configurable fiat nisab policy, worn jewellery exempt, conditional monetary-debt relief, and continuous nisab through the lunar year.',
     keywords:
       'maliki zakat calculator, maliki nisab, gold nisab 85g, maliki debt deduction zakat, zakat maliki madhhab',
     h1: 'Zakat according to the Maliki school',
     lede:
-      'The Maliki school is the most generous of the four on debt: what you owe comes off in full, not merely the part falling due this year. It is also among the stricter schools on timing, because the threshold has to be held for the entire year rather than checked at its two ends.',
-    nisabBasis: 'gold',
+      'The Maliki school can recognize debt against monetary wealth under conditions, including whether other non-zakatable assets can meet it; it is not a universal full-balance deduction. It also requires the threshold to be maintained through the lunar year.',
+    nisabBasis: null,
     nisabNote:
-      'The Maliki school sets the threshold by gold, 85 grams of it. That is a materially higher bar than the silver figure, so fewer people are liable than under the Hanafi rule.',
+      'Fiat currency is modern, so the Maliki school alone does not silently choose gold or silver for it. Select the named contemporary policy you follow; both values are shown below.',
     conventionKey: 'AAOIFI',
     rules: [
-      { k: 'Nisab basis', v: 'Gold, 85 grams' },
+      { k: 'Nisab basis', v: 'Explicit contemporary fiat policy; both metal values shown' },
       { k: 'Worn jewellery', v: 'Exempt' },
-      { k: 'Debt deduction', v: 'Debts deducted in full' },
+      { k: 'Debt deduction', v: 'Conditional for monetary wealth; not universal' },
       { k: 'Nisab timing', v: 'The threshold must be held for the whole year' },
     ],
     body: [
       {
-        h: 'Debt deducted in full, and what that actually means',
+        h: 'Debt relief is conditional, not a blanket subtraction',
         p: [
-          'The Maliki position is that Zakat falls on wealth you genuinely own, and wealth encumbered by a debt is not fully yours. So the debt is subtracted, not merely the portion maturing inside the year.',
-          'This is the widest deduction any of the four schools allows, and it is why the Maliki method often produces the lowest bill of the four for someone carrying real liabilities.',
-          'It still does not license deducting a whole mortgage against a small savings balance to reach zero. BarakahFlow keeps the mortgage handling explicit and conservative by default, and asks rather than assuming, precisely because this is the setting most often abused.',
+          'Under the Maliki method, qualifying debt can reduce monetary wealth when the payer lacks surplus non-zakatable assets capable of meeting it. The rule is category-specific rather than a universal offset against every Zakat asset.',
+          'A multi-year mortgage balance is therefore itemized rather than automatically netted in full. The app records principal and the amount due within the chosen horizon, excludes interest, and makes the applied policy visible.',
         ],
       },
       {
@@ -275,26 +273,26 @@ const madhhabPages = [
         { k: 'Cash and savings', v: '$30,000' },
         { k: 'Money owed to you and expected', v: '$5,000' },
         { k: 'Gold jewellery worn regularly', v: 'Exempt' },
-        { k: 'Less: debts, deducted in full', v: '− $8,000' },
+        { k: 'Less: qualifying debt under the selected profile', v: '− $8,000' },
         { k: 'Zakatable base', v: '$27,000', total: true },
         { k: 'Zakat due at 2.5%', v: '$675', total: true, final: true },
       ],
       note:
-        'The same person on the Shafi’i method deducts no debt at all, giving a base of $35,000 and a bill of $875 — two hundred dollars more from identical holdings. And under the Maliki timing rule, if this person’s wealth had fallen below the roughly $12,994 gold threshold at any point during the year, nothing would be due at all.',
+        'This example assumes the full $8,000 qualifies under the selected Maliki debt profile and no surplus non-zakatable assets cover it. The Shafi’i mu’tamad baseline deducts no personal debt, giving a base of $35,000 and $875 due. Nisab still depends on the separately selected fiat benchmark.',
     },
     faqs: [
       {
-        q: 'Can I really deduct all my debts under the Maliki school?',
+        q: 'Which debts can reduce Zakat under the Maliki school?',
         a: [
-          'Debts genuinely owed are deducted, and the Maliki school does not restrict this to liabilities maturing within the year as the other schools do. That is the school’s distinctive position.',
-          'It is not a licence to net a thirty-year mortgage against a modest savings balance and declare nothing due. BarakahFlow defaults to deducting no mortgage principal at all and makes any wider treatment an explicit choice you make knowingly.',
+          'Qualifying debt may reduce monetary wealth when you lack surplus non-zakatable assets with which to meet it. It is not a universal deduction against every Zakat category.',
+          'The app itemizes mortgage principal, due dates and the selected debt horizon; it never deducts interest or silently nets the full multi-year balance.',
         ],
       },
       {
         q: 'Which nisab does the Maliki school use?',
         a: [
-          'Gold, at 85 grams, following the AAOIFI and majority weight conversion. At the time of writing that is roughly $12,994.',
-          'Because the gold threshold sits far above the silver one, a person can owe nothing under the Maliki rule and owe a substantial amount under the Hanafi rule on precisely the same wealth. The live figures above show the current gap.',
+          'The classical Maliki method does not itself select one benchmark for modern fiat currency. Gold, silver or lower-of-both must come from a named contemporary policy.',
+          'BarakahFlow shows both live values and records the policy used, because the choice can materially change whether nisab is met.',
         ],
       },
       {
@@ -321,20 +319,20 @@ const madhhabPages = [
     label: "Shafi'i",
     navLabel: 'Shafi’i',
     currency: 'USD',
-    title: 'Shafi’i Zakat Calculator — Gold Nisab, No Debt Deduction',
+    title: 'Shafi’i Zakat Calculator — Nisab, Debt and Hawl Rules',
     description:
-      'Zakat on the Shafi’i method: the 85g gold threshold, worn jewellery exempt, no deduction for debts, and nisab held across the full lunar year.',
+      'Zakat on the Shafi’i method: explicit fiat nisab policy, worn jewellery exempt, no personal-debt deduction in the mu‘tamad baseline, and continuous nisab.',
     keywords:
       'shafii zakat calculator, shafi i nisab, gold nisab 85g, zakat without debt deduction, shafii madhhab zakat',
     h1: 'Zakat according to the Shafi’i school',
     lede:
       'The Shafi’i school takes the strictest line of the four on debt: it does not come off at all. Zakat attaches to the wealth in your hand, and what you happen to owe someone else does not change what you are holding. For anyone carrying liabilities, this produces the highest bill of the four schools.',
-    nisabBasis: 'gold',
+    nisabBasis: null,
     nisabNote:
-      'The Shafi’i school sets the threshold by gold, 85 grams. Fewer people cross this bar than cross the silver one used by the Hanafi school.',
+      'The classical Shafi’i method keeps gold and silver distinct. Mapping modern fiat money to gold, silver or another named benchmark is a separate contemporary policy choice, so both live thresholds are shown.',
     conventionKey: 'AAOIFI',
     rules: [
-      { k: 'Nisab basis', v: 'Gold, 85 grams' },
+      { k: 'Nisab basis', v: 'Explicit contemporary fiat policy; classical metals remain distinct' },
       { k: 'Worn jewellery', v: 'Exempt' },
       { k: 'Debt deduction', v: 'None' },
       { k: 'Nisab timing', v: 'The threshold must be held for the whole year' },
@@ -352,7 +350,7 @@ const madhhabPages = [
         h: 'Holding the threshold across the year',
         p: [
           'With the Maliki and Hanbali schools, the Shafi’i school requires your wealth to remain at or above the threshold for the entire lunar year. A dip below breaks the year and the count restarts.',
-          'Paired with the higher gold threshold, this means the Shafi’i method excuses more people entirely — but charges those it does capture more than the other schools would.',
+          'Which people cross nisab depends on the separately selected fiat benchmark; the continuous-hawl rule remains part of the Shafi’i calculation.',
         ],
       },
       {
@@ -387,8 +385,7 @@ const madhhabPages = [
       {
         q: 'Which nisab applies in the Shafi’i school?',
         a: [
-          'Gold, at 85 grams, which at the time of writing is around $12,994. This is the higher of the two thresholds.',
-          'The combination of a high threshold and no debt deduction means the Shafi’i method captures fewer people than the Hanafi method but charges those it captures more.',
+          'The classical Shafi’i method keeps gold and silver distinct. A modern fiat benchmark must be selected as a separate contemporary policy, so BarakahFlow shows both live thresholds.',
         ],
       },
       {
@@ -415,20 +412,20 @@ const madhhabPages = [
     label: 'Hanbali',
     navLabel: 'Hanbali',
     currency: 'USD',
-    title: 'Hanbali Zakat Calculator — Gold Nisab and Immediate Debts',
+    title: 'Hanbali Zakat Calculator — Nisab, Debt and Hawl Rules',
     description:
-      'Zakat on the Hanbali method: the 85g gold threshold, worn jewellery exempt, immediate debts deducted, and nisab held across the whole lunar year.',
+      'Zakat on the Hanbali method: explicit fiat nisab policy, worn jewellery treatment, conditional present-debt relief, and continuous nisab through the lunar year.',
     keywords:
       'hanbali zakat calculator, hanbali nisab, gold nisab 85g, hanbali debt deduction, zakat hanbali madhhab',
     h1: 'Zakat according to the Hanbali school',
     lede:
       'The Hanbali school sits between the Maliki and Shafi’i positions on debt. What is due now comes off; what is merely owed in the abstract does not. It is the narrowest of the deduction rules that actually allows a deduction, and it is the school followed across much of the Arabian peninsula.',
-    nisabBasis: 'gold',
+    nisabBasis: null,
     nisabNote:
-      'The Hanbali school sets the threshold by gold, 85 grams — the higher of the two thresholds, shared with the Maliki and Shafi’i schools.',
+      'Current Hanbali authorities differ over the benchmark for modern fiat money. BarakahFlow keeps that policy explicit and shows both live metal thresholds.',
     conventionKey: 'AAOIFI',
     rules: [
-      { k: 'Nisab basis', v: 'Gold, 85 grams' },
+      { k: 'Nisab basis', v: 'Explicit contemporary fiat policy; both metal values shown' },
       { k: 'Worn jewellery', v: 'Exempt' },
       { k: 'Debt deduction', v: 'Immediate debts deducted' },
       { k: 'Nisab timing', v: 'The threshold must be held for the whole year' },
@@ -439,13 +436,13 @@ const madhhabPages = [
         p: [
           'The Hanbali position deducts what is presently demandable. Rent due this month, an invoice payable now, an instalment that has already fallen due — these reduce your zakatable wealth because the money is already spoken for.',
           'A liability that will not be demanded until later does not, even though you know it is coming. The test is whether the creditor could ask for it today.',
-          'This is narrower than the Maliki rule, which subtracts the whole debt, and wider than the Shafi’i rule, which subtracts nothing. In practice it produces a figure between the two.',
+          'Hanbali debt relief also depends on asset category, available non-zakatable cover assets and the adopted narration; it is not a universal offset.',
         ],
       },
       {
-        h: 'The gold threshold and the full year',
+        h: 'The selected threshold and the full year',
         p: [
-          'The Hanbali school uses the 85 gram gold threshold and, with the Maliki and Shafi’i schools, requires it to be held continuously across the lunar year.',
+          'The fiat benchmark is a named contemporary policy choice; the Hanbali continuity rule still requires the selected threshold to be held across the lunar year.',
           'A dip below the threshold breaks the year. Your count restarts from the day you next rise above it, and BarakahFlow resets the Hijri anniversary accordingly rather than carrying the old date forward.',
         ],
       },
@@ -481,14 +478,13 @@ const madhhabPages = [
       {
         q: 'How does the Hanbali position differ from the Maliki one on debt?',
         a: [
-          'The Maliki school deducts the debt in full regardless of when it matures. The Hanbali school deducts only what is presently demandable.',
-          'For someone carrying a long-dated liability the gap is large. On a $6,000 instalment plan not yet due, the Maliki base is $6,000 lower and the bill $150 lower on the same holdings.',
+          'Hanbali debt relief depends on present liability, asset category, available non-zakatable cover assets and the adopted narration. Maliki relief has its own conditions; neither is a universal full-balance subtraction.',
         ],
       },
       {
         q: 'Which nisab does the Hanbali school use?',
         a: [
-          'Gold, at 85 grams — roughly $12,994 at the time of writing. This is shared with the Maliki and Shafi’i schools and stands against the Hanafi silver threshold.',
+          'Modern fiat money requires an explicit benchmark policy, and current Hanbali authorities differ. BarakahFlow shows both live metal thresholds and records the selected policy.',
         ],
       },
       {
@@ -736,7 +732,7 @@ const regionalPages = [
       {
         h: 'Gold at 86g, and the silver figure alongside it',
         p: [
-          'Singapore’s Muslim community is predominantly Shafi’i, and the Shafi’i school sets the threshold by gold. The Singapore Fatwa Committee’s figure of 86 grams of gold is the one usually quoted.',
+          'Singapore’s Muslim community is predominantly Shafi’i, while MUIS supplies the contemporary local benchmark policy for modern currency. Its 86-gram gold convention is therefore a regional authority choice, not an automatic rule derived from the madhhab alone.',
           'It is worth knowing that MUIS also points to the silver threshold of 595 grams as a practical default, which is a far lower bar. The two produce very different answers, and someone with modest savings can be below the gold threshold and above the silver one. Which applies to you is a question of which position you are following, not one to settle by picking the cheaper figure.',
           'MUIS publishes the official figure and revises it as the metal price moves. Where its published number differs from anything derived here from international spot prices, MUIS is the authority and its figure governs.',
         ],
