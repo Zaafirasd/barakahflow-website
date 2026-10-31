@@ -27,7 +27,64 @@ async function settle(page) {
   });
   await page.waitForFunction(() => Array.from(document.images).every(image => image.complete && image.naturalWidth > 0));
 }
+async function settleScroll(page) {
+  await page.evaluate(() => { window.scrollCheck = { previous: scrollY, stable: 0 }; });
+  await page.waitForFunction(() => {
+    const check = window.scrollCheck;
+    check.stable = Math.abs(scrollY - check.previous) < .5 ? check.stable + 1 : 0;
+    check.previous = scrollY;
+    return check.stable >= 8;
+  }, null, { timeout: 5000 });
+}
+async function checkAlignment(page, id) {
+  await settleScroll(page);
+  await page.waitForFunction(id => {
+    const intro = document.querySelector('#' + id + ' .section-intro, #' + id + ' .faq-heading');
+    const gap = intro.getBoundingClientRect().top - document.querySelector('.site-header').getBoundingClientRect().bottom;
+    return Math.abs(gap - parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5) <= 2;
+  }, id, { timeout: 5000 });
+  assert.equal(new URL(page.url()).hash, '#' + id);
+}
 try {
+  const navigationContext = await browser.newContext({ reducedMotion: 'no-preference' });
+  const navigation = await navigationContext.newPage();
+  navigation.on('pageerror', error => errors.push(error.message));
+  for (const width of [1440, 390, 320]) {
+    await navigation.setViewportSize({ width, height: 900 });
+    await navigation.goto(origin); await settle(navigation);
+    await navigation.waitForFunction(() => !document.querySelector('.hero').getAnimations({ subtree: true }).some(animation => animation.playState === 'running'));
+    await navigation.screenshot({ path: resolve(output, 'glass-hero-' + width + '.png') });
+    await navigation.evaluate(() => {
+      window.navigationScrolls = [];
+      addEventListener('scroll', () => window.navigationScrolls.push(scrollY), { passive: true });
+    });
+    for (const id of ['cards', 'features', 'questions']) {
+      await navigation.locator('.nav-links a[href="#' + id + '"]').click();
+      await checkAlignment(navigation, id);
+    }
+    assert(await navigation.evaluate(() => new Set(window.navigationScrolls).size > 10), 'Section navigation should animate through intermediate positions');
+    await navigation.goBack();
+    await checkAlignment(navigation, 'features');
+    await navigation.locator('.nav-links a[href="#questions"]').click();
+    await navigation.locator('.nav-links a[href="#cards"]').click();
+    await checkAlignment(navigation, 'cards');
+    await navigation.mouse.move(1, 1);
+    await navigation.screenshot({ path: resolve(output, 'glass-cards-' + width + '.png') });
+    await navigation.goto(origin + '/#features'); await settle(navigation);
+    await checkAlignment(navigation, 'features');
+    await navigation.screenshot({ path: resolve(output, 'glass-features-' + width + '.png') });
+    await navigation.emulateMedia({ reducedMotion: 'reduce' });
+    assert.equal(await navigation.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
+    await navigation.locator('.nav-links a[href="#questions"]').click();
+    await checkAlignment(navigation, 'questions');
+    assert.equal(await navigation.locator('[data-reveal-pending]').count(), 0, 'Reduced motion must release every pending reveal');
+    await navigation.emulateMedia({ reducedMotion: 'no-preference' });
+  }
+  await navigation.setViewportSize({ width: 720, height: 900 });
+  await navigation.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+  await navigation.locator('.nav-links a[href="#features"]').click();
+  await checkAlignment(navigation, 'features');
+  await navigationContext.close();
   const context = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
@@ -125,10 +182,13 @@ try {
   await failurePage.waitForFunction(() => !document.querySelector('#edition-art').hidden && document.querySelector('#edition-art').src.endsWith('pearl-platinum.webp'));
   await failureContext.close();
 
-  const noJS = await browser.newContext({ javaScriptEnabled: false });
+  const noJS = await browser.newContext({ javaScriptEnabled: false, reducedMotion: 'reduce' });
   const noJSPage = await noJS.newPage(); await noJSPage.goto(origin);
   assert.equal(await noJSPage.locator('h1').isVisible(), true);
   assert.equal(await noJSPage.locator('.hero-actions a[data-track="launch"]').isVisible(), true);
+  await noJSPage.locator('.nav-links a[href="#cards"]').click();
+  const noJSGap = await noJSPage.locator('#cards .section-intro').evaluate(element => element.getBoundingClientRect().top - document.querySelector('.site-header').getBoundingClientRect().bottom);
+  assert(Math.abs(noJSGap - 24) <= 2, 'Anchors should remain aligned without JavaScript');
   await noJS.close();
 
   const motionContext = await browser.newContext({ reducedMotion: 'no-preference', viewport: { width: 1440, height: 1000 } });
@@ -224,6 +284,6 @@ try {
   assert.equal(await unsupported.locator('[data-phone-tilt]').isHidden(), true);
   await unsupportedContext.close();
   assert.deepEqual(errors, [], 'Runtime errors or failed resources');
-  await writeFile(resolve(output, 'browser-results.json'), JSON.stringify({ viewports: results, checks: ['edition content and rapid switching', 'theme persistence', 'keyboard tabs', 'native FAQ', 'CTA destinations', 'reduced motion', '200% text', 'blocked storage', 'image failure and retry', 'no JavaScript', 'Pearl Platinum closing card', 'pointer tilt and leave reset', 'phone sensor consent/calibration/clamping', 'denied and unavailable sensor permission', 'offscreen and reduced-motion sensor suspension', 'unsupported sensor fallback', 'smooth interruptible edition dissolves', 'Summary dashboard feature panel', 'writing preview removed'], errors }, null, 2));
-  console.log('PASS: 10 layouts/themes, axe WCAG AA, card dissolves/tilt, sensor handling, responsive brand artwork and Summary feature tour.');
+  await writeFile(resolve(output, 'browser-results.json'), JSON.stringify({ viewports: results, checks: ['smooth native section scrolling at 1440/390/320px', 'sticky-header alignment with 200% text', 'anchor history, direct links and rapid interruption', 'reduced-motion reveal release', 'edition content and rapid switching', 'theme persistence', 'keyboard tabs', 'native FAQ', 'CTA destinations', 'reduced motion', '200% text', 'blocked storage', 'image failure and retry', 'no JavaScript including anchors', 'Pearl Platinum closing card', 'pointer tilt and leave reset', 'phone sensor consent/calibration/clamping', 'denied and unavailable sensor permission', 'offscreen and reduced-motion sensor suspension', 'unsupported sensor fallback', 'smooth interruptible edition dissolves', 'Summary dashboard feature panel', 'writing preview removed'], errors }, null, 2));
+  console.log('PASS: smooth section navigation/alignment, 10 layouts/themes, axe WCAG AA, card dissolves/tilt, sensor handling and Summary feature tour.');
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

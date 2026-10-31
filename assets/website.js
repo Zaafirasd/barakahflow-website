@@ -2,6 +2,11 @@
   'use strict';
   const root = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const header = document.querySelector('.site-header');
+  // Keep native anchors accurate when the navigation wraps or text is enlarged.
+  const measureHeader = () => root.style.setProperty('--header-height', header.getBoundingClientRect().height + 'px');
+  measureHeader();
+  if ('ResizeObserver' in window) new ResizeObserver(measureHeader).observe(header);
   const themeButton = document.querySelector('[data-theme-toggle]');
   const art = document.getElementById('edition-art');
   const editions = [
@@ -109,13 +114,25 @@
       event.preventDefault(); tabs[next].focus(); activateTab(tabs[next], false);
     });
   });
-  // One-off reveals; content is always visible if scripts, observers or motion are unavailable.
+  // Only prepare offscreen content; initial and restored views never flash away.
   if ('IntersectionObserver' in window && !reduced.matches) {
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-    reduced.addEventListener('change', () => { if (reduced.matches) observer.disconnect(); });
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        entry.target.removeAttribute('data-reveal-pending');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(element => {
+      if (element.getBoundingClientRect().top >= innerHeight) element.setAttribute('data-reveal-pending', '');
+      observer.observe(element);
+    });
+    reduced.addEventListener('change', () => {
+      if (!reduced.matches) return;
+      observer.disconnect();
+      document.querySelectorAll('[data-reveal-pending]').forEach(element => element.removeAttribute('data-reveal-pending'));
+    });
   }
   reduced.addEventListener('change', () => { if (reduced.matches) { clearCardFades(); panelAnimation?.cancel(); } });
 
