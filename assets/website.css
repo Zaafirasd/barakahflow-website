@@ -624,6 +624,7 @@ figcaption {
 }
 
 .card-art-frame {
+  position: relative;
   perspective: 1200px;
   padding-block: .5rem;
 }
@@ -640,6 +641,37 @@ figcaption {
   font-size: .625rem;
   margin-top: 1rem;
   text-align: center;
+}
+
+.writing-preview {
+  position: absolute;
+  inset: .5rem 0;
+  pointer-events: none;
+  color: #f4ede2;
+}
+
+[data-theme=light] .writing-preview {
+  color: #0f172a;
+}
+
+.writing-preview>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.writing-button {
+  display: flex;
+  margin: .5rem auto 0;
+  padding: .5rem;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: .75rem;
+}
+
+.writing-button:disabled {
+  cursor: default;
 }
 
 .edition-picker {

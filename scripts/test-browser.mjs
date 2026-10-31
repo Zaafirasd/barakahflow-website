@@ -122,6 +122,17 @@ try {
   await failurePage.unroute('**/assets/cards/pearl-platinum.webp');
   await failurePage.getByRole('button', { name: 'Pearl Platinum', exact: true }).click();
   await failurePage.waitForFunction(() => !document.querySelector('#edition-art').hidden && document.querySelector('#edition-art').src.endsWith('pearl-platinum.webp'));
+  await failurePage.emulateMedia({ reducedMotion: 'no-preference' });
+  await failurePage.getByRole('button', { name: 'Essential', exact: true }).click();
+  await failurePage.route('**/assets/cards/essential-writing.svg', route => route.fulfill({ status: 503, body: 'Unavailable' }));
+  await failurePage.locator('[data-preview-writing]').click();
+  await failurePage.waitForFunction(() => document.querySelector('.art-caption').textContent.includes('Writing preview could not load'));
+  assert.match(await failurePage.locator('#edition-art').getAttribute('src'), /essential-dark\.webp$/);
+  assert.equal(await failurePage.locator('[data-writing-preview] svg').count(), 0);
+  await failurePage.unroute('**/assets/cards/essential-writing.svg');
+  await failurePage.locator('[data-preview-writing]').click();
+  await failurePage.waitForFunction(() => document.querySelector('[data-preview-writing]').textContent === 'Replay the writing');
+  assert.match(await failurePage.locator('.art-caption').textContent(), /artwork preview/);
   await failureContext.close();
 
   const noJS = await browser.newContext({ javaScriptEnabled: false });
@@ -132,9 +143,33 @@ try {
 
   const motionContext = await browser.newContext({ reducedMotion: 'no-preference', viewport: { width: 1440, height: 1000 } });
   const motionPage = await motionContext.newPage(); await motionPage.goto(origin); await settle(motionPage);
+  motionPage.on('pageerror', error => errors.push(error.message));
   await motionPage.waitForFunction(() => !document.getAnimations().some(animation => animation.playState === 'running' && animation.effect?.getTiming().duration !== 'auto'));
   await motionPage.locator('#cards').scrollIntoViewIfNeeded();
+  const writing = motionPage.locator('[data-preview-writing]');
+  assert.equal(await motionPage.locator('[data-writing-preview] svg').count(), 0, 'Writing must not autoplay');
+  await writing.click();
+  await motionPage.waitForFunction(() => document.querySelector('[data-writing-preview]')?.getAnimations({ subtree: true }).some(animation => animation.currentTime > 300 && animation.playState === 'running'));
+  await motionPage.locator('.collection-stage').screenshot({ path: resolve(output, 'essential-writing-midpoint.png') });
+  await motionPage.waitForFunction(() => document.querySelector('[data-preview-writing]').textContent === 'Replay the writing');
+  assert.equal(await motionPage.locator('[data-writing-preview] svg').count(), 0);
+  assert.match(await motionPage.locator('#edition-art').getAttribute('src'), /essential-dark\.webp$/);
+  await writing.click();
+  await motionPage.waitForFunction(() => !document.querySelector('[data-writing-preview]').hidden);
+  await motionPage.emulateMedia({ reducedMotion: 'reduce' });
+  await motionPage.waitForFunction(() => document.querySelector('[data-writing-preview]').hidden);
+  assert.equal(await writing.isHidden(), true);
+  await motionPage.emulateMedia({ reducedMotion: 'no-preference' });
+  await writing.click();
+  await motionPage.waitForFunction(() => !document.querySelector('[data-writing-preview]').hidden);
+  await motionPage.locator('[data-theme-toggle]').click();
+  await motionPage.waitForFunction(() => document.querySelector('#edition-art').src.endsWith('essential-light.webp'));
+  assert.equal(await motionPage.locator('[data-writing-preview] svg').count(), 0);
+  await writing.click();
+  await motionPage.waitForFunction(() => !document.querySelector('[data-writing-preview]').hidden);
   await motionPage.getByRole('button', { name: 'Emerald', exact: true }).click();
+  assert.equal(await motionPage.locator('[data-writing-preview] svg').count(), 0);
+  assert.equal(await writing.isHidden(), true, 'Earned editions keep their full writing reveal in the app');
   await motionPage.getByRole('button', { name: 'Midnight Gold', exact: true }).click();
   await motionPage.getByRole('button', { name: 'Pearl Platinum', exact: true }).click();
   await motionPage.waitForFunction(() => document.querySelector('#edition-art').src.endsWith('/pearl-platinum.webp'));
@@ -215,6 +250,6 @@ try {
   assert.equal(await unsupported.locator('[data-phone-tilt]').isHidden(), true);
   await unsupportedContext.close();
   assert.deepEqual(errors, [], 'Runtime errors or failed resources');
-  await writeFile(resolve(output, 'browser-results.json'), JSON.stringify({ viewports: results, checks: ['edition content and rapid switching', 'theme persistence', 'keyboard tabs', 'native FAQ', 'CTA destinations', 'reduced motion', '200% text', 'blocked storage', 'image failure and retry', 'no JavaScript', 'Pearl Platinum closing card', 'pointer tilt and leave reset', 'phone sensor consent/calibration/clamping', 'denied and unavailable sensor permission', 'offscreen and reduced-motion sensor suspension', 'unsupported sensor fallback'], errors }, null, 2));
-  console.log('PASS: 10 layouts/themes, axe WCAG AA, navigation/fallbacks, Pearl Platinum pointer tilt, sensor permission/calibration/clamping, offscreen suspension and reduced motion.');
+  await writeFile(resolve(output, 'browser-results.json'), JSON.stringify({ viewports: results, checks: ['edition content and rapid switching', 'theme persistence', 'keyboard tabs', 'native FAQ', 'CTA destinations', 'reduced motion', '200% text', 'blocked storage', 'image failure and retry', 'no JavaScript', 'Pearl Platinum closing card', 'pointer tilt and leave reset', 'phone sensor consent/calibration/clamping', 'denied and unavailable sensor permission', 'offscreen and reduced-motion sensor suspension', 'unsupported sensor fallback', 'opt-in Essential writing and replay', 'writing interruption on theme/edition/reduced-motion changes'], errors }, null, 2));
+  console.log('PASS: 10 layouts/themes, axe WCAG AA, card previews/tilt, sensor handling and opt-in Essential writing/replay/interruption.');
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

@@ -8,7 +8,7 @@ Marketing site for **BarakahFlow**, a mindful personal finance app for Muslims. 
 | --- | --- |
 | `index.html` | App-led landing page: Summary preview, Barakah Card explorer, Track/Plan/Save, guided routine, download and FAQ |
 | `assets/website.css`, `assets/website.js` | Shared website tokens, responsive layouts, accessible previews and restrained native motion |
-| `assets/cards/` | WebP exports of the app's active card component, with illustrative balances |
+| `assets/cards/` | Current artwork-only WebP cards, a separate dashboard balance preview, and lazy-loaded Essential writing artwork |
 | `404.html` | Branded missing-page response, including retired public calculators |
 | `privacy-policy.html` | Privacy policy |
 | `terms.html` | Terms of Service |
@@ -30,6 +30,7 @@ Public calculator pages and their promotion are hidden. Their eleven generated H
 
 - **App branding**: Montserrat, emerald accents, slate surfaces, quiet 14px panels and light/dark themes. Fonts are self-hosted copies of the app's existing files.
 - **Barakah Cards**: Essential, Emerald, Midnight Gold and Pearl Platinum, with current earning rules and Arabic artwork. No payment-card, streak, private Wallet demo or prototype promises.
+- **Artwork and writing**: collection, social artwork and closing card omit cash figures. The dashboard alone shows an illustrative balance. Essential offers an explicit writing preview using the app's exact Arabic outlines, pen routes and timing; no autoplay, earned-edition animation, engraving evolution or reward celebration. Reduced motion keeps the finished artwork visible.
 - **Closing card**: Pearl Platinum follows desktop pointer movement with bounded 3D tilt. Phone motion is opt-in, requests sensor permission where required, calibrates to the starting position and suspends offscreen or when reduced motion is enabled. The scroll entrance and interactive tilt use separate layers. No sensor readings are stored or sent anywhere.
 - **Current features**: manual records/Quick Spend, account balances, category budgets, recurring bills, savings goals, multiple currencies and guided check-ins.
 - **Platform clarity**: browser and Android APK links; iPhone Safari Home Screen instructions, with no App Store claim or automatic install popup.
@@ -46,9 +47,9 @@ Public calculator pages and their promotion are hidden. Their eleven generated H
 
 Compared the public homepage with the app's active `BarakahCard.tsx`, `card-data.ts`, `CardProgressSummary.tsx`, dashboard, `DashboardCard.module.css`, Quick Spend, budget and savings components and current onboarding. Product reference was the app itself, not a new visual direction. The separate clean-card concept remains a preview and is deliberately not advertised as shipped.
 
-Card images were rendered from the active React component in isolated Chrome with sample AED 18,450, then exported to 9–28KB WebP files. Dashboard and feature compositions are HTML previews, not authenticated screenshots. No production data, financial writes or auth changes were used. Regenerate the assets deliberately when the active renderer changes; do not reuse the older Wallet PNGs, which retain historical edition labels.
+Card images were rendered from the active React component's `presentation="artwork"` mode in isolated Chrome and exported to small WebP files. The separate `emerald-balance.webp` dashboard image uses an illustrative AED 18,450. Essential's blank artwork and `essential-writing.svg` come from the same renderer: the SVG preserves the exact Amiri mask paths and per-stroke schedules. Only the word is previewed, without the full in-app reveal. Dashboard and feature compositions are HTML previews, not authenticated screenshots. No production data, financial writes or auth changes were used. Regenerate assets deliberately when the active renderer changes; older Wallet PNGs retain historical edition labels.
 
-The old calculator-led sections, repeated scholarly descriptions, dated screenshots, unsupported demo claims, automatic install popup, remote font requests and unpinned icon library were removed from the landing page. Legal content and the APK/checksum are preserved. The homepage is about 25KB HTML, plus 34KB CSS and 12KB JavaScript before hosting compression.
+The old calculator-led sections, repeated scholarly descriptions, dated screenshots, unsupported demo claims, automatic install popup, remote font requests and unpinned icon library were removed from the landing page. Legal content and the APK/checksum are preserved. The website remains buildless; the writing artwork loads only on request and adds no framework or animation dependency.
 
 ## Local checks and preview
 
@@ -63,6 +64,8 @@ Preview defaults to `http://127.0.0.1:3001`. Static checks use only Node. Browse
 Browser checks cover 320/390/768/1024/1440px in both themes, zero automated WCAG AA violations, overflow, keyboard tabs, FAQ, accurate edition requirements, rapid switching, failed-image retry, theme persistence, blocked storage, reduced motion, 200% text and core content without JavaScript. Static checks cover assets/anchors, schema/FAQ parity, legal links and 33 variants of retired calculator URLs. External app onboarding and APK installation are outside the landing-page checks.
 
 Closing-card checks cover desktop pointer/reset, phone sensor opt-in, granted/denied/rejected permission, calibration, tilt limits, offscreen suspension, unsupported sensors and dynamic reduced motion. Phone sensor events are simulated in Chrome; physical-device feel still needs a real phone. Permission handling follows the [Device Orientation specification](https://www.w3.org/TR/orientation-event/).
+
+Writing checks cover no autoplay, explicit replay, a visible midpoint, return to the settled artwork, and interruption by theme, edition and reduced-motion changes. The full reward animation stays in the app.
 
 Evidence is written to the parent checkout's ignored `output/website-refresh` directory, configurable with `WEBSITE_EVIDENCE_DIR`. One independent visual polish review and one isolated local UX walkthrough were completed. Findings led to larger narrow-screen edition labels and an earlier in-app-card explanation. Motion was checked in real Chrome by the implementing agent; no physical-device performance claim is made.
 

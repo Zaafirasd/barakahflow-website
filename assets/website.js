@@ -4,6 +4,12 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const themeButton = document.querySelector('[data-theme-toggle]');
   const art = document.getElementById('edition-art');
+  const writingButton = document.querySelector('[data-preview-writing]');
+  const writingPreview = document.querySelector('[data-writing-preview]');
+  let writingVersion = 0;
+  let writingAnimations = [];
+  let writingMarkup;
+  let writingActive = false;
   const editions = [
     { name: 'Essential', material: 'YOUR STARTING POINT', message: 'A hopeful beginning.', description: 'A difficult season does not erase your progress. Begin with one small, intentional step.', requirement: 'Your starting card when you create your account. It follows your light or dark theme.', file: 'essential', word: 'Yusr, ease' },
     { name: 'Emerald', material: 'EMERALD SATIN', message: 'Keep going, gently.', description: 'Your picture is getting clearer. Keep showing up, one thoughtful habit at a time.', requirement: 'Complete one accepted first check-in: review an account balance and your recent records.', file: 'emerald', word: 'Sabr, patience' },
@@ -17,6 +23,8 @@
     return '/assets/cards/' + editions[index].file + (index === 0 ? '-' + root.dataset.theme : '') + '.webp';
   }
   async function showCard(index) {
+    cancelWriting();
+    syncWritingButton();
     const request = ++imageRequest;
     const path = editionPath(index);
     const next = new Image();
@@ -33,7 +41,7 @@
     if (request !== imageRequest) return;
     cardAnimation?.cancel();
     art.hidden = false;
-    caption.textContent = 'The Barakah Card collection · illustrative balance';
+    caption.textContent = 'The Barakah Card collection · artwork preview';
     caption.removeAttribute('role');
     art.src = path;
     art.alt = editions[index].name + ' Barakah Card, with the Arabic reminder ' + editions[index].word + '.';
@@ -41,6 +49,65 @@
       cardAnimation = art.animate([{ opacity: .4, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 220, easing: 'cubic-bezier(.23,1,.32,1)' });
     }
   }
+  function syncWritingButton() {
+    writingButton.hidden = selected !== 0 || reduced.matches || typeof art.animate !== 'function';
+  }
+  function cancelWriting() {
+    ++writingVersion;
+    writingAnimations.forEach(animation => animation.cancel());
+    writingAnimations = [];
+    writingPreview.hidden = true;
+    writingPreview.replaceChildren();
+    writingButton.disabled = false;
+    writingButton.textContent = 'Preview the writing';
+    if (writingActive && selected === 0) art.src = editionPath(0);
+    writingActive = false;
+  }
+  writingButton.addEventListener('click', async () => {
+    if (selected !== 0 || reduced.matches || writingActive) return;
+    ++imageRequest;
+    const version = ++writingVersion;
+    writingActive = true;
+    writingButton.disabled = true;
+    writingButton.textContent = 'Loading preview…';
+    const caption = document.querySelector('.art-caption');
+    caption.textContent = 'The Barakah Card collection · artwork preview';
+    caption.removeAttribute('role');
+    const blank = new Image();
+    blank.src = '/assets/cards/essential-' + root.dataset.theme + '-blank.webp';
+    try {
+      const [markup] = await Promise.all([
+        writingMarkup || fetch('/assets/cards/essential-writing.svg').then(response => { if (!response.ok) throw new Error('Writing artwork unavailable'); return response.text(); }),
+        blank.decode(),
+      ]);
+      writingMarkup = markup;
+      if (version !== writingVersion || reduced.matches || selected !== 0) return;
+      const svg = new DOMParser().parseFromString(markup, 'image/svg+xml').documentElement;
+      if (svg.localName !== 'svg' || svg.querySelector('parsererror')) throw new Error('Invalid writing artwork');
+      writingPreview.replaceChildren(document.importNode(svg, true));
+      art.src = blank.src;
+      writingPreview.hidden = false;
+      writingButton.textContent = 'Writing…';
+      // The app's exact Amiri outlines, pen routes and timings; no reward reveal.
+      writingAnimations = Array.from(writingPreview.querySelectorAll('[data-pen-stroke],[data-pen-tip]'), path => path.animate([
+        { strokeDashoffset: '1', opacity: 0, offset: 0 },
+        { strokeDashoffset: '1', opacity: 1, offset: .001 },
+        { strokeDashoffset: '0', opacity: 1, offset: 1 },
+      ], { delay: Number(path.dataset.delay), duration: Number(path.dataset.duration), easing: 'cubic-bezier(.32,.08,.24,1)', fill: 'both' }));
+      await Promise.all(writingAnimations.map(animation => animation.finished));
+      if (version !== writingVersion) return;
+      cancelWriting();
+      writingButton.textContent = 'Replay the writing';
+    } catch {
+      if (version !== writingVersion) return;
+      cancelWriting();
+      const caption = document.querySelector('.art-caption');
+      caption.textContent = 'Writing preview could not load. Try again.';
+      caption.setAttribute('role', 'status');
+    }
+  });
+  syncWritingButton();
+  document.addEventListener('visibilitychange', () => { if (document.hidden) cancelWriting(); });
   function syncTheme() {
     const light = root.dataset.theme === 'light';
     themeButton.setAttribute('aria-label', 'Switch to ' + (light ? 'dark' : 'light') + ' theme');
@@ -97,7 +164,7 @@
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
     reduced.addEventListener('change', () => { if (reduced.matches) observer.disconnect(); });
   }
-  reduced.addEventListener('change', () => { if (reduced.matches) { cardAnimation?.cancel(); panelAnimation?.cancel(); } });
+  reduced.addEventListener('change', () => { if (reduced.matches) { cardAnimation?.cancel(); panelAnimation?.cancel(); cancelWriting(); } syncWritingButton(); });
 
   // Same bounded tilt and orientation calibration as the app's useCardTilt.
   // Scroll entrance belongs to the outer stage, so it cannot override interaction.
