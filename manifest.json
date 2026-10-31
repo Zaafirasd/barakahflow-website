@@ -1,11 +1,11 @@
 {
   "name": "BarakahFlow",
   "short_name": "BarakahFlow",
-  "description": "Halal personal finance for Muslims — budgeting, bills and savings built around a Zakat engine that follows your school of jurisprudence.",
-  "start_url": "/index.html",
+  "description": "Mindful personal finance for Muslims. Spending, bills, budgets, savings and your Barakah Card.",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#020c45",
-  "theme_color": "#10b981",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
   "icons": [
     {
       "src": "Images/icon-192.png?v=3",
