@@ -28,7 +28,7 @@ Midnight Gold requires three accepted weekly check-ins after the first check-in.
 Pearl Platinum requires eight accepted weekly check-ins in total plus two complete financial-period reviews.
 Weekly checks are at least seven days apart. There is no streak requirement; earned editions remain available.
 The in-app card displays cash balance, not total net worth. The website's dashboard balance is illustrative; standalone card art omits balances.
-An optional Essential writing preview demonstrates the Arabic word. Full earned-card reveals remain in the app.
+The website previews card finishes with gentle transitions. Full writing and earned-card reveals remain in the app.
 
 ## Availability and limits
 
