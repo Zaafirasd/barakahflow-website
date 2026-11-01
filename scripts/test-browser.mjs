@@ -182,6 +182,44 @@ try {
   await failurePage.waitForFunction(() => !document.querySelector('#edition-art').hidden && document.querySelector('#edition-art').src.endsWith('pearl-platinum.webp'));
   await failureContext.close();
 
+  for (const theme of ['dark', 'light']) {
+    const legalContext = await browser.newContext({ reducedMotion: 'reduce' });
+    await legalContext.addInitScript(theme => localStorage.setItem('barakahflow-theme', theme), theme);
+    const legal = await legalContext.newPage();
+    legal.on('pageerror', error => errors.push(error.message));
+    for (const width of [320, 390, 1440]) {
+      await legal.setViewportSize({ width, height: 1000 });
+      for (const route of ['privacy-policy.html', 'terms.html']) {
+        await legal.goto(origin + '/' + route); await settle(legal);
+        assert.equal(await legal.locator('html').getAttribute('data-theme'), theme);
+        assert(await legal.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route + ': horizontal overflow at ' + width);
+        await legal.addScriptTag({ path: axePath });
+        const violations = await legal.evaluate(async () => (await window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa'] } })).violations.map(({ id, nodes }) => ({ id, targets: nodes.map(node => node.target) })));
+        assert.deepEqual(violations, [], route + '/' + width + '/' + theme + ': accessibility');
+        assert.equal(await legal.locator('h1').count(), 1);
+        assert.equal(await legal.getByRole('link', { name: 'Back to home', exact: true }).getAttribute('href'), '/');
+        assert.equal(await legal.evaluate(() => performance.getEntriesByType('resource').every(entry => new URL(entry.name).origin === location.origin)), true, route + ': external page resource');
+        if (width !== 320) await legal.screenshot({ path: resolve(output, route.replace('.html', '') + '-' + width + '-' + theme + '.png'), fullPage: width === 1440 });
+        if (width === 1440) {
+          await legal.setViewportSize({ width: 720, height: 1000 });
+          await legal.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+          assert(await legal.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route + ': overflow at 200% text');
+          await legal.setViewportSize({ width, height: 1000 });
+        }
+      }
+    }
+    await legalContext.close();
+  }
+  const legalBlocked = await browser.newContext();
+  await legalBlocked.addInitScript(() => { Object.defineProperty(Storage.prototype, 'getItem', { value() { throw new Error('Storage blocked'); } }); });
+  const legalBlockedPage = await legalBlocked.newPage();
+  legalBlockedPage.on('pageerror', error => errors.push(error.message));
+  for (const route of ['privacy-policy.html', 'terms.html']) {
+    await legalBlockedPage.goto(origin + '/' + route);
+    assert.equal(await legalBlockedPage.locator('h1').isVisible(), true);
+  }
+  await legalBlocked.close();
+
   const noJS = await browser.newContext({ javaScriptEnabled: false, reducedMotion: 'reduce' });
   const noJSPage = await noJS.newPage(); await noJSPage.goto(origin);
   assert.equal(await noJSPage.locator('h1').isVisible(), true);
@@ -285,5 +323,5 @@ try {
   await unsupportedContext.close();
   assert.deepEqual(errors, [], 'Runtime errors or failed resources');
   await writeFile(resolve(output, 'browser-results.json'), JSON.stringify({ viewports: results, checks: ['smooth native section scrolling at 1440/390/320px', 'sticky-header alignment with 200% text', 'anchor history, direct links and rapid interruption', 'reduced-motion reveal release', 'edition content and rapid switching', 'theme persistence', 'keyboard tabs', 'native FAQ', 'CTA destinations', 'reduced motion', '200% text', 'blocked storage', 'image failure and retry', 'no JavaScript including anchors', 'Pearl Platinum closing card', 'pointer tilt and leave reset', 'phone sensor consent/calibration/clamping', 'denied and unavailable sensor permission', 'offscreen and reduced-motion sensor suspension', 'unsupported sensor fallback', 'smooth interruptible edition dissolves', 'Summary dashboard feature panel', 'writing preview removed'], errors }, null, 2));
-  console.log('PASS: smooth section navigation/alignment, 10 layouts/themes, axe WCAG AA, card dissolves/tilt, sensor handling and Summary feature tour.');
+  console.log('PASS: section navigation, 10 homepage layouts/themes, 12 legal-page layouts/themes, axe WCAG AA, card motion, legal storage fallback and local assets.');
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

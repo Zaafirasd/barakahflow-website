@@ -1,0 +1,81 @@
+.legal-document {
+  width: min(760px,calc(100% - 3rem));
+  margin-inline: auto;
+  padding-block: 4.5rem 6rem;
+}
+
+.legal-intro {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-intro h1 {
+  font-size: clamp(2.25rem,5vw,3.5rem);
+  margin-top: 1rem;
+}
+
+.legal-document .legal-date {
+  font-size: .75rem;
+  margin-top: 1.25rem;
+}
+
+.legal-intro>p:last-child {
+  font-size: 1rem;
+  margin-top: 1.75rem;
+  color: var(--text);
+}
+
+.legal-section {
+  margin-top: 2.5rem;
+}
+
+.legal-section h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+}
+
+.legal-section p,.legal-section ul {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: .9375rem;
+  line-height: 1.9;
+}
+
+.legal-section ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.legal-section li+li {
+  margin-top: .75rem;
+}
+
+.legal-section strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.legal-document a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.legal-footer p,.legal-footer nav {
+  font-size: .75rem;
+}
+
+@media(max-width:600px) {
+  .legal-document {
+    width: calc(100% - 2.5rem);
+    padding-block: 2.75rem 4rem;
+  }
+  .legal-page .nav {
+    gap: .5rem;
+  }
+  .legal-page .nav>.text-link {
+    font-size: .75rem;
+  }
+}

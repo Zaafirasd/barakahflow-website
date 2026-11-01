@@ -37,6 +37,7 @@ Public calculator pages and their promotion are hidden. Their eleven generated H
 - **Current features**: manual records/Quick Spend, account balances, category budgets, recurring bills, savings goals, multiple currencies and guided check-ins.
 - **Platform clarity**: browser and Android APK links; iPhone Safari Home Screen instructions, with no App Store claim or automatic install popup.
 - **SEO**: preserved canonical and verification, new 1200×630 social artwork, `WebSite`, `Organization`, `SoftwareApplication` and visible-FAQ-matched `FAQPage` schema. The unsupported site-search schema was removed.
+- **Legal pages**: Privacy Policy and Terms of Service updated on 1 November 2026 with plain language, concise service-provider disclosures and consistent retention/deletion wording. They reuse the website's self-hosted fonts and reading layout. The linked deletion page follows the same wording; legal-page dates are included in the sitemap.
 - **Analytics**: page visits, APK downloads and web-app launches posted to the app's own analytics endpoint.
 
 ## Tech stack

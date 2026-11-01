@@ -29,6 +29,21 @@ for (const match of html.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
   assert((await stat(file)).isFile(), 'Missing public asset: ' + url);
 }
 for (const image of html.matchAll(/<img\b[^>]*>/g)) assert(/\bwidth="\d+"/.test(image[0]) && /\bheight="\d+"/.test(image[0]), 'Image dimensions missing');
+for (const route of ['privacy-policy.html', 'terms.html']) {
+  const document = await readFile(resolve(root, route), 'utf8');
+  assert.equal((document.match(/<h1\b/g) || []).length, 1, route + ': expected one heading');
+  assert(document.includes('rel="canonical" href="https://barakahflowapp.com/' + route + '"'), route + ': canonical missing');
+  const legalIds = [...document.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(legalIds.length, new Set(legalIds).size, route + ': duplicate IDs');
+  for (const match of document.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
+    const url = match[1];
+    if (url.startsWith('#')) { assert(legalIds.includes(url.slice(1)), route + ': broken anchor'); continue; }
+    if (!url.startsWith('/')) continue;
+    const pathname = url.split('?')[0];
+    const file = pathname === '/' ? 'index.html' : pathname === '/delete-account' ? 'delete-account.html' : pathname.slice(1);
+    assert((await stat(resolve(root, file))).isFile(), route + ': missing asset/link ' + url);
+  }
+}
 const calculators = await readdir(resolve(root, 'zakat-calculator')).catch(() => []);
 assert(!calculators.some(file => file.endsWith('.html')), 'A retired calculator can still be served');
 const server = createPreviewServer();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Delete your BarakahFlow account | BarakahFlow</title>
-  <meta name="description" content="Request permanent deletion of your BarakahFlow account and all data associated with it.">
+  <meta name="description" content="How to delete your BarakahFlow account and linked records, including requests when you cannot sign in.">
   <link rel="canonical" href="https://barakahflowapp.com/delete-account">
   <meta name="robots" content="index, follow">
   <meta property="og:site_name" content="BarakahFlow">
@@ -14,10 +14,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="/Images/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    @font-face { font-family: Montserrat; src: url('/assets/fonts/montserrat.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: Montserrat; src: url('/assets/fonts/montserrat-medium.ttf') format('truetype'); font-weight: 500 800; font-display: swap; }
     :root {
       --emerald: #10b981;
       --emerald-strong: #34d399;
@@ -226,11 +225,11 @@
     <div class="content-box">
       <h1>Delete your BarakahFlow account</h1>
 
-      <p>This page is for requesting deletion of a BarakahFlow account and all data associated with it. If you still have the BarakahFlow app installed on your device, the fastest route is <strong>Settings &rarr; Delete Account</strong> inside the app, where deletion is immediate. This page exists for people who have already uninstalled the app or cannot sign in.</p>
+      <p>You can delete your account in the app from <strong>Profile &rarr; Delete Account</strong>. If you cannot sign in or have already uninstalled the app, use the email request below. We verify ownership before deleting an account.</p>
 
       <div class="action-panel">
         <a
-          href="mailto:barakahflowapp@gmail.com?subject=Account%20deletion%20request&body=I%20am%20requesting%20permanent%20deletion%20of%20my%20BarakahFlow%20account%20and%20all%20associated%20data.%0A%0AI%20confirm%20that%3A%0A1.%20I%20am%20sending%20this%20request%20from%20the%20email%20address%20registered%20to%20my%20BarakahFlow%20account.%0A2.%20I%20understand%20that%20this%20deletion%20is%20permanent%2C%20irreversible%2C%20and%20removes%20all%20my%20stored%20transactions%2C%20accounts%2C%20budgets%2C%20bills%2C%20savings%20goals%2C%20holdings%2C%20and%20Zakat%20history.%0A%0AAccount%20email%3A%20"
+          href="mailto:barakahflowapp@gmail.com?subject=Account%20deletion%20request&body=Please%20delete%20my%20BarakahFlow%20account%20and%20linked%20records.%0A%0AI%20am%20sending%20this%20request%20from%20my%20registered%20email%20address.%20I%20understand%20that%20account%20deletion%20is%20permanent.%0A%0AAccount%20email%3A%20"
           class="button button-primary"
         >
           Email Account Deletion Request
@@ -246,32 +245,24 @@
       </div>
 
       <h2>What gets deleted</h2>
-      <p>Requesting deletion permanently removes your account and everything linked to it:</p>
+      <p>Deletion removes your account and linked records from the active service, including:</p>
       <ol>
         <li><strong>Account profile, name and email</strong></li>
         <li><strong>Linked accounts and balances</strong></li>
         <li><strong>Logged transactions and categories</strong></li>
         <li><strong>Budgets, bills and savings goals</strong></li>
-        <li><strong>Gold and silver holdings</strong></li>
-        <li><strong>Investment records</strong></li>
-        <li><strong>Zakat calculation method, hawl dates and Zakat history</strong></li>
+        <li><strong>Optional asset records, saved calculations and related settings</strong></li>
         <li><strong>Push notification device tokens</strong></li>
       </ol>
 
       <h2>Data held by our service providers</h2>
-      <p>BarakahFlow&rsquo;s data is hosted with third-party infrastructure providers. When an account is deleted, the data is removed from BarakahFlow&rsquo;s own systems and deletion is requested from those providers in line with their retention schedules:</p>
-      <ul>
-        <li><strong>Supabase</strong>: Our database and authentication provider. Your account, profile records, and all financial data are purged from Supabase servers upon deletion.</li>
-        <li><strong>Firebase Cloud Messaging (Google)</strong>: Delivers push notifications to Android devices. Device tokens are purged from our records upon deletion.</li>
-        <li><strong>Web Push</strong>: Delivers push notifications in browsers and on iPhone. Device tokens and push endpoints are purged from our records upon deletion.</li>
-        <li><strong>Vercel</strong>: Our hosting provider. Ephemeral server access and runtime logs roll off in accordance with Vercel&rsquo;s standard log retention schedules.</li>
-      </ul>
+      <p>Our providers support hosting, storage, sign-in and notifications. Account deletion removes the linked records from the active service. Provider logs and any backup copies may remain until their retention periods expire. See our <a href="/privacy-policy.html">Privacy Policy</a> for more about how information is handled.</p>
 
       <h2>How long it takes</h2>
       <p>Requests are actioned within 30 days of verification, and a confirmation is sent once complete.</p>
 
-      <h2>What we keep</h2>
-      <p>Nothing. BarakahFlow retains no personal financial data, account credentials, transaction logs, or profile records once an account is deleted.</p>
+      <h2>What may remain</h2>
+      <p>Limited support or security records are kept only as long as needed for legal obligations, security or resolving disputes. Account deletion does not remove files you have exported or saved yourself. If you used the app on other devices, you can remove their local copies through the app's data controls or browser settings.</p>
     </div>
   </main>
 
