@@ -15,16 +15,6 @@
       ],
       "destination": "https://barakahflowapp.com/:path*",
       "permanent": true
-    },
-    {
-      "source": "/downloads/barakahflow-notification-beta.apk",
-      "destination": "/downloads/barakahflow.apk",
-      "permanent": false
-    },
-    {
-      "source": "/downloads/barakahflow-notification-beta.apk.sha256",
-      "destination": "/downloads/barakahflow.apk.sha256",
-      "permanent": false
     }
   ],
   "rewrites": [
