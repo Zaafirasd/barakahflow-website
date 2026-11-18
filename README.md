@@ -77,7 +77,7 @@ Evidence is written to the parent checkout's ignored `output/website-refresh` di
 
 ## Deployment
 
-Current Android download: **1.1.0 (version code 3)**, published 27 October 2026. The signed release adds calm native haptics and a device-local preference. It uses the same application ID and signing certificate as 1.0.1, so existing installations can be updated without clearing device data. The checksum is published at `downloads/barakahflow.apk.sha256`.
+Current Android download: **1.2.0 (version code 7)**. Purchase alerts are optional in Profile. Android users select their wallet apps and review expenses before saving. The main APK uses the existing application ID and signing certificate. The checksum is published at `downloads/barakahflow.apk.sha256`.
 
 Static site — 1-click deployment to **Vercel** or **GitHub Pages**. No build required; edit and push.
 
